@@ -23,9 +23,9 @@ public Partita (Squadra squadra1, Squadra squadra2 ,int orario , int data ,Strin
     	  
 	this.squadra1 = squadra1;
  	this.squadra2 = squadra2;
-    this.Data = data ;
-    this.Orario = orario ;
-    this.Risultato = risultato ;
+    this.data = data ;
+    this.orario = orario ;
+    this.risultato = risultato ;
 
      
 }
@@ -91,7 +91,7 @@ public void setrisultato (String risultato) {
 @Override
 public String toString() {
 
-	return this.getsquadra1() + "\t" + this.getsquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getRisultato();
+	return this.getsquadra1() + "\t" + this.getsquadra2() + "\t" + this.getorario() + "\t" + this.getdata() + "\t" + this.getrisultato();
 
 }
 
