@@ -19,7 +19,7 @@ public class Partita {
 
 
 
-public Partite (Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ) {
+public Partita (Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ) {
     	  
 	this.squadra1 = squadra1;
  	this.squadra2 = squadra2;
@@ -30,7 +30,7 @@ public Partite (Squadra squadra1, Squadra squadra2 ,int orario , int data ,Strin
      
 }
 
-public Squadra getsquadr1(){
+public Squadra getsquadra1(){
 	
 	return squadra1;
 
@@ -42,7 +42,7 @@ public void setsquadra1 (Squadra squadra1) {
 	this.squadra1 = squadra1 ;
 }
 
-public Squadra getsquadr2(){
+public Squadra getsquadra2(){
 	
 	return squadra2;
 
