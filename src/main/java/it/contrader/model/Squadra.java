@@ -1,91 +1,161 @@
+package it.contrader.model;
+
 
 public class Squadra {
-	private String NomeSquadra;
-	private int NumGiocatori;
-	final int Rating;
-	private int VittorieCasa;
-	private int VittorieEsterne;
-	private int SconfitteCasa;
-	private int SconfitteEsterne;
-	private int Pareggi;
-	public Squadra() {
-		//costruttore vuoto//
-	};
-	public Squadra(String NomeSquadra,int NumGiocatori,int Rating,int VittorieCasa,int VittorieEsterne,int SconfitteCasa,int SconfitteEsterne,int Pareggi) {
-		//costruttore per le istanze Squadra//
-		
-		this.NomeSquadra= NomeSquadra;
-		this.NumGiocatori= NumGiocatori;
-		this.Rating= Rating;
-		this.VittorieCasa= VittorieCasa;
-		this.VittorieEsterne= VittorieEsterne;
-		this.SconfitteCasa= SconfitteCasa;
-		this.SconfitteEsterne= SconfitteEsterne;
-		this.Pareggi= Pareggi;
-		
+	private String nomeSquadra;
+	private int numGiocatori;
+	private float rating;
+	private int vittorieCasa;
+	private int vittorieEsterne;
+	private int sconfitteCasa;
+	private int sconfitteEsterne;
+	private int pareggiCasa;
+	private int pareggiEsterne;
+
+	public Squadra()
+	{
+		this.nomeSquadra = null;
+		this.numGiocatori = 0;
+		this.rating = 0;
+		this.vittorieCasa = 0;
+		this.vittorieEsterne = 0;
+		this.sconfitteCasa = 0;
+		this.sconfitteEsterne = 0;
+		this.pareggiCasa = 0;
+		this.pareggiEsterne = 0;
 	}
-	public String getNomeSquadra() {
-		return this.NomeSquadra;
+
+
+	
+	
+public Squadra(String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
+		super();
+		this.nomeSquadra = nomeSquadra;
+		this.numGiocatori = numGiocatori;
+		this.rating = rating;
+		this.vittorieCasa = vittorieCasa;
+		this.vittorieEsterne = vittorieEsterne;
+		this.sconfitteCasa = sconfitteCasa;
+		this.sconfitteEsterne = sconfitteEsterne;
+		this.pareggiCasa = pareggiCasa;
+		this.pareggiEsterne = pareggiEsterne;
 	}
-public void setNomeSquadra(String NomeSquadra) {
-	this.NomeSquadra= NomeSquadra;
-	
-	
+
+
+
+
+public int getVittorieCasa() {
+	return vittorieCasa;
 }
-public int getNumGiocatori () {
-	return this.NumGiocatori;
+
+
+
+
+public void setVittorieCasa(int vittorieCasa) {
+	this.vittorieCasa = vittorieCasa;
 }
-public void setNumGiocatori(int NumGiocatori) {
-	this.NumGiocatori= NumGiocatori;
-	
+
+
+
+
+public int getVittorieEsterne() {
+	return vittorieEsterne;
 }
-public int getRating() {
-	return this.Rating;
+
+
+
+
+public void setVittorieEsterne(int vittorieEsterne) {
+	this.vittorieEsterne = vittorieEsterne;
 }
-public void setRating(int Rating) {
-	this.Rating=Rating;
+
+
+
+
+public int getSconfitteCasa() {
+	return sconfitteCasa;
 }
-public int getVittorieCasa () {
-	return this.VittorieCasa;
+
+
+
+
+public void setSconfitteCasa(int sconfitteCasa) {
+	this.sconfitteCasa = sconfitteCasa;
 }
-public void setVittorieCasa(int VittorieCasa) {
-	this.VittorieCasa= VittorieCasa;
-	
+
+
+
+
+public int getSconfitteEsterne() {
+	return sconfitteEsterne;
 }
-public int getVittorieEsterne () {
-	return this.VittorieEsterne;
+
+
+
+
+public void setSconfitteEsterne(int sconfitteEsterne) {
+	this.sconfitteEsterne = sconfitteEsterne;
 }
-public void setVittorieEsterne(int VittorieEsterne) {
-	this.VittorieEsterne= VittorieEsterne;
-	
+
+
+
+
+public int getPareggiCasa() {
+	return pareggiCasa;
 }
-public int getSconfitteCasa () {
-	return this.SconfitteCasa;
+
+
+
+
+public void setPareggiCasa(int pareggiCasa) {
+	this.pareggiCasa = pareggiCasa;
 }
-public void setSconfitteCasa(int SconfitteCasa) {
-	this.SconfitteCasa= SconfitteCasa;
-	
+
+
+
+
+public int getPareggiEsterne() {
+	return pareggiEsterne;
 }
-public int getSconfitteEsterne () {
-	return this.SconfitteEsterne;
+
+
+
+
+public void setPareggiEsterne(int pareggiEsterne) {
+	this.pareggiEsterne = pareggiEsterne;
 }
-public void setSconfitteEsterne(int SconfitteEsterne) {
-	this.SconfitteEsterne= SconfitteEsterne;
-	
+
+
+
+
+public String getNomeSquadra() {
+	return nomeSquadra;
 }
-public int getPareggi () {
-	return this.Pareggi;
+
+
+
+
+public int getNumGiocatori() {
+	return numGiocatori;
 }
-public void setPareggi(int Pareggi) {
-	this.Pareggi= Pareggi;
-	
+
+
+
+
+public float getRating() {
+	return rating;
 }
+
+
+
 
 @Override
 public String toString() {
-return NomeSquadra+ "t/"+ NumGiocatori + "t/" +Rating+ "t/"+VittorieCasa+"t/"+VittorieEsterne+"t/"+SconfitteCasa+"t/"+SconfitteEsterne+"t/"+Pareggi;
+return nomeSquadra+ "t/"+ numGiocatori + "t/" +rating+ "t/"+vittorieCasa+"t/"+vittorieEsterne+"t/"+sconfitteCasa+"t/"+sconfitteEsterne+"t/"+pareggiCasa+"t/"+pareggiEsterne;
 
 }
+
 @Override
 public boolean equals(Object obj) {
 	if(this == obj)
@@ -95,42 +165,47 @@ public boolean equals(Object obj) {
 	if(getClass()!= obj.getClass())
 		return false;
 	Squadra other = (Squadra) obj;
-	if(NomeSquadra!= other.NomeSquadra())
+	if(nomeSquadra!= other.getNomeSquadra())
 		return false;
-	if(NumGiocatori==null) {
-		if(other.NumGiocatori!=null)
+	if(numGiocatori == 0) {
+		if(other.numGiocatori != 0)
 			return false;
-	}else if (!NumGiocatori.equals(other.NumGiocatori))
+	}else if (numGiocatori != other.numGiocatori)
 		return false;
-	if(Rating==null) {
-		if(other.Rating!=null)
+	if(rating==0) {
+		if(other.rating!=0)
 			return false;
-	}else if (!Rating.equals(other.Rating))
+	}else if (rating != other.rating)
 		return false;
-	if(VittorieCasa==null) {
-		if(other.VittorieCasa!=null)
+	if(vittorieCasa==0) {
+		if(other.vittorieCasa!=0)
 			return false;
-	}else if (!VittorieCasa.equals(other.VittorieCasa))
+	}else if (vittorieCasa != other.vittorieCasa)
 		return false;
-	if(VittorieEsterne==null) {
-		if(other.VittorieEsterne!=null)
+	if(vittorieEsterne==0) {
+		if(other.vittorieEsterne!= 0)
 			return false;
-	}else if (!VittorieEsterne.equals(other.VittorieEsterne))
+	}else if (vittorieEsterne != other.vittorieEsterne)
 		return false;
-	if(SconfitteCasa==null) {
-		if(other.SconfitteCasa!=null)
+	if(sconfitteCasa==0) {
+		if(other.sconfitteCasa!= 0)
 			return false;
-	}else if (!SconfitteCasa.equals(other.SconfitteCasa))
+	}else if (sconfitteCasa != other.sconfitteCasa)
 		return false;
-	if(SconfitteEsterne==null) {
-		if(other.SconfitteEsterne!=null)
+	if(sconfitteEsterne==0) {
+		if(other.sconfitteEsterne!=0)
 			return false;
-	}else if (!SconfitteEsterne.equals(other.SconfitteEsterne))
+	}else if (sconfitteEsterne != other.sconfitteEsterne)
 		return false;
-	if(Pareggi==null) {
-		if(other.Pareggi!=null)
+	if(pareggiCasa==0) {
+		if(other.pareggiCasa!=0)
 			return false;
-	}else if (!Pareggi.equals(other.Pareggi))
+	}else if (pareggiCasa != other.pareggiCasa)
+		return false;
+	if(pareggiEsterne==0) {
+		if(other.pareggiEsterne!=0)
+			return false;
+	}else if (pareggiEsterne != other.pareggiEsterne)
 		return false;
 	return true;
 	
