@@ -9,6 +9,7 @@ package it.contrader.dto;
  *a oggetti del DTO tramite i Converter (chiamati dai Service). 
  *Per la descrizione della classe far riferimento al Model "User".
  */
+
 public class UserDTO {
 	
 	private int id;

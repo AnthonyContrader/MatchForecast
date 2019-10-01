@@ -49,7 +49,7 @@ public Squadra getsquadra2(){
  }
 
 
-public void setsquadra1 (Squadra squadra2) {
+public void setsquadra2 (Squadra squadra2) {
             
 	this.squadra2 = squadra2 ;
 }
@@ -103,8 +103,8 @@ public boolean equals(Object obj) {
 		return false;
 	if(getClass()!= obj.getClass())
 		return false;
-	Squadra other = (Squadra) obj;
-	if(squadra1!= other.getsquadra1())
+	Partita other = (Partita) obj;
+	if(squadra1.equals(other.getsquadra1()))
 		return false;
 	if(squadra2!= other.getsquadra2())
 		return false;
