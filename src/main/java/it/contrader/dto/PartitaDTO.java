@@ -1,7 +1,7 @@
 package it.contrader.dto;
 
 public class PartitaDTO {
-	
+	private int id;
     private Squadra squadra1 ;
     private Squadra squadra2;
     private int orario ;
@@ -10,11 +10,7 @@ public class PartitaDTO {
 
 
  public PartitaDTO() {
-	 this.squadra1 = null;
-	 this.squadra2 = null;
-	 this.data = 0 ;
-	 this.orario = 0 ;
-	 this.risultato = null ;
+	 
  }
  
  public PartitaDTO (Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ){
@@ -27,69 +23,87 @@ public class PartitaDTO {
 
 	     
 	}
+ 
+ public PartitaDTO ( int id  , Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ) {
+		this.id = id ;  
+		this.squadra1 = squadra1;
+	 	this.squadra2 = squadra2;
+	    this.data = data ;
+	    this.orario = orario ;
+	    this.risultato = risultato ;
 
- public Squadra getsquadra1(){
+	     
+	}
+ 
+ public int getId() {
+		return this.id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+ public Squadra getSquadra1(){
 		
 		return squadra1;
 
 	 }
 
 
-	public void setsquadra1 (Squadra squadra1) {
+	public void setSquadra1 (Squadra squadra1) {
 	            
 		this.squadra1 = squadra1 ;
 	}
 
-	public Squadra getsquadra2(){
+	public Squadra getSquadra2(){
 		
 		return squadra2;
 
 	 }
 
 
-	public void setsquadra2 (Squadra squadra2) {
+	public void setSquadra2 (Squadra squadra2) {
 	            
 		this.squadra2 = squadra2 ;
 	}
 
-	public int getorario(){
+	public int getOrario(){
 		
 		return orario;
 	}
 
 
-	public void setorario (int orario) {
+	public void setOrario (int orario) {
 	    
 		this.orario = orario ;
 
 	}
 
-	public int getdata(){
+	public int getData(){
 		
 		return data;
 
 	}
 
 
-	public void setdata (int data) {
+	public void setData (int data) {
 	    
 		this.data = data ;
 	}
 
 
-	public String getrisultato(){
+	public String getRisultato(){
 		
 		return risultato;
 	}
 
-	public void setrisultato (String risultato) {
+	public void setRisultato (String risultato) {
 	    this.risultato = risultato ;
 	}
 
 	@Override
 	public String toString() {
 
-		return this.getsquadra1() + "\t" + this.getsquadra2() + "\t" + this.getorario() + "\t" + this.getdata() + "\t" + this.getrisultato();
+		return this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getRisultato();
 
 
 	}
