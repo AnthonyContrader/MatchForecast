@@ -119,6 +119,8 @@ public boolean equals(Object obj) {
 	if(getClass()!= obj.getClass())
 		return false;
 	Partita other = (Partita) obj;
+	if (id != other.id)
+		return false;
 	if(squadra1.equals(other.getSquadra1()))
 		return false;
 	if(squadra2!= other.getSquadra2())

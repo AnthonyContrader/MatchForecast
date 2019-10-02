@@ -1,4 +1,4 @@
-
+package it.contrader.dto;
 public class SquadraDTO {
 	
 	private int id;
@@ -16,10 +16,26 @@ public class SquadraDTO {
 		
 	}
 	
+	public Squadra(String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
+		
+	    
+		this.nomeSquadra = nomeSquadra;
+		this.numGiocatori = numGiocatori;
+		this.rating = rating;
+		this.vittorieCasa = vittorieCasa;
+		this.vittorieEsterne = vittorieEsterne;
+		this.sconfitteCasa = sconfitteCasa;
+		this.sconfitteEsterne = sconfitteEsterne;
+		this.pareggiCasa = pareggiCasa;
+		this.pareggiEsterne = pareggiEsterne;
+	}
+	
+	
 	public Squadra(int id, String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
 			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
-		super();
-		this.id = id;
+		
+	    this.id = id;
 		this.nomeSquadra = nomeSquadra;
 		this.numGiocatori = numGiocatori;
 		this.rating = rating;
