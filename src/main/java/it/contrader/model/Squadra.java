@@ -1,4 +1,4 @@
-package it.contrader.model;
+package model;
 
 
 public class Squadra {
@@ -14,15 +14,7 @@ public class Squadra {
 
 	public Squadra()
 	{
-		this.nomeSquadra = null;
-		this.numGiocatori = 0;
-		this.rating = 0;
-		this.vittorieCasa = 0;
-		this.vittorieEsterne = 0;
-		this.sconfitteCasa = 0;
-		this.sconfitteEsterne = 0;
-		this.pareggiCasa = 0;
-		this.pareggiEsterne = 0;
+		
 	}
 
 
