@@ -22,7 +22,7 @@ import it.contrader.model.Partita;
 
 		
 		public Partita toEntity(PartitaDTO partitaDTO) {
-			User user = new Partita(partitaDTO.getId, partitaDTO.getSquadra1(), partitaDTO.getSquadra2(), partitaDTO.getData() , partitaDTO.getOrario() ,partitaDTO.getRisultato());
+			Partita partita = new Partita(partitaDTO.getId, partitaDTO.getSquadra1(), partitaDTO.getSquadra2(), partitaDTO.getData() , partitaDTO.getOrario() ,partitaDTO.getRisultato());
 			return partita;
 		}
 		

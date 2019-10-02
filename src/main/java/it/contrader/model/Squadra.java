@@ -2,6 +2,7 @@ package model;
 
 
 public class Squadra {
+	private int id;
 	private String nomeSquadra;
 	private int numGiocatori;
 	private float rating;
@@ -20,9 +21,10 @@ public class Squadra {
 
 	
 	
-public Squadra(String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+public Squadra(int id, String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
 			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
 		super();
+		this.id = id;
 		this.nomeSquadra = nomeSquadra;
 		this.numGiocatori = numGiocatori;
 		this.rating = rating;
@@ -35,7 +37,13 @@ public Squadra(String nomeSquadra, int numGiocatori, float rating, int vittorieC
 	}
 
 
+public int getId() {
+	return this.id;
+}
 
+public void setId(int id) {
+	this.id = id;
+}	
 
 public int getVittorieCasa() {
 	return vittorieCasa;
@@ -144,7 +152,7 @@ public float getRating() {
 
 @Override
 public String toString() {
-return nomeSquadra+ "t/"+ numGiocatori + "t/" +rating+ "t/"+vittorieCasa+"t/"+vittorieEsterne+"t/"+sconfitteCasa+"t/"+sconfitteEsterne+"t/"+pareggiCasa+"t/"+pareggiEsterne;
+return id+ "/t"+ nomeSquadra+ "t/"+ numGiocatori + "t/" +rating+ "t/"+vittorieCasa+"t/"+vittorieEsterne+"t/"+sconfitteCasa+"t/"+sconfitteEsterne+"t/"+pareggiCasa+"t/"+pareggiEsterne;
 
 }
 
@@ -157,6 +165,8 @@ public boolean equals(Object obj) {
 	if(getClass()!= obj.getClass())
 		return false;
 	Squadra other = (Squadra) obj;
+	if (id != other.id)
+		return false;
 	if(nomeSquadra!= other.getNomeSquadra())
 		return false;
 	if(numGiocatori == 0) {
