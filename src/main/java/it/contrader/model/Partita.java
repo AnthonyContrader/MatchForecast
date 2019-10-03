@@ -3,8 +3,8 @@ package it.contrader.model;
 public class Partita {
 
      private int id ;
-	 private Squadra squadra1 ;
-     private Squadra squadra2;
+	 private String squadra1 ;
+     private String squadra2;
      private int orario ;
      private int data ;
      private String risultato; 
@@ -16,7 +16,7 @@ public class Partita {
 
 
 
-public Partita (Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ) {
+public Partita (String squadra1, String squadra2 ,int orario , int data ,String risultato ) {
     	  
 	this.squadra1 = squadra1;
  	this.squadra2 = squadra2;
@@ -26,7 +26,7 @@ public Partita (Squadra squadra1, Squadra squadra2 ,int orario , int data ,Strin
 
      
 }
-public Partita ( int id  , Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ) {
+public Partita ( int id  , String squadra1, String squadra2 ,int orario , int data ,String risultato ) {
 	this.id = id ;  
 	this.squadra1 = squadra1;
  	this.squadra2 = squadra2;
@@ -45,26 +45,26 @@ public int getId() {
 public void setId(int id) {
 	this.id = id;
 }
- public Squadra getSquadra1(){
+ public String getSquadra1(){
 	
 	return squadra1;
 
  }
 
 
-public void setSquadra1 (Squadra squadra1) {
+public void setSquadra1 (String squadra1) {
             
 	this.squadra1 = squadra1 ;
 }
 
-public Squadra getSquadra2(){
+public String getSquadra2(){
 	
 	return squadra2;
 
  }
 
 
-public void setSquadra2 (Squadra squadra2) {
+public void setSquadra2 (String squadra2) {
             
 	this.squadra2 = squadra2 ;
 }

@@ -2,8 +2,8 @@ package it.contrader.dto;
 
 public class PartitaDTO {
 	private int id;
-    private Squadra squadra1 ;
-    private Squadra squadra2;
+    private String squadra1 ;
+    private String squadra2;
     private int orario ;
     private int data ;
     private String risultato; 
@@ -13,7 +13,7 @@ public class PartitaDTO {
 	 
  }
  
- public PartitaDTO (Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ){
+ public PartitaDTO (String squadra1, String squadra2 ,int orario , int data ,String risultato ){
 	  
 		this.squadra1 = squadra1;
 	 	this.squadra2 = squadra2;
@@ -24,7 +24,7 @@ public class PartitaDTO {
 	     
 	}
  
- public PartitaDTO ( int id  , Squadra squadra1, Squadra squadra2 ,int orario , int data ,String risultato ) {
+ public PartitaDTO ( int id  , String squadra1, String squadra2 ,int orario , int data ,String risultato ) {
 		this.id = id ;  
 		this.squadra1 = squadra1;
 	 	this.squadra2 = squadra2;
@@ -42,26 +42,26 @@ public class PartitaDTO {
 		this.id = id;
 	}
 
- public Squadra getSquadra1(){
+ public String getSquadra1(){
 		
 		return squadra1;
 
 	 }
 
 
-	public void setSquadra1 (Squadra squadra1) {
+	public void setSquadra1 (String squadra1) {
 	            
 		this.squadra1 = squadra1 ;
 	}
 
-	public Squadra getSquadra2(){
+	public String getSquadra2(){
 		
 		return squadra2;
 
 	 }
 
 
-	public void setSquadra2 (Squadra squadra2) {
+	public void setSquadra2 (String squadra2) {
 	            
 		this.squadra2 = squadra2 ;
 	}

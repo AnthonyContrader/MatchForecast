@@ -28,8 +28,8 @@ public class PartitaDAO {
 			Partita partita;
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
-				Squadra squadra1 = resultSet.getSquadra1("squadra1");
-				Squadra squadra2 = resultSet.getSquadra2("squadra2");
+				String squadra1 = resultSet.getString("squadra1");
+				String squadra2 = resultSet.getString("squadra2");
 				int  data = resultSet.getInt("data");
 				int  orario = resultSet.getInt("orario");
 				String risultato = resultSet.getString("risultato");
@@ -71,8 +71,8 @@ public class PartitaDAO {
 			resultSet.next();
 			String squadra1,squadra2,data,orario,risultato;
             
-			squadra1 = resultSet.getSquadra1("squadra1");
-			squadra2 = resultSet.getSquadra2("squadra2");
+			squadra1 = resultSet.getString("squadra1");
+			squadra2 = resultSet.getString("squadra2");
 			data = resultSet.getInt("data");
 			orario = resultSet.getint("orario");
 			risultato = resultSet.getString("risultato");
@@ -117,8 +117,8 @@ public class PartitaDAO {
 
 				// Update the user
 				PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
-				preparedStatement.setSquadra1(1, partitaToUpdate.getSquadra1());
-				preparedStatement.setSquadra2(2, partitaToUpdate.getSquadra2());
+				preparedStatement.setString(1, partitaToUpdate.getSquadra1());
+				preparedStatement.setString(2, partitaToUpdate.getSquadra2());
 				preparedStatement.setInt(3, partitaToUpdate.getData());
 				preparedStatement.setInt(4, partitaToUpdate.getOrario());
 				preparedStatement.setString(5, partitaToUpdate.getRisultato());
