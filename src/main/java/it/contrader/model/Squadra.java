@@ -164,7 +164,7 @@ public int getNumGiocatori() {
 	return numGiocatori;
 }
 
-public void  setNumGiocatori(String numGiocatori) {
+public void  setNumGiocatori(int numGiocatori) {
 	this.numGiocatori= numGiocatori;
 }
 
