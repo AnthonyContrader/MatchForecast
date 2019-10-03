@@ -155,13 +155,18 @@ public String getNomeSquadra() {
 }
 
 
+public void  setNomeSquadra(String nomeSquadra) {
+	this.nomeSquadra= nomeSquadra;
+}
 
 
 public int getNumGiocatori() {
 	return numGiocatori;
 }
 
-
+public void  setNumGiocatori(String numGiocatori) {
+	this.numGiocatori= numGiocatori;
+}
 
 
 public float getRating() {
@@ -169,7 +174,9 @@ public float getRating() {
 }
 
 
-
+public void  setRating(float rating) {
+	this.rating= rating;
+}
 
 @Override
 public String toString() {

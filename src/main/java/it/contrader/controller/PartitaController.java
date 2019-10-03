@@ -43,7 +43,7 @@ public class PartitaController implements Controller {
 		
 		case "READ":
 			id = Integer.parseInt(request.get("id").toString());
-			UserDTO userDTO = userService.read(id);
+			PartitaDTO partitaDTO = partitaService.read(id);
 			request.put("partita", partitaDTO);
 			MainDispatcher.getInstance().callView(sub_package + "PartitaRead", request);
 			break;
@@ -52,8 +52,8 @@ public class PartitaController implements Controller {
 		case "INSERT":
 			squadra1 = request.get("squadra1").toString();
 			squadra2 = request.get("squadra2").toString();
-			data = request.get("data").toString();
-			orario = request.get("orario").toString();
+			data = Integer.parseInt(request.get("data").toString());
+			orario = Integer.parseInt(request.get("orario").toString());
 			risultato = request.get("risultato").toString();
 			
 			
@@ -81,11 +81,11 @@ public class PartitaController implements Controller {
 			id = Integer.parseInt(request.get("id").toString());
 			squadra1 = request.get("squadra1").toString();
 			squadra2 = request.get("squadra2").toString();
-			data = request.get("data").toString();
-			orario = request.get("orario").toString();
+			data =Integer.parseInt (request.get("data").toString());
+			orario =Integer.parseInt( request.get("orario").toString());
 			risultato = request.get("risultato").toString();
 			PartitaDTO partitatoupdate = new PartitaDTO(squadra1, squadra2, data, orario, risultato);
-			usertoupdate.setId(id);
+			partitatoupdate.setId(id);
 			partitaService.update(partitatoupdate);
 			request = new Request();
 			request.put("mode", "mode");
@@ -93,8 +93,8 @@ public class PartitaController implements Controller {
 			break;
 			
 		 
-		case "USERLIST":
-			List<PartiteDTO> partiteDTO = partitaService.getAll();
+		case "PARTITELIST":
+			List<PartitaDTO> partiteDTO = partitaService.getAll();
 			
 			request.put("partite", partiteDTO);
 			MainDispatcher.getInstance().callView("Partita", request);

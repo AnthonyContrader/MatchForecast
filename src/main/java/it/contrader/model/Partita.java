@@ -106,7 +106,7 @@ public void setRisultato (String risultato) {
 @Override
 public String toString() {
 
-	return this.getId() + "\t"  this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getRisultato();
+	return this.getId() + "\t" + this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getRisultato();
 
 }
 

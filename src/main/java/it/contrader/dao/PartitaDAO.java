@@ -15,7 +15,7 @@ public class PartitaDAO {
 	private final String QUERY_UPDATE = "UPDATE partita SET squadra1=?, squadra2=?, data=?, orario=? ,risultato=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM partita WHERE id=?";
 
-	public partitaDAO() {
+	public PartitaDAO() {
 
 	}
 
@@ -47,8 +47,8 @@ public class PartitaDAO {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {	
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_CREATE);
-			preparedStatement.setSquadra1(1, userToInsert.getSquadra1());
-			preparedStatement.setSquadra2(2, userToInsert.getSquadra2());
+			preparedStatement.setString(1, userToInsert.getSquadra1());
+			preparedStatement.setString(2, userToInsert.getSquadra2());
 			preparedStatement.setInt(3, userToInsert.getData());
 			preparedStatement.setInt(4, userToInsert.getOrario());
 			preparedStatement.setString(5, userToInsert.getRisultato());
@@ -60,7 +60,7 @@ public class PartitaDAO {
 
 	}
 
-	public User read(int userId) {
+	public Partita read(int userId) {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {
 
@@ -69,12 +69,12 @@ public class PartitaDAO {
 			preparedStatement.setInt(1, userId);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
-			String squadra1,squadra2,data,orario,risultato;
-            
+			String squadra1,squadra2,risultato;
+            int data,orario;
 			squadra1 = resultSet.getString("squadra1");
 			squadra2 = resultSet.getString("squadra2");
 			data = resultSet.getInt("data");
-			orario = resultSet.getint("orario");
+			orario = resultSet.getInt("orario");
 			risultato = resultSet.getString("risultato");
 			Partita partita = new Partita(squadra1,squadra2,data,orario,risultato);
 			partita.setId(resultSet.getInt("id"));
@@ -89,14 +89,14 @@ public class PartitaDAO {
 	public boolean update(Partita partitaToUpdate) {
 		Connection connection = ConnectionSingleton.getInstance();
 
-		// Check if id is present
+		
 		if (partitaToUpdate.getId() == 0)
 			return false;
 
 		Partita partitaRead = read(partitaToUpdate.getId());
 		if (!partitaRead.equals(partitaToUpdate)) {
 			try {
-				// Fill the userToUpdate object
+				
 				if (partitaToUpdate.getSquadra1() == null || partitaToUpdate.getSquadra1().equals("")) {
 					partitaToUpdate.setSquadra1(partitaRead.getSquadra1());
 				}
@@ -105,17 +105,17 @@ public class PartitaDAO {
 					partitaToUpdate.setSquadra2(partitaRead.getSquadra2());
 				}
 
-				if (partitaToUpdate.getData() == null || partitaToUpdate.getData().equals("")) {
+				if (partitaToUpdate.getData() == 0 ) {
 					partitaToUpdate.setData(partitaRead.getData());
 				}
-				if (partitaToUpdate.getOrario() == null || partitaToUpdate.getOrario().equals("")) {
+				if (partitaToUpdate.getOrario() == 0 ) {
 					partitaToUpdate.setOrario(partitaRead.getOrario());
 				}
 				if (partitaToUpdate.getRisultato() == null || partitaToUpdate.getRisultato().equals("")) {
 					partitaToUpdate.setRisultato(partitaRead.getRisultato());
 				}
 
-				// Update the user
+				
 				PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement(QUERY_UPDATE);
 				preparedStatement.setString(1, partitaToUpdate.getSquadra1());
 				preparedStatement.setString(2, partitaToUpdate.getSquadra2());

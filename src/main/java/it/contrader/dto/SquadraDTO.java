@@ -16,7 +16,7 @@ public class SquadraDTO {
 		
 	}
 	
-	public Squadra(String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+	public SquadraDTO(String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
 			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
 		
 	    
@@ -32,7 +32,7 @@ public class SquadraDTO {
 	}
 	
 	
-	public Squadra(int id, String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+	public SquadraDTO(int id, String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
 			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
 		
 	    this.id = id;

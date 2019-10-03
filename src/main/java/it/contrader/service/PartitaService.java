@@ -3,7 +3,7 @@ package it.contrader.service;
 import java.util.List;
 
 
-import it.contrader.converter.UserConverter;
+import it.contrader.converter.PartitaConverter;
 import it.contrader.dao.PartitaDAO;
 import it.contrader.dto.PartitaDTO;
 
@@ -15,7 +15,7 @@ public class PartitaService {
 	
 	
 	public PartitaService(){
-		this.partitaDAO = new ParitaDAO();
+		this.partitaDAO = new PartitaDAO();
 		this.partitaConverter = new PartitaConverter();
 	}
 	

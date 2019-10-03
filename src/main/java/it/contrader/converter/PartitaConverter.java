@@ -38,4 +38,4 @@ import it.contrader.model.Partita;
 			}
 			return partitaDTOList;
 		} 
-	
+	}

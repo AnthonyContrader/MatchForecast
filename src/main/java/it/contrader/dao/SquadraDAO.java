@@ -104,35 +104,35 @@ public boolean insert(Squadra squadraToInsert) {
 					squadraToUpdate.setNomeSquadra(squadraRead.getNomeSquadra());
 				}
 
-				if (squadraToUpdate.getNumGiocatori() == 0 || squadraToUpdate.getNumGiocatori().equals("")) {
+				if (squadraToUpdate.getNumGiocatori() == 0 ) {
 					squadraToUpdate.setNumGiocatori(squadraRead.getNumGiocatori());
 				}
 
-				if (squadraToUpdate.getRating() == 0 || squadraToUpdate.getRating().equals("")) {
+				if (squadraToUpdate.getRating() == 0 ) {
 					squadraToUpdate.setRating(squadraRead.getRating());
 				}
 				
-				if (squadraToUpdate.getVittorieCasa() == 0 || squadraToUpdate.getVittorieCasa().equals("")) {
+				if (squadraToUpdate.getVittorieCasa() == 0 ) {
 					squadraToUpdate.setVittorieCasa(squadraRead.getVittorieCasa());
 				}
 
-				if (squadraToUpdate.getVittorieEsterne() == 0 || squadraToUpdate.getVittorieEsterne().equals("")) {
+				if (squadraToUpdate.getVittorieEsterne() == 0 ) {
 					squadraToUpdate.setVittorieEsterne(squadraRead.getVittorieEsterne());
 				}
 
-				if (squadraToUpdate.getSconfitteCasa() == 0 || squadraToUpdate.getSconfitteCasa().equals("")) {
+				if (squadraToUpdate.getSconfitteCasa() == 0 ) {
 					squadraToUpdate.setSconfitteCasa(squadraRead.getSconfitteCasa());
 				}
 				
-				if (squadraToUpdate.getSconfitteEsterne() == 0 || squadraToUpdate.getSconfitteEsterne().equals("")) {
+				if (squadraToUpdate.getSconfitteEsterne() == 0 ) {
 					squadraToUpdate.setSconfitteEsterne(squadraRead.getSconfitteEsterne());
 				}
 
-				if (squadraToUpdate.getPareggiCasa() == 0 || squadraToUpdate.getPareggiCasa().equals("")) {
+				if (squadraToUpdate.getPareggiCasa() == 0 ) {
 					squadraToUpdate.setPareggiCasa(squadraRead.getPareggiCasa());
 				}
 
-				if (squadraToUpdate.getPareggiEsterne() == 0 || squadraToUpdate.getPareggiEsterne().equals("")) {
+				if (squadraToUpdate.getPareggiEsterne() == 0 ) {
 					squadraToUpdate.setPareggiEsterne(squadraRead.getPareggiEsterne());
 				}
 
@@ -158,3 +158,20 @@ public boolean insert(Squadra squadraToInsert) {
 				return false;
 			}
 		}
+		
+	return false;
+	}
+	public boolean delete(int id) {
+		Connection connection = ConnectionSingleton.getInstance();
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE);
+			preparedStatement.setInt(1, id);
+			int n = preparedStatement.executeUpdate();
+			if (n != 0)
+				return true;
+
+		} catch (SQLException e) {
+		}
+		return false;
+	}
+}	
