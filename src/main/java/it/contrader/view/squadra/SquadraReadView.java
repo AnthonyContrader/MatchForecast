@@ -1,4 +1,4 @@
-package it.contrader.view.squadre;
+package it.contrader.view.squadra;
 import it.contrader.controller.Request;
 
 import it.contrader.dto.SquadraDTO;
@@ -16,8 +16,8 @@ public class SquadraReadView extends AbstractView {
 	@Override
 	public void showResults(Request request) {
 		if (request != null) {
-			SquadraDTO user = (SquadraDTO) request.get("user");
-			System.out.println(user);
+			SquadraDTO squadra = (SquadraDTO) request.get("Squadra");
+			System.out.println(squadra);
 			MainDispatcher.getInstance().callView("Squadra", null);
 		}
 	}

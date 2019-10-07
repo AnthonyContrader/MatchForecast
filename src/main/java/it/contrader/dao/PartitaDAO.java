@@ -10,7 +10,7 @@ import it.contrader.model.Partita;
 public class PartitaDAO {
 
 	private final String QUERY_ALL = "SELECT * FROM partita";
-	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , risultato ) VALUES (?,?,?)";
+	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , risultato ) VALUES (?,?,?,?,?)";
 	private final String QUERY_READ = "SELECT * FROM partita WHERE id=?";
 	private final String QUERY_UPDATE = "UPDATE partita SET squadra1=?, squadra2=?, data=?, orario=? ,risultato=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM partita WHERE id=?";
@@ -20,7 +20,7 @@ public class PartitaDAO {
 	}
 
 	public List<Partita> getAll() {
-		List<User> partitaList = new ArrayList<>();
+		List<Partita> partitaList = new ArrayList<>();
 		Connection connection = ConnectionSingleton.getInstance();
 		try {
 			Statement statement = connection.createStatement();
@@ -47,12 +47,13 @@ public class PartitaDAO {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {	
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_CREATE);
-			preparedStatement.setString(1, userToInsert.getSquadra1());
-			preparedStatement.setString(2, userToInsert.getSquadra2());
-			preparedStatement.setInt(3, userToInsert.getData());
-			preparedStatement.setInt(4, userToInsert.getOrario());
-			preparedStatement.setString(5, userToInsert.getRisultato());
+			preparedStatement.setString(1, partitaToInsert.getSquadra1());
+			preparedStatement.setString(2, partitaToInsert.getSquadra2());
+			preparedStatement.setInt(3, partitaToInsert.getData());
+			preparedStatement.setInt(4, partitaToInsert.getOrario());
+			preparedStatement.setString(5, partitaToInsert.getRisultato());
 			preparedStatement.execute();
+			System.out.println(partitaToInsert);
 			return true;
 		} catch (SQLException e) {
 			return false;
@@ -60,13 +61,13 @@ public class PartitaDAO {
 
 	}
 
-	public Partita read(int userId) {
+	public Partita read(int partitaId) {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {
 
 
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_READ);
-			preparedStatement.setInt(1, userId);
+			preparedStatement.setInt(1, partitaId);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
 			String squadra1,squadra2,risultato;

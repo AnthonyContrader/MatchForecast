@@ -58,11 +58,9 @@ public class PartitaController implements Controller {
 			
 			
 			PartitaDTO partitatoinsert = new PartitaDTO(squadra1, squadra2, data, orario, risultato);
-			
 			partitaService.insert(partitatoinsert);
 			request = new Request();
 			request.put("mode", "mode");
-			
 			MainDispatcher.getInstance().callView(sub_package + "PartitaInsert", request);
 			break;
 		

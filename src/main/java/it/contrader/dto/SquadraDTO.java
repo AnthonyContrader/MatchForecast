@@ -16,7 +16,7 @@ public class SquadraDTO {
 		
 	}
 	
-	public SquadraDTO(String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+	public SquadraDTO (String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
 			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
 		
 	    
@@ -32,7 +32,7 @@ public class SquadraDTO {
 	}
 	
 	
-	public SquadraDTO(int id, String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
+	public SquadraDTO (int id, String nomeSquadra, int numGiocatori, float rating, int vittorieCasa, int vittorieEsterne,
 			int sconfitteCasa, int sconfitteEsterne, int pareggiCasa, int pareggiEsterne) {
 		
 	    this.id = id;
@@ -157,6 +157,6 @@ public class SquadraDTO {
 	}
 	@Override
 	public String toString() {
-	return id+ "/t"+ nomeSquadra+ "t/"+ numGiocatori + "t/" +rating+ "t/"+vittorieCasa+"t/"+vittorieEsterne+"t/"+sconfitteCasa+"t/"+sconfitteEsterne+"t/"+pareggiCasa+"t/"+pareggiEsterne;
+	return id + "\t"+ nomeSquadra + "\t"+ numGiocatori + "\t\t" + rating+ "\t\t"+ vittorieCasa+"\t\t" + vittorieEsterne+"\t\t" + sconfitteCasa+"\t\t" + sconfitteEsterne +"\t\t" + pareggiCasa + "\t\t" + pareggiEsterne;
 	}
 }

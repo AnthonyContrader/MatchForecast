@@ -1,4 +1,4 @@
-package it.contrader.view.squadre;
+package it.contrader.view.squadra;
 import it.contrader.controller.Request;
 import it.contrader.main.MainDispatcher;
 import it.contrader.view.AbstractView;

@@ -14,7 +14,7 @@ public class SquadraDAO {
 	private final String QUERY_DELETE = "DELETE FROM squadra WHERE id=?";
 	
 public List<Squadra> getAll() {
-	List<Squadra> squadreList = new ArrayList<>();
+	List<Squadra> squadraList = new ArrayList<>();
 	Connection connection = ConnectionSingleton.getInstance();
 	try {
 		Statement statement = connection.createStatement();
@@ -33,12 +33,12 @@ public List<Squadra> getAll() {
 			int pareggiEsterne = resultSet.getInt("pareggiEsterne");
 			squadra = new Squadra(nomeSquadra,numGiocatori,rating,vittorieCasa,vittorieEsterne,sconfitteCasa,sconfitteEsterne,pareggiCasa,pareggiEsterne);
 			squadra.setId(id);
-			squadreList.add(squadra);
+			squadraList.add(squadra);
 		}
 	} catch (SQLException e) {
 		e.printStackTrace();
 	}
-	return squadreList;
+	return squadraList;
 }
 public boolean insert(Squadra squadraToInsert) {
 	Connection connection = ConnectionSingleton.getInstance();
@@ -51,7 +51,7 @@ public boolean insert(Squadra squadraToInsert) {
 		preparedStatement.setInt(5, squadraToInsert.getVittorieEsterne());
 		preparedStatement.setInt(6, squadraToInsert.getSconfitteCasa());
 		preparedStatement.setInt(7, squadraToInsert.getSconfitteEsterne());
-		preparedStatement.setInt(8,squadraToInsert.getPareggiCasa());
+		preparedStatement.setInt(8, squadraToInsert.getPareggiCasa());
 		preparedStatement.setInt(9, squadraToInsert.getPareggiEsterne());
 		preparedStatement.execute();
 		return true;
@@ -82,6 +82,7 @@ public boolean insert(Squadra squadraToInsert) {
 			pareggiEsterne = resultSet.getInt("pareggiEsterne");
 			Squadra squadra = new Squadra(nomeSquadra,numGiocatori,rating,vittorieCasa,vittorieEsterne,sconfitteCasa,sconfitteEsterne,pareggiCasa,pareggiEsterne);
 			squadra.setId(resultSet.getInt("id"));
+			
 			return squadra;
 		} catch (SQLException e) {
 			return null;

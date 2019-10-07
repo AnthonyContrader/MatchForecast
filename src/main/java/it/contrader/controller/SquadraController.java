@@ -31,7 +31,7 @@ private static String sub_package = "squadra.";
 		int id;
 		String nomeSquadra;
 		int numGiocatori;
-		int rating;
+		float rating;
 		int vittorieCasa;
 		int vittorieEsterne;
 		int sconfitteCasa;
@@ -44,15 +44,16 @@ private static String sub_package = "squadra.";
 		case "READ":
 			id = Integer.parseInt(request.get("id").toString());
 			SquadraDTO squadraDTO = squadraService.read(id);
-			request.put("squadra", squadraDTO);
+			request.put("Squadra", squadraDTO);
 			MainDispatcher.getInstance().callView(sub_package + "SquadraRead", request);
 			break;
 		
 		
 		case "INSERT" :
 			nomeSquadra = request.get("nomeSquadra").toString();
+			System.out.println(nomeSquadra);
 			numGiocatori = Integer.parseInt(request.get("numGiocatori").toString());
-			rating = Integer.parseInt(request.get("rating").toString());
+			rating = Float.parseFloat(request.get("rating").toString());
 			vittorieCasa = Integer.parseInt(request.get("vittorieCasa").toString());
 			vittorieEsterne = Integer.parseInt(request.get("vittorieEsterne").toString());
 			sconfitteCasa = Integer.parseInt(request.get("sconfitteCasa").toString());
@@ -79,15 +80,14 @@ private static String sub_package = "squadra.";
 			id = Integer.parseInt(request.get("id").toString());
 			nomeSquadra = request.get("nomeSquadra").toString();
 			numGiocatori = Integer.parseInt(request.get("numGiocatori").toString());
-			rating = Integer.parseInt(request.get("rating").toString());
+			rating = Float.parseFloat(request.get("rating").toString());
 			vittorieCasa = Integer.parseInt(request.get("vittorieCasa").toString());
 			vittorieEsterne = Integer.parseInt(request.get("vittorieEsterne").toString());
 			sconfitteCasa = Integer.parseInt(request.get("sconfitteCasa").toString());
 			sconfitteEsterne = Integer.parseInt(request.get("sconfitteEsterne").toString());
 			pareggiCasa = Integer.parseInt(request.get("pareggiCasa").toString());
 			pareggiEsterne = Integer.parseInt(request.get("pareggiEsterne").toString());
-			
-			SquadraDTO squadratoupdate = new SquadraDTO(nomeSquadra, numGiocatori, rating, vittorieCasa, vittorieEsterne, sconfitteCasa, sconfitteEsterne, pareggiCasa, pareggiEsterne);
+			SquadraDTO squadratoupdate = new SquadraDTO (nomeSquadra, numGiocatori, rating, vittorieCasa, vittorieEsterne, sconfitteCasa, sconfitteEsterne, pareggiCasa, pareggiEsterne);
 			squadratoupdate.setId(id);
 			squadraService.update(squadratoupdate);
 			request = new Request();
@@ -97,7 +97,7 @@ private static String sub_package = "squadra.";
 			
 		case "SQUADRALIST":
 			List<SquadraDTO> squadreDTO = squadraService.getAll();
-			request.put("squadra", squadreDTO);
+			request.put("squadre", squadreDTO);
 			MainDispatcher.getInstance().callView("Squadra", request);
 			break;
 			

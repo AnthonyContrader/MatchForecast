@@ -20,7 +20,7 @@ public class SquadraService {
 		return squadraConverter.toDTOList(squadraDAO.getAll());
 	}
 	public SquadraDTO read(int id) {
-		
+	
 		return squadraConverter.toDTO(squadraDAO.read(id));
 	}
 	public boolean insert(SquadraDTO dto) {
@@ -28,8 +28,9 @@ public class SquadraService {
 		return squadraDAO.insert(squadraConverter.toEntity(dto));
 	}
 	public boolean update(SquadraDTO dto) {
-		
+		System.out.println("ciao");
 		return squadraDAO.update(squadraConverter.toEntity(dto));
+		
 	}
 	public boolean delete(int id) {
 		

@@ -31,6 +31,8 @@ public class PartitaUpdateView extends AbstractView {
 	@Override
 	public void showOptions() {
 		try {
+			System.out.println("Inserisci id della partita:");
+			id = Integer.parseInt(getInput());
 			System.out.println("Inserisci squadra1 della partita:");
 			squadra1 = getInput();
 			System.out.println("Inserisci squadra2 della partita:");

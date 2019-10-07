@@ -1,4 +1,4 @@
-package it.contrader.view.squadre;
+package it.contrader.view.squadra;
 import it.contrader.controller.Request;
 import it.contrader.main.MainDispatcher;
 import it.contrader.view.AbstractView;
@@ -68,9 +68,8 @@ public class SquadraUpdateView extends AbstractView{
 		request.put("sconfitteCasa", sconfitteCasa);
 		request.put("sconfitteEsterne", sconfitteEsterne);
 		request.put("pareggiCasa", pareggiCasa);
-		request.put("pareggiEsterni", pareggiEsterne);
+		request.put("pareggiEsterne", pareggiEsterne);
 		request.put("mode", mode);
 		MainDispatcher.getInstance().callAction("Squadra", "doControl", request);
 	}
 }
-

@@ -51,6 +51,7 @@ public void submit() {
 	request.put("choice", choice);
 	request.put("mode", "GETCHOICE");
 	MainDispatcher.getInstance().callAction("Partita", "doControl", this.request);
+	
 }
 
 }

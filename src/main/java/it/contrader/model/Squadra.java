@@ -180,7 +180,7 @@ public void  setRating(float rating) {
 
 @Override
 public String toString() {
-return id+ "/t"+ nomeSquadra+ "t/"+ numGiocatori + "t/" +rating+ "t/"+vittorieCasa+"t/"+vittorieEsterne+"t/"+sconfitteCasa+"t/"+sconfitteEsterne+"t/"+pareggiCasa+"t/"+pareggiEsterne;
+return id+ "\t\t"+ nomeSquadra+ "\t\t" + numGiocatori + "\t\t" + rating +"\t\t"+ vittorieCasa + "\t\t"+ vittorieEsterne +"\t\t"+sconfitteCasa+"\t\t"+sconfitteEsterne+"\t\t"+pareggiCasa+"\t\t"+pareggiEsterne;
 
 }
 
