@@ -20,7 +20,7 @@ public class PartitaView extends AbstractView {
 public void showResults(Request request) {
 	if (request != null) {
 		System.out.println("\n------------------- Gestione partite ----------------\n");
-		System.out.println("ID\tSquadra1\tSquadra2\tOrario\tData\tRisultato\tTipo Partite");
+		System.out.println("ID\tSquadra1\tSquadra2\tOrario\tData\tGoalCasa\tGoalTrasferta\tTipo Partite");
 		System.out.println("----------------------------------------------------\n");
 		
 		@SuppressWarnings("unchecked")

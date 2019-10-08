@@ -12,7 +12,9 @@ public class PartitaInsertView extends AbstractView  {
 	private String squadra2;
 	private int orario;
 	private int data;
-	private String risultato;
+	private int goalCasa;
+	private int goalTrasferta;
+	
 	private final String mode = "INSERT";
 
 	public PartitaInsertView() {
@@ -37,8 +39,11 @@ public class PartitaInsertView extends AbstractView  {
 			orario = Integer.parseInt(getInput());
 			System.out.println("Inserisci data della partita:");
 			data = Integer.parseInt(getInput());
-			System.out.println("Inserisci risultato della partita:");
-			risultato = getInput();
+			System.out.println("Inserisci goalCasa della partita:");
+			goalCasa = Integer.parseInt(getInput());
+			System.out.println("Inserisci goalTrasferta della partita:");
+			goalTrasferta = Integer.parseInt(getInput());
+			
 	}
 	
 	@Override
@@ -48,7 +53,8 @@ public class PartitaInsertView extends AbstractView  {
 		request.put("squadra2", squadra2);
 		request.put("orario", orario);
 		request.put("data", data);
-		request.put("risultato", risultato);
+		request.put("goalCasa", goalCasa);
+		request.put("goalTrasferta", goalTrasferta);
 		request.put("mode", mode);
 		MainDispatcher.getInstance().callAction("Partita", "doControl", request);
 	}

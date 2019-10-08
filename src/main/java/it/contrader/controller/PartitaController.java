@@ -35,8 +35,9 @@ public class PartitaController implements Controller {
 		String squadra2;
 		int data;
 		int orario;
+		int goalCasa;
+		int goalTrasferta;
 		
-		String risultato;
 
 		switch (mode) {
 		
@@ -54,10 +55,10 @@ public class PartitaController implements Controller {
 			squadra2 = request.get("squadra2").toString();
 			data = Integer.parseInt(request.get("data").toString());
 			orario = Integer.parseInt(request.get("orario").toString());
-			risultato = request.get("risultato").toString();
+			goalCasa = Integer.parseInt(request.get("goalCasa").toString());
+			goalTrasferta = Integer.parseInt(request.get("goalTrasferta").toString());
 			
-			
-			PartitaDTO partitatoinsert = new PartitaDTO(squadra1, squadra2, data, orario, risultato);
+			PartitaDTO partitatoinsert = new PartitaDTO(squadra1, squadra2, data, orario, goalCasa,goalTrasferta);
 			partitaService.insert(partitatoinsert);
 			request = new Request();
 			request.put("mode", "mode");
@@ -81,8 +82,9 @@ public class PartitaController implements Controller {
 			squadra2 = request.get("squadra2").toString();
 			data =Integer.parseInt (request.get("data").toString());
 			orario =Integer.parseInt( request.get("orario").toString());
-			risultato = request.get("risultato").toString();
-			PartitaDTO partitatoupdate = new PartitaDTO(squadra1, squadra2, data, orario, risultato);
+			goalCasa = Integer.parseInt(request.get("goalCasa").toString());
+			goalTrasferta = Integer.parseInt(request.get("goalTrasferta").toString());
+			PartitaDTO partitatoupdate = new PartitaDTO(squadra1, squadra2, data, orario, goalCasa,goalTrasferta);
 			partitatoupdate.setId(id);
 			partitaService.update(partitatoupdate);
 			request = new Request();
