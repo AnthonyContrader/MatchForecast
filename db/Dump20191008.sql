@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `sampledb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `sampledb`;
+CREATE DATABASE  IF NOT EXISTS `Dump` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
+USE `Dump`;
 -- MySQL dump 10.13  Distrib 8.0.15, for Win64 (x86_64)
 --
 -- Host: localhost    Database: sampledb
@@ -29,21 +29,18 @@ CREATE TABLE `partita` (
   `squadra2` varchar(255) NOT NULL,
   `data` int(255) NOT NULL,
   `orario` int(255) NOT NULL,
-  `risultato` varchar(255) NOT NULL,
+  `goalCasa` int(255) NOT NULL,
+  `goalTrasferta` int(255) NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `partita`
+-- 
 --
 
-LOCK TABLES `partita` WRITE;
-/*!40000 ALTER TABLE `partita` DISABLE KEYS */;
-INSERT INTO `partita` VALUES ('parma','juve',1,1,'v',4),('fer','tr',4,4,'4',5),('lazio','roma',51209,15,'1-0',6);
-/*!40000 ALTER TABLE `partita` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `squadra`
