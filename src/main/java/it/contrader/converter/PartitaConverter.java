@@ -16,13 +16,13 @@ import it.contrader.model.Partita;
 		
 		
 		public PartitaDTO toDTO(Partita partita) {
-			PartitaDTO partitaDTO = new PartitaDTO(partita.getId(), partita.getSquadra1(), partita.getSquadra2(), partita.getData() , partita.getOrario() ,partita.getRisultato());
+			PartitaDTO partitaDTO = new PartitaDTO(partita.getId(), partita.getSquadra1(), partita.getSquadra2(), partita.getData() , partita.getOrario() ,partita.getGoalCasa(),partita.getGoalTrasferta());
 			return partitaDTO;
 		}
 
 		
 		public Partita toEntity(PartitaDTO partitaDTO) {
-			Partita partita = new Partita(partitaDTO.getId(), partitaDTO.getSquadra1(), partitaDTO.getSquadra2(), partitaDTO.getData() , partitaDTO.getOrario() ,partitaDTO.getRisultato());
+			Partita partita = new Partita(partitaDTO.getId(), partitaDTO.getSquadra1(), partitaDTO.getSquadra2(), partitaDTO.getData() , partitaDTO.getOrario() ,partitaDTO.getGoalCasa(),partitaDTO.getGoalTrasferta());
 			return partita;
 		}
 		

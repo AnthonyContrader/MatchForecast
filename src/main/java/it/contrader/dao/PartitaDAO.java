@@ -10,9 +10,9 @@ import it.contrader.model.Partita;
 public class PartitaDAO {
 
 	private final String QUERY_ALL = "SELECT * FROM partita";
-	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , risultato ) VALUES (?,?,?,?,?)";
+	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , goalCasa,goalTrasferta ) VALUES (?,?,?,?,?,?)";
 	private final String QUERY_READ = "SELECT * FROM partita WHERE id=?";
-	private final String QUERY_UPDATE = "UPDATE partita SET squadra1=?, squadra2=?, data=?, orario=? ,risultato=? WHERE id=?";
+	private final String QUERY_UPDATE = "UPDATE partita SET squadra1=?, squadra2=?, data=?, orario=? ,goalCasa=?,goalTrasferta=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM partita WHERE id=?";
 
 	public PartitaDAO() {
@@ -32,8 +32,9 @@ public class PartitaDAO {
 				String squadra2 = resultSet.getString("squadra2");
 				int  data = resultSet.getInt("data");
 				int  orario = resultSet.getInt("orario");
-				String risultato = resultSet.getString("risultato");
-				partita = new Partita(squadra1,squadra2,data,orario,risultato );
+				int goalCasa = resultSet.getInt("goalCasa");
+				int goalTrasferta = resultSet.getInt("goalTrasferta");
+				partita = new Partita(squadra1,squadra2,data,orario,goalCasa,goalTrasferta );
 				partita.setId(id);
 				partitaList.add(partita);
 			}
@@ -51,7 +52,8 @@ public class PartitaDAO {
 			preparedStatement.setString(2, partitaToInsert.getSquadra2());
 			preparedStatement.setInt(3, partitaToInsert.getData());
 			preparedStatement.setInt(4, partitaToInsert.getOrario());
-			preparedStatement.setString(5, partitaToInsert.getRisultato());
+			preparedStatement.setInt(5, partitaToInsert.getGoalCasa());
+			preparedStatement.setInt(6, partitaToInsert.getGoalTrasferta());
 			preparedStatement.execute();
 			System.out.println(partitaToInsert);
 			return true;
@@ -70,14 +72,15 @@ public class PartitaDAO {
 			preparedStatement.setInt(1, partitaId);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
-			String squadra1,squadra2,risultato;
-            int data,orario;
+			String squadra1,squadra2;
+            int data,orario,goalCasa,goalTrasferta;
 			squadra1 = resultSet.getString("squadra1");
 			squadra2 = resultSet.getString("squadra2");
 			data = resultSet.getInt("data");
 			orario = resultSet.getInt("orario");
-			risultato = resultSet.getString("risultato");
-			Partita partita = new Partita(squadra1,squadra2,data,orario,risultato);
+			goalCasa = resultSet.getInt("goalCasa");
+			goalTrasferta = resultSet.getInt("goalTrasferta");
+			Partita partita = new Partita(squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
 			partita.setId(resultSet.getInt("id"));
 
 			return partita;
@@ -112,8 +115,11 @@ public class PartitaDAO {
 				if (partitaToUpdate.getOrario() == 0 ) {
 					partitaToUpdate.setOrario(partitaRead.getOrario());
 				}
-				if (partitaToUpdate.getRisultato() == null || partitaToUpdate.getRisultato().equals("")) {
-					partitaToUpdate.setRisultato(partitaRead.getRisultato());
+				if (partitaToUpdate.getGoalCasa() == 0 ) {
+					partitaToUpdate.setGoalCasa(partitaRead.getGoalCasa());
+				}
+				if (partitaToUpdate.getGoalTrasferta() == 0 ) {
+					partitaToUpdate.setGoalTrasferta(partitaRead.getGoalTrasferta());
 				}
 
 				
@@ -122,8 +128,9 @@ public class PartitaDAO {
 				preparedStatement.setString(2, partitaToUpdate.getSquadra2());
 				preparedStatement.setInt(3, partitaToUpdate.getData());
 				preparedStatement.setInt(4, partitaToUpdate.getOrario());
-				preparedStatement.setString(5, partitaToUpdate.getRisultato());
-				preparedStatement.setInt(6, partitaToUpdate.getId());
+				preparedStatement.setInt(5, partitaToUpdate.getGoalCasa());
+				preparedStatement.setInt(6, partitaToUpdate.getGoalTrasferta());
+				preparedStatement.setInt(7, partitaToUpdate.getId());
 				int a = preparedStatement.executeUpdate();
 				if (a > 0)
 					return true;
