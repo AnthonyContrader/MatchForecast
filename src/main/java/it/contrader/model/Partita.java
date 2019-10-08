@@ -7,7 +7,8 @@ public class Partita {
      private String squadra2;
      private int orario ;
      private int data ;
-     private String risultato; 
+     private int goalCasa;
+     private int goalTrasferta;
 
      public Partita(){
     	
@@ -16,23 +17,26 @@ public class Partita {
 
 
 
-public Partita (String squadra1, String squadra2 ,int orario , int data ,String risultato ) {
+public Partita (String squadra1, String squadra2 ,int orario , int data , int goalCasa, int goalTrasferta ) {
     	  
 	this.squadra1 = squadra1;
  	this.squadra2 = squadra2;
     this.data = data ;
     this.orario = orario ;
-    this.risultato = risultato ;
+    this.goalCasa = goalCasa;
+    this.goalTrasferta = goalTrasferta;
 
      
 }
-public Partita ( int id  , String squadra1, String squadra2 ,int orario , int data ,String risultato ) {
+public Partita ( int id  , String squadra1, String squadra2 ,int orario , int data , int goalCasa, int goalTrasferta ) {
 	this.id = id ;  
 	this.squadra1 = squadra1;
  	this.squadra2 = squadra2;
     this.data = data ;
     this.orario = orario ;
-    this.risultato = risultato ;
+    this.goalCasa = goalCasa;
+    this.goalTrasferta = goalTrasferta;
+    
 
      
 }
@@ -45,9 +49,11 @@ public int getId() {
 public void setId(int id) {
 	this.id = id;
 }
- public String getSquadra1(){
+ 
+
+public String getSquadra1(){
 	
-	return squadra1;
+	return this.squadra1;
 
  }
 
@@ -59,7 +65,7 @@ public void setSquadra1 (String squadra1) {
 
 public String getSquadra2(){
 	
-	return squadra2;
+	return this.squadra2;
 
  }
 
@@ -71,7 +77,7 @@ public void setSquadra2 (String squadra2) {
 
 public int getOrario(){
 	
-	return orario;
+	return this.orario;
 }
 
 
@@ -83,7 +89,7 @@ public void setOrario (int orario) {
 
 public int getData(){
 	
-	return data;
+	return this.data;
 
 }
 
@@ -94,19 +100,28 @@ public void setData (int data) {
 }
 
 
-public String getRisultato(){
+public int getGoalCasa(){
 	
-	return risultato;
+	return this.goalCasa;
 }
 
-public void setRisultato (String risultato) {
-    this.risultato = risultato ;
+public void setGoalCasa (int goalCasa) {
+    this.goalCasa = goalCasa ;
+}
+
+public int getGoalTrasferta(){
+	
+	return this.goalTrasferta;
+}
+
+public void setGoalTrasferta (int goalTrasferta) {
+    this.goalTrasferta = goalTrasferta ;
 }
 
 @Override
 public String toString() {
 
-	return this.getId() + "\t" + this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getRisultato();
+	return this.getId() + "\t" + this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getGoalCasa() + "\t"+ this.getGoalTrasferta();
 
 }
 
@@ -135,13 +150,17 @@ public boolean equals(Object obj) {
 			return false;
 	}else if (orario != other.orario)
 		return false;
-	if (risultato == null) {
-		if (other.risultato != null)
+	if (goalCasa == 0) {
+		if (other.goalCasa != 0)
 		return false;
-		} else if (!risultato.equals(other.risultato))
+		} else if (goalCasa != other.goalCasa)
+		return false;
+	if (goalTrasferta == 0) {
+		if (other.goalTrasferta != 0)
+		return false;
+		} else if (goalTrasferta != other.goalTrasferta)
 		return false;
 	return true;
 	
 }
-
 }

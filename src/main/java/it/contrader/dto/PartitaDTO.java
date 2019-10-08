@@ -6,31 +6,33 @@ public class PartitaDTO {
     private String squadra2;
     private int orario ;
     private int data ;
-    private String risultato; 
-
+    private int goalCasa; 
+    private int goalTrasferta; 
 
  public PartitaDTO() {
 	 
  }
  
- public PartitaDTO (String squadra1, String squadra2 ,int orario , int data ,String risultato ){
+ public PartitaDTO (String squadra1, String squadra2 ,int orario , int data ,int goalCasa, int goalTrasferta ){
 	  
 		this.squadra1 = squadra1;
 	 	this.squadra2 = squadra2;
 	    this.data = data ;
 	    this.orario = orario ;
-	    this.risultato = risultato ;
+	    this.goalCasa = goalCasa ;
+	    this.goalTrasferta = goalTrasferta;
 
 	     
 	}
  
- public PartitaDTO ( int id  , String squadra1, String squadra2 ,int orario , int data ,String risultato ) {
+ public PartitaDTO ( int id  , String squadra1, String squadra2 ,int orario , int data ,int goalCasa, int goalTrasferta ) {
 		this.id = id ;  
 		this.squadra1 = squadra1;
 	 	this.squadra2 = squadra2;
 	    this.data = data ;
 	    this.orario = orario ;
-	    this.risultato = risultato ;
+	    this.goalCasa = goalCasa ;
+	    this.goalTrasferta = goalTrasferta;
 
 	     
 	}
@@ -44,7 +46,7 @@ public class PartitaDTO {
 
  public String getSquadra1(){
 		
-		return squadra1;
+		return this.squadra1;
 
 	 }
 
@@ -56,7 +58,7 @@ public class PartitaDTO {
 
 	public String getSquadra2(){
 		
-		return squadra2;
+		return this.squadra2;
 
 	 }
 
@@ -68,7 +70,7 @@ public class PartitaDTO {
 
 	public int getOrario(){
 		
-		return orario;
+		return this.orario;
 	}
 
 
@@ -80,7 +82,7 @@ public class PartitaDTO {
 
 	public int getData(){
 		
-		return data;
+		return this.data;
 
 	}
 
@@ -91,19 +93,28 @@ public class PartitaDTO {
 	}
 
 
-	public String getRisultato(){
+	public int getGoalCasa(){
 		
-		return risultato;
+		return this.goalCasa;
 	}
 
-	public void setRisultato (String risultato) {
-	    this.risultato = risultato ;
+	public void setGoalCasa (int goalCasa) {
+		this.goalCasa = goalCasa ;
 	}
 
+public int getGoalTrasferta(){
+		
+		return this.goalTrasferta;
+	}
+
+	public void setGoalTrasferta (int goalTrasferta) {
+		this.goalTrasferta = goalTrasferta ;
+	}
+	
 	@Override
 	public String toString() {
 
-		return this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getRisultato();
+		return this.getSquadra1() + "\t" + this.getSquadra2() + "\t" + this.getOrario() + "\t" + this.getData() + "\t" + this.getGoalCasa() + "\t" + this.getGoalTrasferta();
 
 
 	}
