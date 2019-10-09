@@ -6,12 +6,16 @@ import java.util.List;
 import it.contrader.utils.ConnectionSingleton;
 import it.contrader.model.Squadra;
 
-public class SquadraDAO {
+public class SquadraDAO implements DAO<Squadra>{
 	private final String QUERY_ALL = "SELECT * FROM squadra";
 	private final String QUERY_CREATE ="INSERT INTO squadra (nomeSquadra,numGiocatori,rating,vittorieCasa,vittorieEsterne,sconfitteCasa,sconfitteEsterne,pareggiCasa,pareggiEsterne) VALUES (?,?,?,?,?,?,?,?,?)";
 	private final String QUERY_READ = "SELECT * FROM squadra WHERE id=?";
 	private final String QUERY_UPDATE = "UPDATE squadra SET nomeSquadra=?, numGiocatori=?, rating=? ,vittorieCasa=?, vittorieEsterne=?, sconfitteCasa=?, sconfitteEsterne=?, pareggiCasa=?, pareggiEsterne=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM squadra WHERE id=?";
+	
+	public SquadraDAO() {
+		
+	}
 	
 public List<Squadra> getAll() {
 	List<Squadra> squadraList = new ArrayList<>();

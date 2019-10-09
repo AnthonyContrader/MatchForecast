@@ -5,15 +5,8 @@ import java.util.List;
 import it.contrader.converter.Converter;
 import it.contrader.dao.DAO;
 
-/**
- * 
- * @author Vittorio
- *
- * @param <DTO> Usa lo stesso tipo generico dell'interfaccia, verrà specificato
- * in ciascuna classe concreta. Tutti i metodi di CRUD sono quindi implementati usando dei tipi generici. 
- * Così facendo le classi che estendono questa classe astratta ereditano i metodi sotto descritti, risparmiandoci
- * la fatica di implementarli ogni volta cambiando solo i nomi!
- */
+
+ 
 public abstract class AbstractService<Entity,DTO> implements Service<DTO> {
 
 	protected DAO<Entity> dao;
