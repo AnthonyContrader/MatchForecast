@@ -7,7 +7,7 @@ import it.contrader.utils.ConnectionSingleton;
 import it.contrader.model.Partita;
 
 
-public class PartitaDAO {
+public class PartitaDAO implements DAO<Partita> {
 
 	private final String QUERY_ALL = "SELECT * FROM partita";
 	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , goalCasa,goalTrasferta ) VALUES (?,?,?,?,?,?)";
