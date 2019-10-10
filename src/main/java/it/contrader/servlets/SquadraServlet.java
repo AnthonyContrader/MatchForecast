@@ -40,7 +40,7 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
  
   switch (mode.toUpperCase()) {
   
-  case "LISTAPARTITE":
+  case "SQUADRALIST":
         
       updateList(request);
       getServletContext().getRequestDispatcher("/squadra/squadramanager.jsp").forward(request, response);
@@ -76,7 +76,7 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
   ans = service.insert(dto);
   request.setAttribute("ans", ans);
   updateList(request);
-  getServletContext().getRequestDispatcher("/user/partitamanager.jsp").forward(request, response);
+  getServletContext().getRequestDispatcher("/squadra/squadramanager.jsp").forward(request, response);
 	break;
   
 case "UPDATE":
