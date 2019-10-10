@@ -58,54 +58,54 @@
 <form id="floatright" action="PartitarServlet?mode=insert" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="squadra1">Squadra1</label>
+      <label for="sq1">Squadra1</label>
     </div>
     <div class="col-75">
-      <input type="text" id="squadra1" name="squadra1" placeholder="inserisci squadra1">
+      <input type="text" id="sq1" name="squadra1" placeholder="inserisci squadra1">
     </div>
   </div>
   
   <div class="row">
     <div class="col-25">
-      <label for="squadra2">Squadra2</label>
+      <label for="sq2">Squadra2</label>
     </div>
     <div class="col-75">
-      <input type="text" id="squadra2" name="squadra2" placeholder="inserisci squadra2">
+      <input type="text" id="sq2" name="squadra2" placeholder="inserisci squadra2">
     </div>
   </div>
   
   <div class="row">
     <div class="col-25">
-     <label for="data">Data</label>
+     <label for="dt">Data</label>
     </div>
     <div class="col-75">
-      <input type="text" id="data" name="data" placeholder="inserisci data"> 
+      <input type="text" id="dt" name="data" placeholder="inserisci data"> 
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-     <label for="orario">Orario</label>
+     <label for="or">Orario</label>
     </div>
     <div class="col-75">
-      <input type="text" id="orario" name="orario" placeholder="inserisci orario"> 
+      <input type="text" id="or" name="orario" placeholder="inserisci orario"> 
     </div>
   </div>
   
    
     <div class="row">
     <div class="col-25">
-     <label for="orario">GoalCasa</label>
+     <label for="gc">GoalCasa</label>
     </div>
     <div class="col-75">
-      <input type="text" id="goalcasa" name="goalcasa" placeholder="inserisci goalcasa"> 
+      <input type="text" id="gc" name="goalcasa" placeholder="inserisci goalcasa"> 
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-     <label for="orario">GoalTrasferta</label>
+     <label for="gt">GoalTrasferta</label>
     </div>
     <div class="col-75">
-      <input type="text" id="goaltrasferta" name="goaltrasferta" placeholder="inserisci goaltrasferta"> 
+      <input type="text" id="gt" name="goaltrasferta" placeholder="inserisci goaltrasferta"> 
     </div>
   </div>
  
