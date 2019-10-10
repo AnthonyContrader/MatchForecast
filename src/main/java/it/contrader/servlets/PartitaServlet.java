@@ -40,7 +40,7 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
  
   switch (mode.toUpperCase()) {
   
-  case "LISTAPARTITE":
+  case "PARTITALIST":
         
       updateList(request);
       getServletContext().getRequestDispatcher("/partita/partitamanager.jsp").forward(request, response);
@@ -63,17 +63,17 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
   
   case "INSERT":
   
-  String squadra1 = request.getParameter("squadra1");
-  String squadra2 =request.getParameter("squadra2");
-  int data =Integer.parseInt(request.getParameter("data"));
-  int orario =Integer.parseInt(request.getParameter("orario"));
-  int goalCasa =Integer.parseInt(request.getParameter("goalCasa"));
-  int goalTrasferta =Integer.parseInt(request.getParameter("goalTrasferta"));
+  String squadra1 = request.getParameter("squadra1").toString();
+  String squadra2 =request.getParameter("squadra2").toString();
+  int data =Integer.parseInt(request.getParameter("data").toString());
+  int orario =Integer.parseInt(request.getParameter("orario").toString());
+  int goalCasa =Integer.parseInt(request.getParameter("goalCasa").toString());
+  int goalTrasferta =Integer.parseInt(request.getParameter("goalTrasferta").toString());
   dto = new PartitaDTO (squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
   ans = service.insert(dto);
   request.setAttribute("ans", ans);
   updateList(request);
-  getServletContext().getRequestDispatcher("/user/partitamanager.jsp").forward(request, response);
+  getServletContext().getRequestDispatcher("/partita/partitamanager.jsp").forward(request, response);
 	break;
   
   
@@ -91,7 +91,7 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
 		dto = new PartitaDTO (squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
 		ans = service.update(dto);
 		updateList(request);
-		getServletContext().getRequestDispatcher("/user/partitamanager.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/partita/partitamanager.jsp").forward(request, response);
 		break;
 
 	case "DELETE":
@@ -99,7 +99,7 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
 		ans = service.delete(id);
 		request.setAttribute("ans", ans);
 		updateList(request);
-		getServletContext().getRequestDispatcher("/user/partitamanager.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/partita/partitamanager.jsp").forward(request, response);
 		break;
   
   

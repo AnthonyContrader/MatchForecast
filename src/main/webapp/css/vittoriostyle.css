@@ -15,7 +15,7 @@ div.text{
 	text-align: center;
 	font-size: 800%;
 	font-family: sans-serif;
-	color: #00a990;
+	color: #ff8c00;
 }
 
 .main {
@@ -30,7 +30,7 @@ div.text{
 .footer {
 	text-align: center;
 	font-size: 70%;
-	background-color: #00a990;
+	background-color: #ff8c00;
 	color: #ffffff;
 	width: 100%;
 	border-radius: 7px;
@@ -138,7 +138,7 @@ tr:nth-child(even) {
 }
 
 th {
-	background-color: #00a990;
+	background-color: #ff8c00;
 	color: #ffffff;
 	
 }
@@ -190,7 +190,7 @@ input {
 }
 
 input:hover {
-  background-color:  #00ccad;
+  background-color:  #ff8000;
 }
 
 
@@ -239,7 +239,7 @@ label {
 button {
   -webkit-transition-duration: 0.1s; /* Safari */
   transition-duration: 0.1s;
-  background-color:  #00a990;
+  background-color:  #ff8c00;
   border: none;
   color: white;
   padding: 3% 3%;
@@ -257,7 +257,7 @@ button {
 }
 
 button:hover {
-  background-color:  #00ccad; 
+  background-color:  #ff8c00; 
   color: white;
 }
 
@@ -284,7 +284,7 @@ button:hover {
 
 /*Navigation bar*/
 div.navbar {
-	background: #00a990;
+	background: #ff8c00;
 	overflow: hidden;
 	position: sticky;
 	width: 100%;
@@ -304,7 +304,7 @@ div.navbar a {
 	text-decoration: none;
 	font-size: 17px;
 	border-radius: 7px;
-	background: #00a990;
+	background: #ff8c00;
 }
 
 div.navbar a:hover {
@@ -313,7 +313,7 @@ div.navbar a:hover {
 }
 
 div.navbar a.active {
-	background: #00ccad;
+	background: #ff8c00;
 	color: #ffffff;
 }
 
