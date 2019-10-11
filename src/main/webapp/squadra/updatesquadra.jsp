@@ -9,12 +9,7 @@
 </head>
 <body>
 <%@ include file="../css/header.jsp" %>
-<div class="navbar">
-<a href="homeadmin.jsp">Home</a>
-<a class="active" href="SquadraServlet?mode=squadralist">Squadre</a>
-<a href="LogoutServlet" id="Logout">Logout</a>
-</div>
-<br>
+<%@ include file="../functions/menuPartita.jsp" %>
 <div class="main">
 
 <%SquadraDTO u = (SquadraDTO) request.getAttribute("dto"); %>

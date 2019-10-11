@@ -10,9 +10,9 @@ import it.contrader.model.Partita;
 public class PartitaDAO implements DAO<Partita> {
 
 	private final String QUERY_ALL = "SELECT * FROM partita";
-	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , goalCasa,goalTrasferta ) VALUES (?,?,?,?,?,?)";
+	private final String QUERY_CREATE = "INSERT INTO partita (squadra1,squadra2, data, orario , golCasa,golTrasferta ) VALUES (?,?,?,?,?,?)";
 	private final String QUERY_READ = "SELECT * FROM partita WHERE id=?";
-	private final String QUERY_UPDATE = "UPDATE partita SET squadra1=?, squadra2=?, data=?, orario=? ,goalCasa=?,goalTrasferta=? WHERE id=?";
+	private final String QUERY_UPDATE = "UPDATE partita SET squadra1=?, squadra2=?, data=?, orario=? ,golCasa=?,golTrasferta=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM partita WHERE id=?";
 
 	public PartitaDAO() {
@@ -32,8 +32,8 @@ public class PartitaDAO implements DAO<Partita> {
 				String squadra2 = resultSet.getString("squadra2");
 				int  data = resultSet.getInt("data");
 				int  orario = resultSet.getInt("orario");
-				int goalCasa = resultSet.getInt("goalCasa");
-				int goalTrasferta = resultSet.getInt("goalTrasferta");
+				int goalCasa = resultSet.getInt("golCasa");
+				int goalTrasferta = resultSet.getInt("golTrasferta");
 				partita = new Partita(squadra1,squadra2,data,orario,goalCasa,goalTrasferta );
 				partita.setId(id);
 				partitaList.add(partita);
@@ -78,8 +78,8 @@ public class PartitaDAO implements DAO<Partita> {
 			squadra2 = resultSet.getString("squadra2");
 			data = resultSet.getInt("data");
 			orario = resultSet.getInt("orario");
-			goalCasa = resultSet.getInt("goalCasa");
-			goalTrasferta = resultSet.getInt("goalTrasferta");
+			goalCasa = resultSet.getInt("golCasa");
+			goalTrasferta = resultSet.getInt("golTrasferta");
 			Partita partita = new Partita(squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
 			partita.setId(resultSet.getInt("id"));
 

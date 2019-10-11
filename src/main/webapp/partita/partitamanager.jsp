@@ -10,11 +10,8 @@
 </head>
 <body>
 <%@ include file="../css/header.jsp" %>
-<div class="navbar">
-  <a href="homeadmin.jsp">Home</a>
-  <a class="active"  href="PartitaServlet?mode=partitalist">Partite</a>
-  <a href="LogoutServlet" id="logout">Logout</a>
-</div>
+<%@ include file="../functions/menuPartita.jsp" %>
+
 <div class="main">
 	<%List<PartitaDTO> list = (List<PartitaDTO>) request.getAttribute("list");%>
 
@@ -36,9 +33,10 @@
 			for (PartitaDTO p : list) {
 		%>
 		<tr>
-			<td><a href=PartitaServlet?mode=read&id=<%=p.getId()%>>
-					<%=p.getSquadra1()%>
-			</a> 
+			<a href=PartitaServlet?mode=update&id=<%=p.getId()%>></a>
+			
+			
+		   <td> <%=p.getSquadra1()%></td> 
 			<td><%=p.getSquadra2()%></td>
 			<td><%=p.getData()%></td>
 			<td><%=p.getOrario()%></td>
@@ -55,7 +53,7 @@
 			}
 		%>
 	</table>
-<form id="floatright" action="PartitarServlet?mode=insert" method="post">
+<form id="floatright" action="PartitaServlet?mode=insert" method="post">
   <div class="row">
     <div class="col-25">
       <label for="sq1">Squadra1</label>
@@ -97,7 +95,7 @@
      <label for="gc">GoalCasa</label>
     </div>
     <div class="col-75">
-      <input type="text" id="gc" name="goalcasa" placeholder="inserisci goalcasa"> 
+      <input type="number" id="gc" name="golCasa" placeholder="inserisci goalcasa"> 
     </div>
   </div>
   <div class="row">
@@ -105,7 +103,7 @@
      <label for="gt">GoalTrasferta</label>
     </div>
     <div class="col-75">
-      <input type="text" id="gt" name="goaltrasferta" placeholder="inserisci goaltrasferta"> 
+      <input type="number" id="gt" name="golTrasferta" placeholder="inserisci goaltrasferta"> 
     </div>
   </div>
  

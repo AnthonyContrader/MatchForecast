@@ -5,15 +5,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="../css/vittoriostyle.css" rel="stylesheet">
-<title>Edit User</title>
+<title>Edit Partita</title>
 </head>
 <body>
 <%@ include file="../css/header.jsp" %>
-<div class="navbar">
-  <a href="homeadmin.jsp">Home</a>
-  <a class="active" href="PartitaServlet?mode=userlist">Partite</a>
-  <a href="LogoutServlet" id="logout">Logout</a>
-</div>
+<%@ include file="../functions/menuPartita.jsp" %>
 <br>
 <div class="main">
 
@@ -26,7 +22,7 @@
       <label for="sq1">Squadra1</label>
     </div>
     <div class="col-75">
-      <input type="text" id="sq1" name="username" value=<%=p.getSquadra1()%>>
+      <input type="text" id="sq1" name="squadra1" value=<%=p.getSquadra1()%>>
     </div>
   </div>
   <div class="row">
@@ -52,7 +48,7 @@
      <label for="or">Orario</label>
     </div>
     <div class="col-75">
-      <input type="text" id="or" name="orario" value=<%=p.getOrario()%>> 
+      <input type="number" id="or" name="orario" value=<%=p.getOrario()%>> 
     </div>
   </div>
   
@@ -62,7 +58,7 @@
      <label for="gc">GoalCasa</label>
     </div>
     <div class="col-75">
-      <input type="text" id="gc" name="goalcasa" value=<%=p.getGoalCasa()%>> 
+      <input type="text" id="gc" name="golCasa" value=<%=p.getGoalCasa()%>> 
     </div>
   </div>
   <div class="row">
@@ -70,7 +66,7 @@
      <label for="gt">GoalTrasferta</label>
     </div>
     <div class="col-75">
-      <input type="text" id="gt" name="goaltrasferta" value=<%=p.getGoalTrasferta()%>> 
+      <input type="text" id="gt" name="golTrasferta" value=<%=p.getGoalTrasferta()%>> 
     </div>
   </div>
   

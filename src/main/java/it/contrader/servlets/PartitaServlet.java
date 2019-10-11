@@ -65,10 +65,10 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
   
   String squadra1 = request.getParameter("squadra1").toString();
   String squadra2 =request.getParameter("squadra2").toString();
-  int data =Integer.parseInt(request.getParameter("data").toString());
-  int orario =Integer.parseInt(request.getParameter("orario").toString());
-  int goalCasa =Integer.parseInt(request.getParameter("goalCasa").toString());
-  int goalTrasferta =Integer.parseInt(request.getParameter("goalTrasferta").toString());
+  int data =Integer.parseInt(request.getParameter("data"));
+  int orario =Integer.parseInt(request.getParameter("orario"));
+  int goalCasa =Integer.parseInt(request.getParameter("golCasa"));
+  int goalTrasferta =Integer.parseInt(request.getParameter("golTrasferta"));
   dto = new PartitaDTO (squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
   ans = service.insert(dto);
   request.setAttribute("ans", ans);
@@ -84,8 +84,8 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
 		squadra2 = request.getParameter("squadra2");
 		data = Integer.parseInt(request.getParameter("data"));
 		orario = Integer.parseInt(request.getParameter("orario"));
-		goalCasa = Integer.parseInt(request.getParameter("goalCasa"));
-		goalTrasferta = Integer.parseInt(request.getParameter("goalTrasferta"));
+		goalCasa = Integer.parseInt(request.getParameter("golCasa"));
+		goalTrasferta = Integer.parseInt(request.getParameter("golTrasferta"));
 		id = Integer.parseInt(request.getParameter("id"));
 	
 		dto = new PartitaDTO (squadra1,squadra2,data,orario,goalCasa,goalTrasferta);

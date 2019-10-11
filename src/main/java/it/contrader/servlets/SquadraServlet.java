@@ -53,10 +53,10 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
         request.setAttribute("dto", dto);
     
         if (request.getParameter("update") == null) {
-		 getServletContext().getRequestDispatcher("/squadra/readpartita.jsp").forward(request, response);
+		 getServletContext().getRequestDispatcher("/squadra/readsquadra.jsp").forward(request, response);
     }
   
-        else getServletContext().getRequestDispatcher("/squadra/updatepartita.jsp").forward(request, response);
+        else getServletContext().getRequestDispatcher("/squadra/updatesquadra.jsp").forward(request, response);
   
   
   break ;

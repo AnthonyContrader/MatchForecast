@@ -9,11 +9,7 @@
 </head>
 <body>
 <%@ include file="../css/header.jsp" %>
-<div class="navbar">
-  <a href="homeadmin.jsp">Home</a>
-  <a class="active"  href="PartitaServlet?mode=partitalist">Partite</a>
-  <a href="LogoutServlet" id="logout">Logout</a>
-</div>
+<%@ include file="../functions/menuPartita.jsp" %>
 <br>
 
 <div class="main">

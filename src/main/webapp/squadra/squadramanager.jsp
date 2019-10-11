@@ -10,11 +10,7 @@
 <body>
 <%@ include file="../css/header.jsp" %>
 
-<div class="navbar">
-   <a href="homeadmin.jsp">Home</a>
-   <a class="active" href=SquadraServlet?mode=squadraList">Squadre</a>
-   <a href="LogoutServlet" id="Logout">Logout</a>
-</div>
+<%@ include file="../functions/menuPartita.jsp" %>
 <div class="main">
 <%
   List<SquadraDTO> list = (List<SquadraDTO>) request.getAttribute("list");
@@ -50,7 +46,7 @@
   <td><%=u.getSconfitteCasa() %></td>
  <td><%=u.getSconfitteEsterne() %></td>
   <td><%=u.getPareggiCasa() %></td>
- <td><%=u.getPareggiEsterne %></td>
+ <td><%=u.getPareggiEsterne() %></td>
  <td><a href=SquadraServlet?mode=read&update=true&id=<%=u.getId() %>>Edit</a>
  </td>
  <td><a href=SquadraServlet?mode=delete&id=<%=u.getId() %>>Delete</a>

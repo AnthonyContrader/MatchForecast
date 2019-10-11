@@ -8,7 +8,7 @@ import it.contrader.model.Partita;
 
 public class PartitaService extends AbstractService<Partita, PartitaDTO> {
 	
-	//Istanzio DAO  e Converter specifici.
+	
 	public PartitaService(){
 		this.dao = new PartitaDAO();
 		this.converter = new PartitaConverter();
