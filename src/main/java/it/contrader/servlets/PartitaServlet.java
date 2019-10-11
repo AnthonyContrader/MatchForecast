@@ -88,7 +88,7 @@ public void service(HttpServletRequest request , HttpServletResponse response)th
 		goalTrasferta = Integer.parseInt(request.getParameter("golTrasferta"));
 		id = Integer.parseInt(request.getParameter("id"));
 	
-		dto = new PartitaDTO (squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
+		dto = new PartitaDTO (id,squadra1,squadra2,data,orario,goalCasa,goalTrasferta);
 		ans = service.update(dto);
 		updateList(request);
 		getServletContext().getRequestDispatcher("/partita/partitamanager.jsp").forward(request, response);

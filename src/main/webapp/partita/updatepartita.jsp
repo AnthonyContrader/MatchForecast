@@ -72,7 +72,7 @@
   
   
   
-      <button type="submit" >Edit</button>
+      <button type="submit" >Insert</button>
 </form>
 
 	
