@@ -19,4 +19,13 @@ public class UserDTO {
 
 	private Usertype usertype;
 
+    private float wSummary;
+	
+	private float mSummary;
+	
+	private float aSummary;
+	
+	private float wallet;
+
 }
+

@@ -61,13 +61,18 @@ public class UserController {
 
 	@PostMapping("/update")
 	public String update(HttpServletRequest request, @RequestParam("id") Long id, @RequestParam("username") String username,
-			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype) {
+			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype,@RequestParam("wSummary") float wSummary,
+			@RequestParam("mSummary") float mSummary,@RequestParam("aSummary") float aSummary,@RequestParam("wallet") float wallet) {
 
 		UserDTO dto = new UserDTO();
 		dto.setId(id);
 		dto.setUsername(username);
 		dto.setPassword(password);
 		dto.setUsertype(usertype);
+		dto.setWSummary(wSummary);
+		dto.setMSummary(mSummary);
+		dto.setASummary(aSummary);
+		dto.setWallet(wallet);
 		service.update(dto);
 		setAll(request);
 		return "users";
@@ -76,12 +81,17 @@ public class UserController {
 
 	@PostMapping("/insert")
 	public String insert(HttpServletRequest request, @RequestParam("username") String username,
-			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype) {
+			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype,@RequestParam("wSummary") float wSummary,
+			@RequestParam("mSummary") float mSummary,@RequestParam("aSummary") float aSummary,@RequestParam("wallet") float wallet) {
 		UserDTO dto = new UserDTO();
 		dto.setUsername(username);
 		dto.setPassword(password);
 		dto.setUsertype(usertype);
-		service.insert(dto);
+		dto.setWSummary(wSummary);
+		dto.setMSummary(mSummary);
+		dto.setASummary(aSummary);
+		dto.setWallet(wallet);
+	    service.insert(dto);
 		setAll(request);
 		return "users";
 	}

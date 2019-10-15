@@ -30,5 +30,21 @@ public class User {
 	private String password;
 
 	private Usertype usertype;
+	
+	@Column(name = "wSummary")
+	
+	private float wSummary;
+	
+	@Column(name = "mSummary")
+	private float mSummary;
+	
+	@Column(name = "aSummary")
+	private float aSummary;
+	
+	@Column(name = "wallet")
+	private float wallet;
 
+	//@OneToMany(mappedBy="user")
+    //private Set<Forecast> forecast;
+	
 }

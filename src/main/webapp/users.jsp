@@ -29,6 +29,10 @@
 				<th>Username</th>
 				<th>Password</th>
 				<th>Usertype</th>
+				<th>Weekly Summary</th>
+		        <th>Monthly Summary</th>
+		        <th>Annual Summary</th>
+		        <th>Wallet</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -40,6 +44,10 @@
 				</a></td>
 				<td><%=u.getPassword()%></td>
 				<td><%=u.getUsertype()%></td>
+				<td><%=u.getWSummary()%></td>
+                <td><%=u.getMSummary()%></td>
+                <td><%=u.getASummary()%></td>
+                <td><%=u.getWallet()%></td>		
 				<td><a href="/user/preupdate?id=<%=u.getId()%>">Edit</a></td>
 
 
@@ -82,6 +90,43 @@
 						<option value="USER">USER</option>
 
 					</select>
+				</div>
+			</div>
+			 <div class="row">
+				<div class="col-25">
+					<label for="ws">Weekly Summary</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="ws" name="wSummary"
+						placeholder="inserisci weekly summary">
+				</div>
+			</div>
+			 <div class="row">
+				<div class="col-25">
+					<label for="ms">Monthly Summary</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="ms" name="mSummary"
+						placeholder="inserisci monthly summary">
+				</div>
+			</div>
+			 <div class="row">
+				<div class="col-25">
+					<label for="as">Annual Summary</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="as" name="aSummary"
+						placeholder="inserisci annual summary">
+				</div>
+			</div>
+			
+			 <div class="row">
+				<div class="col-25">
+					<label for="wall">Wallet</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="wall" name="wallet"
+						placeholder="inserisci wallet">
 				</div>
 			</div>
 			<button type="submit">Insert</button>

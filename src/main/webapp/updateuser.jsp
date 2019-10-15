@@ -55,6 +55,41 @@
     	</div>
     	<input type="hidden" name="id" value =<%=u.getId() %>>
   </div>
+  
+     <div class="row">
+    <div class="col-25">
+      <label for="ws">Weekly Summary</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="ws" name="wSummary" value=<%=u.getWSummary()%>>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="ms">Monthly Summary</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="ms" name="mSummary" value=<%=u.getMSummary()%>>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="as">Annual Summary</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="as" name="aSummary" value=<%=u.getASummary()%>>
+    </div>
+  </div>  
+     <div class="row">
+    <div class="col-25">
+      <label for="wall">Wallet</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="wall" name="wallet" value=<%=u.getWallet() %>>
+    </div>
+  </div> 
+      
       <button type="submit" >Edit</button>
 </form>
 

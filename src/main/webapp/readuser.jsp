@@ -30,12 +30,20 @@
 				<th>Username</th>
 				<th>Password</th>
 				<th>Usertype</th>
+		        <th>Weekly Summary</th>
+		        <th>Monthly Summary</th>
+		        <th>Annual Summary</th>
+		        <th>Wallet</th>
 			</tr>
 			<tr>
 				<td><%=u.getId()%></td>
 				<td><%=u.getUsername()%></td>
 				<td><%=u.getPassword()%></td>
 				<td><%=u.getUsertype()%></td>
+                <td><%=u.getWSummary()%></td>
+                <td><%=u.getMSummary()%></td>
+                <td><%=u.getASummary()%></td>
+                <td><%=u.getWallet()%></td>			
 			</tr>
 		</table>
 
