@@ -14,7 +14,7 @@
 
 	<div class="navbar">
 		<a href="/homeadmin.jsp">Home</a> <a class="active"
-			href="/partita/getall">Partite</a> <a href="/user/logout" id="logout">Logout</a>
+			href="/partita/getall">Partita</a> <a href="/partita/logout" id="logout">Logout</a>
 	</div>
 	<div class="main">
 		<%
@@ -24,9 +24,9 @@
 		<br>
 		<table>
 			<tr>
-				<th>CodiceForecast</th>
+				<th>codiceForecast</th>
 				<th>Squadra1</th>
-				<th>Squadra2</th>
+				<th>squadra2</th>
 				<th>Data</th>
 		        <th>Orario</th>
 		        <th>GoalCasa</th>
@@ -38,7 +38,7 @@
 				for (PartitaDTO u : list) {
 			%>
 			<tr>
-				<td><a href="/partita/read?id=<%=u.getIdPartita()%>"> 
+				<td><a href="/partita/read?idPartita=<%=u.getIdPartita()%>"> 
 				</a></td>
 				<td><%=u.getCodiceForecast()%></td>
 				<td><%=u.getSquadra1()%></td>
@@ -47,10 +47,10 @@
                 <td><%=u.getOrario()%></td>
                 <td><%=u.getGoalCasa()%></td>	
                 <td><%=u.getGoalTrasferta()%></td>	
-				<td><a href="/user/preupdate?id=<%=u.getIdPartita()%>">Edit</a></td>
+				<td><a href="/partita/preupdate?idPartita=<%=u.getIdPartita()%>">Edit</a></td>
 
 
-				<td><a href="/user/delete?id=<%=u.getIdPartita()%>">Delete</a></td>
+				<td><a href="/partita/delete?idPartita=<%=u.getIdPartita()%>">Delete</a></td>
 
 			</tr>
 			<%
@@ -62,10 +62,10 @@
 		<form id="floatright" action="/partita/insert" method="post">
 			<div class="row">
 				<div class="col-25">
-					<label for="cf">CodiceForecast</label>
+					<label for="cf">codiceForecast</label>
 				</div>
 				<div class="col-75">
-					<input type="cf" id="codiceForecast" name="CodiceForecast"
+					<input type="text" id="cf" name="codiceForecast"
 						placeholder="inserisci codice forecast">
 				</div>
 			</div>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="row">
 				<div class="col-25">
-					<label for="sq2">Squadra2</label>
+					<label for="sq2">squadra2</label>
 				</div>
 				<div class="col-75">
 					<input type="text" id="sq2" name="squadra1"

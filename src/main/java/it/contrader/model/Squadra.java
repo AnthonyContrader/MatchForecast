@@ -21,7 +21,7 @@ public class Squadra {
 	
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long nomeSquadra;
+private long nomeSquadra;
 
 
 @Column

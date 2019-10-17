@@ -1,12 +1,10 @@
 package it.contrader.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import java.time.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,20 +15,24 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Forecast {
-	
+
 	@Id
-	@GeneratedValue( strategy = GenerationType.IDENTITY)
-	private Long codiceForecast;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long codiceForecast;
+
 	
-	@ManyToOne
-	@JoinColumn(name="id")
-	@Column
-	private Long id;
+	
+	@Column(name = "id")
+	private long id;
+	@Column(name = "investimento")
 	private float investimento;
+	@Column(name = "guadagno")
 	private float guadagno;
-	private double pRischio;
+	@Column(name = "pRischio")
+	private float pRischio;
+	@Column(name = "wallet")
 	private float wallet;
-	private LocalTime durata;
-	
+	@Column(name = "durata")
+	private String durata;
 
 }

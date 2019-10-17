@@ -1,5 +1,4 @@
 package it.contrader.dto;
-import it.contrader.model.Partita;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +9,9 @@ import lombok.NoArgsConstructor;
 
 public class PartitaDTO {
 	
-	private Long idPartita;
+	private long idPartita;
 	
-	private Long codiceForecast;
+	private long codiceForecast;
 	
 	private String squadra1;
 

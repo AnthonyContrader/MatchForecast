@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import ="it.contrader.dto.ForecastDTO"%>
+    pageEncoding="ISO-8859-1" import="it.contrader.dto.ForecastDTO"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -12,8 +12,9 @@
 </head>
 <body>
      <%@ include file="./css/header.jsp"%>
-     <div class= "navbar"><a href= "/homeadmin.jsp">Home</a><a class= "active" 
-      href = "/forecast/getall">Forecast</a><a href="/forecast/logout" id="logout"> Logout </a>
+     <div class="navbar">
+     <a href="/homeadmin.jsp">Home</a>       <a class="active" 
+      href="/forecast/getall">Forecasts</a>  <a href="/forecast/logout" id="logout"> Logout </a>
       
       </div>
       <br>
@@ -29,18 +30,18 @@
                <th>ID</th>
                <th>Investimento</th>
                <th>Guadagno</th>
-               <th>P.Rischio</th>
+               <th>pRischio</th>
                <th>Wallet</th>
                <th>Durata</th>
            </tr>
            <tr>
-             <td><%=f.getCodiceForecast() %></td>
-             <td><%=f.getId() %></td>
-             <td><%=f.getInvestimento() %></td>
-             <td><%=f.getGuadagno() %></td>
-             <td><%=f.getPRischio()  %></td>
-             <td><%=f.getWallet()  %></td>
-             <td><%=f.getDurata()  %></td>
+             <td><%=f.getCodiceForecast()%></td>
+             <td><%=f.getId()%></td>
+             <td><%=f.getInvestimento()%></td>
+             <td><%=f.getGuadagno()%></td>
+             <td><%=f.getPRischio() %></td>
+             <td><%=f.getWallet()%></td>
+             <td><%=f.getDurata()%></td>
            </tr>
        </table>
                

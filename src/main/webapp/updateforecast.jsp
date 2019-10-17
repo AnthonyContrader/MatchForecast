@@ -53,10 +53,10 @@
   </div>
   <div class="row">
 				<div class="col-25">
-					<label for="pris">P.Rischio</label>
+					<label for="pris">pRischio</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="pris" name="p.Rischio"
+					<input type="text" id="pris" name="pRischio"
 						value=<%=f.getPRischio() %>>
 				</div>
 			</div>

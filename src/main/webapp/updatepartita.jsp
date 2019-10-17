@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="User Edit page">
+<meta name="description" content="Partita Edit page">
 <meta name="author" content="Vittorio Valent">
 <link href="/css/vittoriostyle.css" rel="stylesheet">
 <title>Edit Partita</title>
@@ -28,7 +28,7 @@
   <form id="floatleft" action="/partite/update" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="cf">CodiceForecast</label>
+      <label for="cf">codiceForecast</label>
     </div>
     <div class="col-75">
       <input type="text" id="cf" name="codiceForecast" value=<%=u.getCodiceForecast()%>>
@@ -44,7 +44,7 @@
   </div>
     <div class="row">
     <div class="col-25">
-      <label for="sq2">Squadra2</label>
+      <label for="sq2">squadra2</label>
     </div>
     <div class="col-75">
       <input type="text" id="sq2" name="squadra2" value=<%=u.getSquadra2()%>>

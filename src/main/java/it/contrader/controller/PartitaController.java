@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import it.contrader.dto.PartitaDTO;
-
 import it.contrader.model.Partita;
 import it.contrader.service.PartitaService;
 
@@ -30,21 +29,20 @@ public class PartitaController {
 	
 
 	@GetMapping("/delete")
-	public String delete(HttpServletRequest request, @RequestParam("IdPartita") Long idPartita) {
+	public String delete(HttpServletRequest request, @RequestParam("idPartita") long idPartita) {
 		service.delete(idPartita);
 		setAll(request);
 		return "partita";
 	}
 	
    @GetMapping("/preupdate")
-   public String preUpdate(HttpServletRequest request,@RequestParam("IdPartita") Long idPartita) {
+   public String preUpdate(HttpServletRequest request,@RequestParam("idPartita") long idPartita) {
 	     request.getSession().setAttribute("dto", service.read(idPartita));
 	     return "updatepartita";
    }
 
 @PostMapping("/update")
-
-public String update(HttpServletRequest request, @RequestParam("idPartita") Long idPartita, @RequestParam("codiceForecast") Long codiceForecast,
+public String update(HttpServletRequest request, @RequestParam("idPartita") long idPartita, @RequestParam("codiceForecast") long codiceForecast,
 		@RequestParam("squadra1") String squadra1, @RequestParam("squadra2") String squadra2,@RequestParam("data") int data,
 		@RequestParam("orario") int orario,@RequestParam("goalCasa") int goalCasa,@RequestParam("goalTrasferta") int goalTrasferta) {
 
@@ -59,19 +57,18 @@ public String update(HttpServletRequest request, @RequestParam("idPartita") Long
 	dto.setGoalTrasferta(goalTrasferta);
 	service.update(dto);
 	setAll(request);
-	return "partite";
+	return "partita";
 
 }
 
 
 @PostMapping("/insert")
-
-public String insert(HttpServletRequest request, @RequestParam("idPartita") Long idPartita, @RequestParam("codiceForecast") Long codiceForecast,
+public String insert(HttpServletRequest request, @RequestParam("codiceForecast") long codiceForecast,
 		@RequestParam("squadra1") String squadra1, @RequestParam("squadra2") String squadra2,@RequestParam("data") int data,
 		@RequestParam("orario") int orario,@RequestParam("goalCasa") int goalCasa,@RequestParam("goalTrasferta") int goalTrasferta) {
 
 	PartitaDTO dto = new PartitaDTO();
-	dto.setIdPartita(idPartita);
+	//dto.setIdPartita(idPartita);
 	dto.setCodiceForecast(codiceForecast);
 	dto.setSquadra1(squadra1);
 	dto.setSquadra2(squadra2);
@@ -79,15 +76,15 @@ public String insert(HttpServletRequest request, @RequestParam("idPartita") Long
 	dto.setOrario(orario);
 	dto.setGoalCasa(goalCasa);
 	dto.setGoalTrasferta(goalTrasferta);
-	service.update(dto);
+	service.insert(dto);
 	setAll(request);
-	return "partite";
+	return "partita";
 
 }
 
 
 @GetMapping("/read")
-public String read(HttpServletRequest request, @RequestParam("idPartita") Long idPartita) {
+public String read(HttpServletRequest request, @RequestParam("idPartita") long idPartita) {
 	request.getSession().setAttribute("dto", service.read(idPartita));
 	return "readpartita";
 }

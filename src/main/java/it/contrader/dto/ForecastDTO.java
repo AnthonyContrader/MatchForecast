@@ -1,5 +1,5 @@
 package it.contrader.dto;
-import java.time.LocalTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,11 +10,17 @@ import lombok.NoArgsConstructor;
 public class ForecastDTO {
 	
 
-    private Long codiceForecast;
-	private Long id;
+    private long codiceForecast;
+    
+	private long id;
+	
 	private float investimento;
+	
 	private float guadagno;
-	private double pRischio;
+	
+	private float pRischio;
+	
 	private float wallet;
-	private LocalTime durata;
+	
+	private String durata;
 }

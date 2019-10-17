@@ -21,16 +21,15 @@
            <%
                       List<ForecastDTO> list = (List<ForecastDTO>) request.getSession().getAttribute("list");
            %>
-           <br>
            
+           <br>
            
            <table>
            <tr>
-				<th>CodiceForecast</th>
 				<th>ID</th>
 				<th>Investimento</th>
 				<th>Guadagno</th>
-		        <th>P.Rischio</th>
+		        <th>pRischio</th>
 		        <th>Wallet</th>
 		        <th>Durata</th>
 		        <th></th>
@@ -40,28 +39,34 @@
 				for (ForecastDTO f : list) {
 			%>
 			<tr>
-			   <td><a href="/forecast/read?codiceForecast=<%=f.getCodiceForecast()%>"> <%=f.getId()%>
-				</a></td>
+			   <td><a href="/forecast/read?codiceForecast=<%=f.getCodiceForecast()%>"></a></td>
+			  <td><%=f.getId()%></td>
               <td><%=f.getInvestimento() %></td>
               <td><%=f.getGuadagno() %></td>
               <td><%=f.getPRischio()  %></td>
               <td><%=f.getWallet()  %></td>
               <td><%=f.getDurata()  %></td>
+              
               <td><a href="/forecast/preupdate?codiceForecast=<%=f.getCodiceForecast()%>">Edit</a></td>
+              
+              
               <td><a href="/forecast/delete?codiceForecast=<%=f.getCodiceForecast()%>">Delete</a></td>
+             
              </tr>
              <%
              }
              %>
            </table>
+           
+           
            <form id="floatright" action="/forecast/insert" method="post">
 			<div class="row">
 				<div class="col-25">
-					<label for="user">ID</label>
+					<label for="id">Id</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="forecast" name="id"
-						placeholder="inserisci ID">
+					<input type="text" id="id" name="id"
+						placeholder="inserisci id">
 				</div>
 			</div>
 			<div class="row">
@@ -84,19 +89,19 @@
 			</div>
 			<div class="row">
 				<div class="col-25">
-					<label for="pris">P.Rischio</label>
+					<label for="pRis">pRischio</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="pris" name="p.Rischio"
-						placeholder="inserisci la percentuale di rischio">
+					<input type="text" id="pRis" name="pRischio"
+						placeholder="inserisci rischio">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-25">
-					<label for="inv">Wallet</label>
+					<label for="wall">Wallet</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="wall" name="Wallet"
+					<input type="text" id="wall" name="wallet"
 						placeholder="inserisci il portafoglio">
 				</div>
 			</div>
@@ -111,6 +116,7 @@
 			</div>
 			<button type="submit">Insert</button>
 		</form>
+		
            </div>
            <br>
            <%@ include file="./css/footer.jsp"%>

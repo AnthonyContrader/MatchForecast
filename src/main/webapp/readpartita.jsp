@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="User Read">
+<meta name="description" content="Partita Read">
 <meta name="author" content="Vittorio Valent">
 <link href="/css/vittoriostyle.css" rel="stylesheet">
 <title>Read Partita</title>
@@ -14,7 +14,7 @@
 	<%@ include file="./css/header.jsp"%>
 	<div class="navbar">
 		<a href="/homeadmin.jsp">Home</a> <a class="active"
-			href="/user/getall">Partite</a> <a href="/user/logout" id="logout">Logout</a>
+			href="/partita/getall">Partite</a> <a href="/user/logout" id="logout">Logout</a>
 	</div>
 	<br>
 
@@ -29,7 +29,7 @@
 				<th>IdPartita</th>
 				<th>CodiceForecast</th>
 				<th>Squadra1</th>
-				<th>Squadra2</th>
+				<th>squadra2</th>
 		        <th>Data</th>
 		        <th>Orario</th>
 		        <th>GoalCasa</th>

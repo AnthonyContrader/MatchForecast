@@ -1,12 +1,13 @@
 package it.contrader.controller;
 import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import java.time.LocalTime;
+
 import it.contrader.dto.ForecastDTO;
 import it.contrader.service.ForecastService;
 
@@ -23,20 +24,20 @@ public class ForecastController {
 		return "forecasts";
 	}
 	@GetMapping("/delete")
-	public String delete(HttpServletRequest request, @RequestParam("codiceForecast") Long codiceForecast) {
+	public String delete(HttpServletRequest request, @RequestParam("codiceForecast") long codiceForecast) {
 		service.delete(codiceForecast);
 		setAll(request);
 		return "forecasts";
 	}
 	@GetMapping("/preupdate")
-	public String preUpdate(HttpServletRequest request, @RequestParam("codiceForecast") Long codiceForecast) {
+	public String preUpdate(HttpServletRequest request, @RequestParam("codiceForecast") long codiceForecast) {
 		request.getSession().setAttribute("dto", service.read(codiceForecast));
 		return "updateforecast";
 	}
 	@PostMapping("/update")
-	public String update(HttpServletRequest request, @RequestParam("codiceForecast") Long codiceForecast, @RequestParam("id") Long id,
+	public String update(HttpServletRequest request, @RequestParam("codiceForecast") long codiceForecast, @RequestParam("id") long id,
 			@RequestParam("investimento") float investimento,@RequestParam("guadagno") float guadagno,
-			@RequestParam("pRischio") double pRischio,@RequestParam("wallet") float wallet,@RequestParam("durata") LocalTime durata) {
+			@RequestParam("pRischio") float pRischio,@RequestParam("wallet") float wallet,@RequestParam("durata") String durata) {
 
 		ForecastDTO dto = new ForecastDTO();
 		dto.setCodiceForecast(codiceForecast);
@@ -52,9 +53,9 @@ public class ForecastController {
 
 	}
 	@PostMapping("/insert")
-	public String insert(HttpServletRequest request, @RequestParam("id") Long id,
+	public String insert(HttpServletRequest request, @RequestParam("id") long id,
 			@RequestParam("investimento") float investimento, @RequestParam("guadagno") float guadagno,
-			@RequestParam("pRischio") double pRischio,@RequestParam("wallet") float wallet,@RequestParam("durata") LocalTime durata) {
+			@RequestParam("pRischio") float pRischio,@RequestParam("wallet") float wallet,@RequestParam("durata") String durata) {
 		ForecastDTO dto = new ForecastDTO();
 		dto.setId(id);
 		dto.setInvestimento(investimento);
@@ -62,13 +63,12 @@ public class ForecastController {
 		dto.setPRischio(pRischio);
 		dto.setWallet(wallet);
 		dto.setDurata(durata);
-		service.update(dto);
-	    service.insert(dto);
+		service.insert(dto);
 		setAll(request);
 		return "forecasts";
 	}
 	@GetMapping("/read")
-	public String read(HttpServletRequest request, @RequestParam("codiceForecast") Long codiceForecast) {
+	public String read(HttpServletRequest request, @RequestParam("codiceForecast") long codiceForecast) {
 		request.getSession().setAttribute("dto", service.read(codiceForecast));
 		return "readforecast";
 	}

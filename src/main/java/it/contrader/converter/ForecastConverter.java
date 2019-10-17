@@ -13,8 +13,8 @@ public class ForecastConverter extends AbstractConverter<Forecast, ForecastDTO> 
 	public Forecast toEntity(ForecastDTO forecastDTO) {
 		Forecast forecast = null;
 		if (forecastDTO != null) {
-			forecast = new Forecast(forecastDTO.getCodiceForecast(), forecastDTO.getId(), forecastDTO.getInvestimento(), forecastDTO.getGuadagno(),forecastDTO.getPRischio(),forecastDTO.getWallet(),forecastDTO.getDurata());
-		}
+			forecast = new Forecast(forecastDTO.getCodiceForecast(),forecastDTO.getId(),forecastDTO.getInvestimento(),forecastDTO.getGuadagno(),forecastDTO.getPRischio(),forecastDTO.getWallet(),forecastDTO.getDurata());
+			}
 		return forecast;
 	}
 
