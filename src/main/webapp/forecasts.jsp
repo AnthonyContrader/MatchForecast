@@ -13,10 +13,7 @@
 <body>
 <%@ include file="./css/header.jsp"%>
 
-	<div class="navbar">
-		<a href="/homeadmin.jsp">Home</a> <a class="active"
-		href="/forecast/getall">Forecast</a> <a href="/forecast/logout" id="logout">Logout</a>
-	</div>
+	<%@ include file="./functionbar/menu.jsp" %>
 <div class="main">
            <%
                       List<ForecastDTO> list = (List<ForecastDTO>) request.getSession().getAttribute("list");
@@ -26,14 +23,14 @@
            
            <table>
            <tr>
-				<th>ID</th>
-				<th>Investimento</th>
-				<th>Guadagno</th>
-		        <th>pRischio</th>
-		        <th>Wallet</th>
-		        <th>Durata</th>
-		        <th></th>
-				<th></th>
+			<th>ID</th>
+			<th>Investimento</th>
+			<th>Guadagno</th>
+		    <th>pRischio</th>
+		    <th>Wallet</th>
+		    <th>Durata</th>
+		    <th></th>
+			<th></th>
 		  </tr>
            <%
 				for (ForecastDTO f : list) {

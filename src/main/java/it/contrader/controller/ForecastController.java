@@ -35,7 +35,7 @@ public class ForecastController {
 		return "updateforecast";
 	}
 	@PostMapping("/update")
-	public String update(HttpServletRequest request, @RequestParam("codiceForecast") long codiceForecast, @RequestParam("id") long id,
+	public String update(HttpServletRequest request,@RequestParam("codiceForecast") long codiceForecast, @RequestParam("id") long id,
 			@RequestParam("investimento") float investimento,@RequestParam("guadagno") float guadagno,
 			@RequestParam("pRischio") float pRischio,@RequestParam("wallet") float wallet,@RequestParam("durata") String durata) {
 

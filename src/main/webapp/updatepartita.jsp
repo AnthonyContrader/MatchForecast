@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="it.contrader.dto.PartitaDTO"%>
-    <!DOCTYPE html>ù
+    <!DOCTYPE html>
     <html>
     <head>
     <meta charset="utf-8">
@@ -15,17 +15,15 @@
     
    <body>
 <%@ include file="./css/header.jsp" %>
-<div class="navbar">
-  <a href="/homeadmin.jsp">Home</a>
-  <a class="active" href="/partita/getall">Partite</a>
-  <a href="/user/logout" id="logout">Logout</a>
-</div>
+<%@ include file="./functionbar/menu.jsp" %>
+
 <br>
 <div class="main"> 
 
 <%PartitaDTO u =(PartitaDTO) request.getSession().getAttribute("dto"); %>
 
   <form id="floatleft" action="/partite/update" method="post">
+  <div><input type="hidden" name="idPartita" value =<%=u.getIdPartita() %>></div>
   <div class="row">
     <div class="col-25">
       <label for="cf">codiceForecast</label>

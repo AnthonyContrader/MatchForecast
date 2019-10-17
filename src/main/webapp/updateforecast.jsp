@@ -25,6 +25,7 @@
           <%ForecastDTO f = (ForecastDTO) request.getSession().getAttribute("dto");%>
           
    <form id="floatleft" action="/forecast/update" method="post">
+   <div><input type="hidden" name="codiceForecast" value =<%=f.getCodiceForecast() %>></div>
    <div class="row">
    <div class="col-25">
       <label for="id">ID</label>
@@ -65,7 +66,7 @@
 					<label for="inv">Wallet</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="wall" name="Wallet"
+					<input type="text" id="wall" name="wallet"
 						value=<%=f.getWallet() %>>
 				</div>
 			</div>

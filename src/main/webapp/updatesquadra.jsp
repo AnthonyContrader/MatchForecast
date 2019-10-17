@@ -14,11 +14,8 @@
 </head>
 <body>
 <%@ include file="./css/header.jsp" %>
-<div class="navbar">
-  <a href="/homeadmin.jsp">Home</a>
-  <a class="active" href="/squadra/getall">Squadre</a>
-  <a href="/squadra/logout" id="logout">Logout</a>
-</div>
+<%@ include file="./functionbar/menu.jsp" %>
+
 <br>
 <div class="main">
 

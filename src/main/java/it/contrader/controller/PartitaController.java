@@ -42,7 +42,7 @@ public class PartitaController {
    }
 
 @PostMapping("/update")
-public String update(HttpServletRequest request, @RequestParam("idPartita") long idPartita, @RequestParam("codiceForecast") long codiceForecast,
+public String update(HttpServletRequest request,@RequestParam("idPartita")long idPartita, @RequestParam("codiceForecast") long codiceForecast,
 		@RequestParam("squadra1") String squadra1, @RequestParam("squadra2") String squadra2,@RequestParam("data") int data,
 		@RequestParam("orario") int orario,@RequestParam("goalCasa") int goalCasa,@RequestParam("goalTrasferta") int goalTrasferta) {
 
@@ -68,7 +68,7 @@ public String insert(HttpServletRequest request, @RequestParam("codiceForecast")
 		@RequestParam("orario") int orario,@RequestParam("goalCasa") int goalCasa,@RequestParam("goalTrasferta") int goalTrasferta) {
 
 	PartitaDTO dto = new PartitaDTO();
-	//dto.setIdPartita(idPartita);
+	
 	dto.setCodiceForecast(codiceForecast);
 	dto.setSquadra1(squadra1);
 	dto.setSquadra2(squadra2);

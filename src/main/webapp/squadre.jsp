@@ -10,7 +10,8 @@
 <body>
 <%@ include file="../css/header.jsp" %>
 
-<%@ include file="../functions/menuSquadra.jsp" %>
+<%@ include file="./functionbar/menu.jsp" %>
+
 <div class="main">
 <%
   List<SquadraDTO> list = (List<SquadraDTO>) request.getAttribute("list");

@@ -12,10 +12,8 @@
 <body>
 	<%@ include file="./css/header.jsp"%>
 
-	<div class="navbar">
-		<a href="/homeadmin.jsp">Home</a> <a class="active"
-			href="/partita/getall">Partita</a> <a href="/partita/logout" id="logout">Logout</a>
-	</div>
+	<%@ include file="./functionbar/menu.jsp" %>
+
 	<div class="main">
 		<%
 			List<PartitaDTO> list = (List<PartitaDTO>) request.getSession().getAttribute("list");
@@ -83,7 +81,7 @@
 					<label for="sq2">squadra2</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="sq2" name="squadra1"
+					<input type="text" id="sq2" name="squadra2"
 						placeholder="inserisci squadra2">
 				</div>
 			</div>

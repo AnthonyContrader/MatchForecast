@@ -9,7 +9,8 @@
 </head>
 <body>
 <%@ include file="../css/header.jsp" %>
-<%@ include file="../functions/menuPartita.jsp" %>
+<%@ include file="./functionbar/menu.jsp" %>
+
 
 <div class="main">
 <%SquadraDTO u = (SquadraDTO) request.getAttribute("dto"); %>
