@@ -48,7 +48,7 @@
 				<td><a href="/partita/preupdate?idPartita=<%=u.getIdPartita()%>">Edit</a></td>
 
 
-				<td><a href="/partita/delete?idPartita=<%=u.getIdPartita()%>">Delete</a></td>
+				 <td><a href="/partita/delete?idPartita=<%=u.getIdPartita()%>">Delete</a></td>
 
 			</tr>
 			<%
