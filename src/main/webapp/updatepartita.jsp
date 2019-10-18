@@ -22,7 +22,7 @@
 
 <%PartitaDTO u =(PartitaDTO) request.getSession().getAttribute("dto"); %>
 
-  <form id="floatleft" action="/partite/update" method="post">
+  <form id="floatleft" action="/partita/update" method="post">
   <div><input type="hidden" name="idPartita" value =<%=u.getIdPartita() %>></div>
   <div class="row">
     <div class="col-25">

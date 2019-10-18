@@ -36,9 +36,9 @@
 				for (PartitaDTO u : list) {
 			%>
 			<tr>
-				<td><a href="/partita/read?idPartita=<%=u.getIdPartita()%>"> 
+				<td><a href="/partita/read?idPartita=<%=u.getIdPartita()%>">  <%=u.getCodiceForecast()%>
 				</a></td>
-				<td><%=u.getCodiceForecast()%></td>
+				
 				<td><%=u.getSquadra1()%></td>
 				<td><%=u.getSquadra2()%></td>
                 <td><%=u.getData()%></td>
