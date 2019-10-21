@@ -22,11 +22,11 @@ public class Match {
 
 	@Column
 	@ManyToOne
-	@JoinColumn(name = "idTeam1", refercedColumnName = "id")
+	@JoinColumn(name = "idTeam1", referencedColumnName = "id")
 	private Team team1;
 
 	@ManyToOne
-	@JoinColumn(name = "idTeam2", refercedColumnName = "id")
+	@JoinColumn(name = "idTeam2", referencedColumnName = "id")
 	private Team team2;
 
 	private String date;

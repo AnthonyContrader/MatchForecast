@@ -1,6 +1,6 @@
 package it.contrader.controller;
 
-package it.contrader.controller;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 
