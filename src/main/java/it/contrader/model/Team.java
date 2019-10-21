@@ -22,7 +22,7 @@ private String nameTeam;
 
 private int numPlayers;
 
-private float rating;
+private int rating;
 
 private int homeWins;
 
