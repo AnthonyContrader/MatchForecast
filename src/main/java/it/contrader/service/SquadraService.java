@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import it.contrader.converter.SquadraConverter;
 import it.contrader.dao.SquadraRepository;
 import it.contrader.dto.SquadraDTO;
-import it.contrader.model.Squadra;
+import it.contrader.model.Squadra;;
 
 @Service
 public class SquadraService extends AbstractService<Squadra, SquadraDTO> {
@@ -17,8 +17,9 @@ public class SquadraService extends AbstractService<Squadra, SquadraDTO> {
 	@Autowired
 	private SquadraRepository repository;
 
-	public SquadraDTO findByNomeSquadra(long NomeSquadra) {
-		return converter.toDTO(repository.findByNomeSquadra(NomeSquadra));
+	public SquadraDTO findByIdSquadra(long idSquadra) {
+		return converter.toDTO(repository.findByIdSquadra(idSquadra));
 	}
 
 }
+

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="it.contrader.dto.SquadraDTO"%>
+	pageEncoding="ISO-8859-1" import="it.contrader.dto.SquadraDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,94 +11,111 @@
 <link href="/css/vittoriostyle.css" rel="stylesheet">
 <title>Edit Squadra</title>
 
+
 </head>
 <body>
-<%@ include file="./css/header.jsp" %>
-<%@ include file="./functionbar/menu.jsp" %>
+	<%@ include file="./css/header.jsp"%>
+	<%@ include file="./functionbar/menu.jsp"%>
+	<div class="main">
+		<%
+			SquadraDTO f = (SquadraDTO) request.getSession().getAttribute("dto");
+		%>
 
-<br>
-<div class="main">
+		<form id="floatleft" action="/squadre/update" method="post">
+			<div>
+				<input type="hidden" name="idSquadra" value=<%=f.getIdSquadra()%>>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="">nomeSquadra</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="nSqua" name="nomeSquadra"
+						value=<%=f.getNomeSquadra()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="numGio">numGiocatori</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="numGio" name="numGiocatori"
+						value=<%=f.getNumGiocatori()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="rat">rating</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="rat" name="rating" value=<%=f.getRating()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="vitCas">vittorieCasa</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="vitCas" name="vittorieCasa"
+						value=<%=f.getVittorieCasa()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="vitEs">vittorieEsterne</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="vitEs" name="vittorieEsterne"
+						value=<%=f.getVittorieEsterne()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="scoC">sconfitteCasa</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="scoC" name="sconfitteCasa"
+						value=<%=f.getSconfitteCasa()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="scoE">sconfitteEsterne</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="scoE" name="sconfitteEsterne"
+						value=<%=f.getSconfitteEsterne()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="parCa">pareggiCasa</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="parCa" name="pareggiCasa"
+						value=<%=f.getPareggiCasa()%>>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="parEs">pareggiEsterne</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="parEs" name="pareggiEsterne"
+						value=<%=f.getPareggiEsterne()%>>
+				</div>
+			</div>
+			<button type="submit">Edit</button>
+			<button type="button"
+				onclick="window.location.href = '/squadre/getall';">Back</button>
 
-<%SquadraDTO u = (SquadraDTO) request.getSession().getAttribute("dto");%>
+		</form>
 
 
-<form id="floatleft" action="/squadra/update" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="squadra">NumGiocatori</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="nGio" name="NumGiocatori" value=<%=u.getNumGiocatori()%>>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-     <label for="pass">Rating</label>
-    </div>
-    <div class="col-75">
-      <input
-			type="text" id="rat" name="rating" value=<%=u.getRating()%>> 
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="type">VittorieCasa</label>
-    </div>
-    <div class="col-75">
-      <input
-			type="text" id="vitCasa" name="vittorieCasa" value=<%=u.getVittorieCasa()%>> 
-    </div>
-  </div>
-   		 
-  
-     <div class="row">
-    <div class="col-25">
-      <label for="ws">VittorieEsterne</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="vitEst" name="vittorieEsterne" value=<%=u.getVittorieEsterne()%>>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-25">
-      <label for="ms">SconfitteCasa</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="scoCasa" name="sconfitteCasa" value=<%=u.getSconfitteCasa()%>>
-    </div>
-  </div>
-    <div class="row">
-    <div class="col-25">
-      <label for="as">SconfitteEsterne</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="scoEs" name="sconfitteEsterne" value=<%=u.getSconfitteEsterne()%>>
-    </div>
-  </div>  
-     <div class="row">
-    <div class="col-25">
-      <label for="wall">PareggiCasa</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="parCasa" name="pareggiCasa" value=<%=u.getPareggiCasa() %>>
-    </div>
-  </div> 
-      <div class="row">
-    <div class="col-25">
-      <label for="wall">PareggiEsterne</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="parEs" name="pareggiEsterne" value=<%=u.getPareggiEsterne() %>>
-    </div>
-  </div> 
-  
-      <button type="submit" >Edit</button>
-</form>
 
-	
-</div>
-<br>
-<%@ include file="./css/footer.jsp" %>	
+	</div>
+	<br>
+	<%@ include file="./css/footer.jsp"%>
+
 </body>
 </html>

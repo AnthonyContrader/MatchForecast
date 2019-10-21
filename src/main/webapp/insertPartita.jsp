@@ -1,40 +1,29 @@
-<%@page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" import="it.contrader.dto.PartitaDTO"%>
-<!DOCTYPE html>
+<%@ page import="it.contrader.dto.PartitaDTO" import="java.util.*"%>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Partita Edit page">
+<meta name="description" content="Partita Management">
 <meta name="author" content="Vittorio Valent">
 <link href="/css/vittoriostyle.css" rel="stylesheet">
-<title>Edit Partita</title>
+<title>Parita Insert</title>
 
 </head>
-
 <body>
 	<%@ include file="./css/header.jsp"%>
+
 	<%@ include file="./functionbar/menu.jsp"%>
 
-	<br>
-	<div class="main">
 
-		<%
-			PartitaDTO u = (PartitaDTO) request.getSession().getAttribute("dto");
-		%>
-
-		<form id="floatleft" action="/partita/update" method="post">
-			<div>
-				<input type="hidden" name="idPartita" value=<%=u.getIdPartita()%>>
-			</div>
+<form id="floatleft" action="/partita/insert" method="post">
 			<div class="row">
 				<div class="col-25">
 					<label for="cf">codiceForecast</label>
 				</div>
 				<div class="col-75">
 					<input type="text" id="cf" name="codiceForecast"
-						value=<%=u.getCodiceForecast()%>>
+						placeholder="inserisci codice forecast">
 				</div>
 			</div>
 			<div class="row">
@@ -43,7 +32,7 @@
 				</div>
 				<div class="col-75">
 					<input type="text" id="sq1" name="squadra1"
-						value=<%=u.getSquadra1()%>>
+						placeholder="inserisci squadra1">
 				</div>
 			</div>
 			<div class="row">
@@ -52,72 +41,51 @@
 				</div>
 				<div class="col-75">
 					<input type="text" id="sq2" name="squadra2"
-						value=<%=u.getSquadra2()%>>
+						placeholder="inserisci squadra2">
 				</div>
 			</div>
-			<div class="row">
+			 <div class="row">
 				<div class="col-25">
 					<label for="dt">Data</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="dt" name="data" value=<%=u.getData()%>>
+					<input type="text" id="dt" name="data"
+						placeholder="DD/MM/YYYY">
 				</div>
 			</div>
-			<div class="row">
+			 <div class="row">
 				<div class="col-25">
 					<label for="or">Orario</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="or" name="orario" value=<%=u.getOrario()%>>
+					<input type="text" id="or" name="orario"
+						placeholder="inserisci orario">
 				</div>
 			</div>
-			<div class="row">
+			 <div class="row">
 				<div class="col-25">
 					<label for="gc">GoalCasa</label>
 				</div>
 				<div class="col-75">
 					<input type="text" id="gc" name="goalCasa"
-						value=<%=u.getGoalCasa()%>>
+						placeholder="inserisci goal casa">
 				</div>
 			</div>
-			<div class="row">
+			
+			 <div class="row">
 				<div class="col-25">
 					<label for="gt">GoalTrasferta</label>
 				</div>
 				<div class="col-75">
 					<input type="text" id="gt" name="goalTrasferta"
-						value=<%=u.getGoalTrasferta()%>>
+						placeholder="inserisci goalTrasferta">
 				</div>
 			</div>
-			<button type="submit">Edit</button>
-		    <button onclick="window.location.href = '/partita/getall';">Back</button>
-		
+			<button type="submit">Insert</button>
+								<button type="button" onclick="window.location.href = '/partita/getall';">Back</button>
+			
 		</form>
-
-
-
-
-
-
-	</div>
-	<br>
-	<%@ include file="./css/footer.jsp"%>
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
+		
+		
+		</body>
+	</html>

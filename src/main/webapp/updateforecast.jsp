@@ -80,6 +80,7 @@
 				</div>
 			</div>
 			<button type="submit" >Edit</button>
+			<button type="button" onclick="window.location.href = '/forecast/getall';">Back</button>
 </form>
 
 

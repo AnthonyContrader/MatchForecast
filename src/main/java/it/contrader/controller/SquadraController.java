@@ -1,5 +1,4 @@
 package it.contrader.controller;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,38 +12,35 @@ import it.contrader.dto.SquadraDTO;
 import it.contrader.service.SquadraService;
 
 @Controller
-@RequestMapping("/squadra")
+@RequestMapping("/squadre")
 public class SquadraController {
-
+	
 	@Autowired
 	private SquadraService service;
-
-
+	
 	@GetMapping("/getall")
 	public String getAll(HttpServletRequest request) {
 		setAll(request);
 		return "squadre";
 	}
-
 	@GetMapping("/delete")
-	public String delete(HttpServletRequest request, @RequestParam("nomeSquadra") long nomeSquadra) {
-		service.delete(nomeSquadra);
+	public String delete(HttpServletRequest request, @RequestParam("idSquadra") long idSquadra) {
+		service.delete(idSquadra);
 		setAll(request);
 		return "squadre";
 	}
-
 	@GetMapping("/preupdate")
-	public String preUpdate(HttpServletRequest request, @RequestParam("nomeSquadra") long nomeSquadra) {
-		request.getSession().setAttribute("dto", service.read(nomeSquadra));
+	public String preUpdate(HttpServletRequest request, @RequestParam("idSquadra") long idSquadra) {
+		request.getSession().setAttribute("dto", service.read(idSquadra));
 		return "updatesquadra";
 	}
-
 	@PostMapping("/update")
-	public String update(HttpServletRequest request, @RequestParam("nomeSquadra") long nomeSquadra, @RequestParam("numGiocatori") int numGiocatori,
-			@RequestParam("rating") int rating, @RequestParam("vittorieCasa") int vittorieCasa, @RequestParam("vittorieEsterne") int vittorieEsterne,
-			@RequestParam("sconfitteCasa") int sconfitteCasa, @RequestParam("sconfitteEsterne") int sconfitteEsterne, @RequestParam("pareggiCasa") int pareggiCasa, @RequestParam("pareggiEsterne") int pareggiEsterne) {
+	public String update(HttpServletRequest request,@RequestParam("idSquadra") long idSquadra, @RequestParam("nomeSquadra") String nomeSquadra,
+			@RequestParam("numGiocatori") int numGiocatori,@RequestParam("rating") float rating, @RequestParam("vittorieCasa") int vittorieCasa,
+			@RequestParam("vittorieEsterne") int vittorieEsterne,@RequestParam("sconfitteCasa") int sconfitteCasa,@RequestParam("sconfitteEsterne") int sconfitteEsterne,@RequestParam("pareggiCasa") int pareggiCasa,@RequestParam("pareggiEsterne") int pareggiEsterne) {
 
 		SquadraDTO dto = new SquadraDTO();
+		dto.setIdSquadra(idSquadra);
 		dto.setNomeSquadra(nomeSquadra);
 		dto.setNumGiocatori(numGiocatori);
 		dto.setRating(rating);
@@ -59,12 +55,13 @@ public class SquadraController {
 		return "squadre";
 
 	}
-
 	@PostMapping("/insert")
-	public String insert(HttpServletRequest request, @RequestParam("numGiocatori") int numGiocatori,
-			@RequestParam("rating") float rating, @RequestParam("vittorieCasa") int vittorieCasa, @RequestParam("vittorieEsterne") int vittorieEsterne,
-			@RequestParam("sconfitteCasa") int sconfitteCasa, @RequestParam("sconfitteEsterne") int sconfitteEsterne, @RequestParam("pareggiCasa") int pareggiCasa, @RequestParam("pareggiEsterne") int pareggiEsterne) {
+	public String insert(HttpServletRequest request,@RequestParam("nomeSquadra") String nomeSquadra,
+			@RequestParam("numGiocatori") int numGiocatori, @RequestParam("rating") float rating,@RequestParam("vittorieCasa") int vittorieCasa,@RequestParam("vittorieEsterne") int vittorieEsterne,
+			@RequestParam("sconfitteCasa") int sconfitteCasa,@RequestParam("sconfitteEsterne") int sconfitteEsterne,@RequestParam("pareggiCasa") int pareggiCasa,@RequestParam("pareggiEsterne") int pareggiEsterne) {
 		SquadraDTO dto = new SquadraDTO();
+		
+		dto.setNomeSquadra(nomeSquadra);
 		dto.setNumGiocatori(numGiocatori);
 		dto.setRating(rating);
 		dto.setVittorieCasa(vittorieCasa);
@@ -73,23 +70,21 @@ public class SquadraController {
 		dto.setSconfitteEsterne(sconfitteEsterne);
 		dto.setPareggiCasa(pareggiCasa);
 		dto.setPareggiEsterne(pareggiEsterne);
-	    service.insert(dto);
+		service.insert(dto);
 		setAll(request);
 		return "squadre";
 	}
-
 	@GetMapping("/read")
-	public String read(HttpServletRequest request, @RequestParam("nomeSquadra") long nomeSquadra) {
-		request.getSession(). setAttribute("dto", service.read(nomeSquadra));
+	public String read(HttpServletRequest request, @RequestParam("idSquadra") long idSquadra) {
+		request.getSession().setAttribute("dto", service.read(idSquadra));
 		return "readsquadra";
 	}
-
+	
 	@GetMapping("/logout")
 	public String logout(HttpServletRequest request) {
 		request.getSession().invalidate();
 		return "index";
 	}
-
 	private void setAll(HttpServletRequest request) {
 		request.getSession().setAttribute("list", service.getAll());
 	}

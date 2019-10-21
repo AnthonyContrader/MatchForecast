@@ -31,7 +31,7 @@ div.text{
 	text-align: center;
 	font-size: 70%;
 	background-color: #ff8c00;
-	color: #ffffff;
+	color: #ff8c00;
 	width: 100%;
 	border-radius: 7px;
 	position: relative;
@@ -46,7 +46,7 @@ h1 {
 	position: center;
 	text-align: center;
 	size: 300%;
-	font-family: sans-serif;
+	font-family: comic-sans-ms;
 	color: #000000;
 }
 
@@ -66,11 +66,11 @@ h2 {
 	
 }
 .login{
-	position:fixed;
+	
 	heigth:50%;
 	width:20%;
-	margin-left:35.6%;
-	margin-right:44.4%;
+	margin-left:auto;
+	margin-right:auto;
 	margin-top:10%;
 	margin-bottom:auto;
 	z-index:1;
@@ -130,22 +130,22 @@ table {
 
 th, td {
 	text-align: center;
-	font-size: medium;
+	font-size: xx-small;
 	padding: 2px;
 }
 
 tr:nth-child(even) {
-	background-color: #f2f2f2
+	background-color: #ff8c00;
 }
 
 th {
 	background-color: #ff8c00;
-	color: #ffffff;
+	color: #ff8c00;
 	
 }
 
 a:hover {
-	color: #999999;
+	color: #ff8c00;
 }
 
 
@@ -333,4 +333,3 @@ div.navbar a.active {
 	position: center; z-index : -1;
 }
 
-}

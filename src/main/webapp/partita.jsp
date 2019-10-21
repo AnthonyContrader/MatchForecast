@@ -45,6 +45,9 @@
                 <td><%=u.getOrario()%></td>
                 <td><%=u.getGoalCasa()%></td>	
                 <td><%=u.getGoalTrasferta()%></td>	
+				<td><a
+					href="/insertPartita.jsp">Insert</a></td>
+				
 				<td><a href="/partita/preupdate?idPartita=<%=u.getIdPartita()%>">Edit</a></td>
 
 
@@ -57,73 +60,7 @@
 		</table>
 		
 		
-		<form id="floatright" action="/partita/insert" method="post">
-			<div class="row">
-				<div class="col-25">
-					<label for="cf">codiceForecast</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="cf" name="codiceForecast"
-						placeholder="inserisci codice forecast">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="sq1">Squadra1</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="sq1" name="squadra1"
-						placeholder="inserisci squadra1">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="sq2">squadra2</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="sq2" name="squadra2"
-						placeholder="inserisci squadra2">
-				</div>
-			</div>
-			 <div class="row">
-				<div class="col-25">
-					<label for="dt">Data</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="dt" name="data"
-						placeholder="inserisci data">
-				</div>
-			</div>
-			 <div class="row">
-				<div class="col-25">
-					<label for="or">Orario</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="or" name="orario"
-						placeholder="inserisci orario">
-				</div>
-			</div>
-			 <div class="row">
-				<div class="col-25">
-					<label for="gc">GoalCasa</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="gc" name="goalCasa"
-						placeholder="inserisci goal casa">
-				</div>
-			</div>
-			
-			 <div class="row">
-				<div class="col-25">
-					<label for="gt">GoalTrasferta</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="gt" name="goalTrasferta"
-						placeholder="inserisci goalTrasferta">
-				</div>
-			</div>
-			<button type="submit">Insert</button>
-		</form>
+		
 
 	</div>
 	<br>

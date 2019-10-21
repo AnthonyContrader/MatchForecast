@@ -36,14 +36,14 @@
 				for (ForecastDTO f : list) {
 			%>
 			<tr>
-			   <td><a href="/forecast/read?codiceForecast=<%=f.getCodiceForecast()%>"></a></td>
-			  <td><%=f.getId()%></td>
+			   <td><a href="/forecast/read?codiceForecast=<%=f.getCodiceForecast()%>">
+			  <%=f.getId()%></a></td>
               <td><%=f.getInvestimento() %></td>
               <td><%=f.getGuadagno() %></td>
               <td><%=f.getPRischio()  %></td>
               <td><%=f.getWallet()  %></td>
               <td><%=f.getDurata()  %></td>
-              
+              <td><a href="/insertForecast.jsp">Insert</a></td>
               <td><a href="/forecast/preupdate?codiceForecast=<%=f.getCodiceForecast()%>">Edit</a></td>
               
               
@@ -56,63 +56,6 @@
            </table>
            
            
-           <form id="floatright" action="/forecast/insert" method="post">
-			<div class="row">
-				<div class="col-25">
-					<label for="id">Id</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="id" name="id"
-						placeholder="inserisci id">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="inv">Investimento</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="inv" name="investimento"
-						placeholder="inserisci l'investimento">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="guad">Guadagno</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="guad" name="guadagno"
-						placeholder="inserisci il guadagno">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="pRis">pRischio</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="pRis" name="pRischio"
-						placeholder="inserisci rischio">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="wall">Wallet</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="wall" name="wallet"
-						placeholder="inserisci il portafoglio">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="dura">Durata</label>
-				</div>
-				<div class="col-75">
-					<input type="text" id="dura" name="durata"
-						placeholder="inserisci in quanto tempo">
-				</div>
-			</div>
-			<button type="submit">Insert</button>
-		</form>
 		
            </div>
            <br>

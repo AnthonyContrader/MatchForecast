@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Sample Login page">
+<meta name="description" content="MatchForecast Login page">
 <meta name="author" content="Vittorio Valent">
 
 <title>Login</title>
@@ -13,13 +13,20 @@
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="/css/vittoriostyle.css" rel="stylesheet">
+<link href="/css/alessandrostyle.css" rel="stylesheet">
 </head>
+     <style>
+         body {
+         background-image: url(futball.png);
+         background-repeat: no-repeat;
+        
+      </style>
 
-
-<body class="text-center">
+<body    class="text-center">
+	
+	
 	<form class="login" action="/user/login" method="post">
-		<h1>SAMPLE LOGIN</h1>
+		<h1>MatchForecast LOGIN</h1>
 
 		<label for="inputUser" class="sr-only">Username</label> <input
 			type="text" name="username" id="inputUser" class="form-control"
