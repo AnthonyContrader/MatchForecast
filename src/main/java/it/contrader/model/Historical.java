@@ -2,11 +2,11 @@ package it.contrader.model;
 
 import javax.persistence.*;
 
-import it.contrader.model.User.Usertype;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import it.dto.model.Match;
+import it.contrader.model.Match;
 
 @Data
 @Entity
@@ -20,8 +20,8 @@ public class Historical {
 	@OneToOne
 	@JoinColumn(name = "idHistoricaL", referencedColumnName= "id")
 	private Match match;
-	@Column(name = "risultato")
-	private String risultato;
+	@Column(name = "result")
+	private String result;
 	
 	
 	

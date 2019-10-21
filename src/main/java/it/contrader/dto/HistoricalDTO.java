@@ -24,6 +24,6 @@ public class HistoricalDTO {
 	
 	private Match match;
 	
-	private String risultato;
+	private String result;
 
 }
