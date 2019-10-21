@@ -30,7 +30,7 @@ private String squadra1;
 
 private String squadra2;
 
-private int data;
+private String data;
 
 private int orario;
 

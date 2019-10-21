@@ -17,7 +17,7 @@ public class PartitaDTO {
 
 	private String squadra2;
 
-	private int data;
+	private String data;
 
 	private int orario;
 

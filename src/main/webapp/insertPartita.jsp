@@ -49,7 +49,7 @@
 					<label for="dt">Data</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="dt" name="data"
+					<input type="date" id="dt" name="data"
 						placeholder="DD/MM/YYYY">
 				</div>
 			</div>
