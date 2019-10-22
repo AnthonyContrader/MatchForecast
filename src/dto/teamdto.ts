@@ -16,8 +16,8 @@ export class TeamDTO {
 
     transferDefeats: number;
 
-    homeDraw: number;
+    homeDraws: number;
 
-    transferDraw: number
+    transferDraws: number
  
  }

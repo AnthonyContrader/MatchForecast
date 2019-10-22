@@ -63,10 +63,10 @@
                       <input placeholder="transferDefeats" [(ngModel)]="teamtoinsert.transferDefeats">
                     </td>
                     <td>
-                        <input placeholder="homeDraw" [(ngModel)]="teamtoinsert.homeDraw">
+                        <input placeholder="homeDraw" [(ngModel)]="teamtoinsert.homeDraws">
                       </td>
                       <td>
-                          <input placeholder="transferDraw" [(ngModel)]="teamtoinsert.transferDraw">
+                          <input placeholder="transferDraw" [(ngModel)]="teamtoinsert.transferDraws">
                         </td>
           <td>
             <button (click)="insert(teamtoinsert)">Insert</button>
@@ -98,10 +98,10 @@
                         <input [(ngModel)]="team.transferDefeats">
                       </td>
                       <td>
-                          <input [(ngModel)]="team.homeDraw">
+                          <input [(ngModel)]="team.homeDraws">
                         </td>
                         <td>
-                            <input [(ngModel)]="team.transferDraw">
+                            <input [(ngModel)]="team.transferDraws">
                           </td>
           <td>
             <button (click)=update(team)>Save</button>
