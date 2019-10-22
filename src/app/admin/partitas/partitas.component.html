@@ -44,7 +44,7 @@
                  </select>
                 </td>
                 <td>
-                    <input placeholder="date" [(ngModel)]="partitatoinsert.date">
+                    <input type="date" #date required name="date" placeholder="date" [(ngModel)]="partitatoinsert.date">
                   </td>
                   <td>
                       <input placeholder="win" [(ngModel)]="partitatoinsert.win">

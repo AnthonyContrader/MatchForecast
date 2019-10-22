@@ -7,13 +7,13 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 	float: left;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
 }
 
 th, td {
 	text-align: center;
-	padding: 2px;
+	padding: 6px;
 }
 
 td{
