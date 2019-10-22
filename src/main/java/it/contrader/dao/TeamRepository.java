@@ -12,7 +12,7 @@ import it.contrader.model.Team;
 @Transactional
 public interface TeamRepository extends CrudRepository<Team, Long>{
 
-  Team findById(long id);
+  Team findTeamById(long id);
   
 	
 }

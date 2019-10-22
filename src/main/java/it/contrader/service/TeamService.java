@@ -10,8 +10,8 @@ import it.contrader.model.Team;
 @Service
 public class TeamService extends AbstractService<Team,TeamDTO> {
 
-	public TeamDTO findById(long id) {
-		return converter.toDTO(((TeamRepository)repository).findById(id));
+	public TeamDTO findTeamById(long id) {
+		return converter.toDTO(((TeamRepository)repository).findTeamById(id));
 	}
 
 }
