@@ -32,19 +32,17 @@
           </th>
         </tr>
         <tr>
-          <td>
-             
-
-          </td>
+         
             <td>
-              <select [(ngModel)] = "partitatoinsert.team">  
-                <option [(ngValue)] = "team" *ngFor = "let team of teams"> {{team.id}}</option>
+              <select [(ngModel)] = "partitatoinsert.team1">  
+                <option [(ngValue)] = "team1" *ngFor = "let team1 of teams"> {{team1.id}}</option>
                  </select>
                </td>
-               <select [(ngModel)] = "teamtoinsert.team">  
-                <option [(ngValue)] = "team" *ngFor = "let team of teams"> {{team.id}}</option>
+               <td>
+               <select [(ngModel)] = "teamtoinsert.team2">  
+                <option [(ngValue)] = "team2" *ngFor = "let team2 of teams"> {{team2.id}}</option>
                  </select>
-
+                </td>
                 <td>
                     <input placeholder="date" [(ngModel)]="partitatoinsert.date">
                   </td>
