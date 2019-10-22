@@ -33,15 +33,17 @@
         </tr>
         <tr>
           <td>
-            <select [(ngModel)]="partitatoinsert.team1">
-             <option[(ngValue)]= "team" *ngFor = "let team of teams ">{{team.id}} </option>
-          
-</select>            </td>
+             
+
+          </td>
             <td>
-                <select [(ngModel)]="partitatoinsert.team2">
-                 <option[(ngValue)]= "team" *ngFor = "let team of teams ">{{team.id}}</option>
-               </select> </td>
-            <td>
+              <select [(ngModel)] = "partitatoinsert.team">  
+                <option [(ngValue)] = "team" *ngFor = "let team of teams"> {{team.id}}</option>
+                 </select>
+               </td>
+               <select [(ngModel)] = "teamtoinsert.team">  
+                <option [(ngValue)] = "team" *ngFor = "let team of teams"> {{team.id}}</option>
+                 </select>
 
                 <td>
                     <input placeholder="date" [(ngModel)]="partitatoinsert.date">
@@ -56,7 +58,7 @@
                           <input placeholder="lose" [(ngModel)]="partitatoinsert.lose">
                         </td>
                         
-          </td>
+          
           <td>
             <button (click)="insert(partitatoinsert)">Insert</button>
           </td>
@@ -69,7 +71,7 @@
 
                 <select [(ngModel)]="partita.team.id">
   
-                    <option [selected] = "team" *ngFor = "let team of teams"> {{team.id}}</option>
+                    <option [selected] = "team" *ngFor = "let team of teams"> {{team.id}} </option>
   
                 </select> 
               </td>
@@ -78,7 +80,7 @@
 
                   <select [(ngModel)]="partita.team.id">
     
-                      <option [selected] = "team" *ngFor = "let team of teams"> {{team.id}}</option>
+                      <option [selected] = "team" *ngFor = "let team of teams"> {{team.id}} </option>
     
                   </select> 
                 </td>

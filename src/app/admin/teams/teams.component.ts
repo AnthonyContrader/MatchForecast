@@ -31,6 +31,7 @@ export class TeamsComponent implements OnInit {
   }
 
   insert(team: TeamDTO) {
+    
     this.service.insert(team).subscribe(() => this.getTeams());
   }
 
