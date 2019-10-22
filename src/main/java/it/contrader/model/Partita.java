@@ -29,8 +29,12 @@ public class Partita {
 	
 	//relazione Match - Team
 	@ManyToOne
-	@JoinColumn(name = "idTeam", referencedColumnName = "id")
-	private Team team;
+	@JoinColumn(name = "idTeam1", referencedColumnName = "id")
+	private Team team1;
+	
+	@ManyToOne
+	@JoinColumn(name = "idTeam2", referencedColumnName = "id")
+	private Team team2;
 	
 	
 	@Column
