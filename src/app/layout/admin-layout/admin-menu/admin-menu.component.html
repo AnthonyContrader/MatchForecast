@@ -30,6 +30,16 @@
                         </i> Manage Users </a>
                 </button>
             </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#teams"
+                (click)="teamscollapse()">
+                <i class="fas fa-teams" style="margin-right: 15px"></i>Teams
+            </button>
+            <div class="collapsebtn" id="teams" *ngIf="isTeamCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/teams']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Manage Teams </a>
+                </button>
+            </div>
             <button class="menubtn" (click)="logout()">
                 <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
             </button>
