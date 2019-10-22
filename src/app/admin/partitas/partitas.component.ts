@@ -12,7 +12,7 @@ export class PartitasComponent implements OnInit {
 
   partitas: PartitaDTO[];
   partitatoinsert: PartitaDTO = new PartitaDTO();
-teams: TeamDTO [];
+  teams: TeamDTO [];
   constructor(private service: PartitaService,private tService: TeamService) { }
 
   ngOnInit() {
