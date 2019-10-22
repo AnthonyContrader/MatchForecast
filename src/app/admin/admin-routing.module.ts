@@ -5,6 +5,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UsersComponent } from './users/users.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
 import { TeamsComponent } from './teams/teams.component';
+import { PartitasComponent } from './partitas/partitas.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
     { path: '', component: AdminDashboardComponent},
     { path: 'users', component: UsersComponent},
     { path: 'teams', component: TeamsComponent},
+    { path: 'partitas', component: PartitasComponent},
     { path: 'work-in-progress', component: WorkInProgressComponent}
   ]}
 ];

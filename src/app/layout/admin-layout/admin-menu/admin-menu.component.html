@@ -40,6 +40,16 @@
                         </i> Manage Teams </a>
                 </button>
             </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#partitas"
+                (click)="partitascollapse()">
+                <i class="fas fa-partitas" style="margin-right: 15px"></i>Partitas
+            </button>
+            <div class="collapsebtn" id="users" *ngIf="isUserCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/partitas']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Manage Partitas </a>
+                </button>
+            </div>
             <button class="menubtn" (click)="logout()">
                 <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
             </button>

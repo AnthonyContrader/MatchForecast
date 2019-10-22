@@ -10,6 +10,7 @@ export class AdminMenuComponent implements OnInit {
 
   isUserCollapsed = false;
   isTeamCollapsed = false;
+  isPartitaCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
 
@@ -36,6 +37,11 @@ export class AdminMenuComponent implements OnInit {
     } else { this.isTeamCollapsed = false; }
   }
 
+  partitascollapse() {
+    if (this.isPartitaCollapsed === false) {
+      this.isPartitaCollapsed = true;
+    } else { this.isPartitaCollapsed = false; }
+  }
   accountcollapse() {
     if (this.isAccountCollapsed === false) {
       this.isAccountCollapsed = true;
