@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-1">
+  
+      </div>
+      <div class="col-md-10">
+        <table>
+          <tr>
+            <th>
+              Partita
+            </th>
+            <th>
+              Result
+            </th>
+            <th>
+              Edit
+            </th>
+            <th>
+              Historical
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <input placeholder="partita" [(ngModel)]="historicaloinsert.partita">
+            </td>
+            <td>
+              <input placeholder="result" [(ngModel)]="historicaltoinsert.result">
+            </td>
+            
+            <td>
+              <button (click)="insert(historicaltoinsert)">Insert</button>
+            </td>
+            <td>
+              <button (click)="clear()">Clear</button>
+            </td>
+          </tr>
+          <tr *ngFor="let historical of historicals">
+            <td>
+
+              <select [(ngModel)]="historical.partita.id">
+
+                  <option [selected] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
+
+              </select>
+                <!--
+                <input [(ngModel)]="historical.partita.id">
+              <select [(ngModel)] = "historicaltoinsert.coin">  
+                <option [(ngValue)] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
+                 </select>-->
+          </td>
+            <td>
+              <input [(ngModel)]="historical.result">
+            </td>
+            
+            <td>
+              <button (click)=update(historical)>Save</button>
+            </td>
+            <td>
+              <button (click)="delete(historical)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-1">
+  
+      </div>
+    </div>
+  </div>
