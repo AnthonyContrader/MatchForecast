@@ -1,7 +1,8 @@
 package it.contrader.model;
 
 import javax.persistence.*;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
