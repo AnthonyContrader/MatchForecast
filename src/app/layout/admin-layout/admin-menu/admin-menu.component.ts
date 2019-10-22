@@ -11,6 +11,7 @@ export class AdminMenuComponent implements OnInit {
   isUserCollapsed = false;
   isTeamCollapsed = false;
   isPartitaCollapsed = false;
+  isHistoricalCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
 
@@ -41,6 +42,12 @@ export class AdminMenuComponent implements OnInit {
     if (this.isPartitaCollapsed === false) {
       this.isPartitaCollapsed = true;
     } else { this.isPartitaCollapsed = false; }
+  }
+  
+  historicalscollapse() {
+    if (this.isHistoricalCollapsed === false) {
+      this.isHistoricalCollapsed = true;
+    } else { this.isHistoricalCollapsed = false; }
   }
   accountcollapse() {
     if (this.isAccountCollapsed === false) {
