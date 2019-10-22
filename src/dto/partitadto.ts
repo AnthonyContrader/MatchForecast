@@ -1,8 +1,8 @@
 import { TeamDTO } from './teamdto';
 
-export class MatchDTO {
+export class PartitaDTO {
 
-    idMatch: number;
+    id: number;
  
     team1: TeamDTO;
 
