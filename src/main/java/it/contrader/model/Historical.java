@@ -2,7 +2,7 @@ package it.contrader.model;
 
 import javax.persistence.*;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,10 +18,14 @@ public class Historical {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private long idHistorical;
-	@OneToOne
-	@JoinColumn(name = "idHistoricaL", referencedColumnName= "id")
+	
+	
+	@ManyToOne
+	@JoinColumn(name = "idMatch", referencedColumnName= "id")
 	private Match match;
-	@Column(name = "result")
+	
+	
+	@Column
 	private String result;
 	
 	
