@@ -67,7 +67,7 @@
         <tr *ngFor="let partita of partitas">
             <td>
 
-                <select [(ngModel)]="partita.team1">
+                <select [(ngModel)]="partita.team1.id">
   
                     <option [selected] = "team1" *ngFor = "let team1 of teams"> {{team1.id}} </option>
   
@@ -76,7 +76,7 @@
          
               <td>
 
-                  <select [(ngModel)]="partita.squadra">
+                  <select [(ngModel)]="partita.squadra.id">
     
                       <option [selected] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.id}} </option>
     

@@ -27,7 +27,7 @@ export class TeamsComponent implements OnInit {
   }
 
   update(team: TeamDTO) {
-    console.log(team);
+    
     this.service.update(team).subscribe(() => this.getTeams());
   }
 
