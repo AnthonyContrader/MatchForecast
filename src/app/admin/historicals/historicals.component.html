@@ -21,8 +21,10 @@
           </tr>
           <tr>
             <td>
-              <input placeholder="partita" [(ngModel)]="historicaloinsert.partita">
-            </td>
+              <select [(ngModel)] = "historicaltoinsert.partita">  
+                <option [(ngValue)] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
+                 </select>
+               </td>
             <td>
               <input placeholder="result" [(ngModel)]="historicaltoinsert.result">
             </td>
@@ -42,11 +44,7 @@
                   <option [selected] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
 
               </select>
-                <!--
-                <input [(ngModel)]="historical.partita.id">
-              <select [(ngModel)] = "historicaltoinsert.coin">  
-                <option [(ngValue)] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
-                 </select>-->
+                
           </td>
             <td>
               <input [(ngModel)]="historical.result">

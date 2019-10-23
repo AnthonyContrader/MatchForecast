@@ -2,7 +2,7 @@ import { PartitaDTO } from './partitadto';
 
 export class HistoricalDTO {
 
-    idHistorical: number;
+    id: number;
  
     partita: PartitaDTO;
  

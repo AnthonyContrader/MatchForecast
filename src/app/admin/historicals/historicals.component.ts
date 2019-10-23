@@ -30,7 +30,7 @@ export class HistoricalsComponent implements OnInit {
   }
 
   delete(historical: HistoricalDTO) {
-    this.service.delete(historical.idHistorical).subscribe(() => this.getHistoricals());
+    this.service.delete(historical.id).subscribe(() => this.getHistoricals());
   }
 
   update(historical: HistoricalDTO) {
