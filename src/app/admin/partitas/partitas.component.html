@@ -40,7 +40,7 @@
                </td>
                <td>
                <select [(ngModel)] = "teamtoinsert.team2">  
-                <option [(ngValue)] = "team2" *ngFor = "let team2 of teams"> {{team2.id}}</option>
+                <option [(ngValue)] = "team2" *ngFor = "let team2 of teams2"> {{team2.id}}</option>
                  </select>
                 </td>
                 <td>
@@ -67,18 +67,18 @@
         <tr *ngFor="let partita of partitas">
             <td>
 
-                <select [(ngModel)]="partita.team.id">
+                <select [(ngModel)]="partita.team1.id">
   
-                    <option [selected] = "team" *ngFor = "let team of teams"> {{team.id}} </option>
+                    <option [selected] = "team1" *ngFor = "let team1 of teams"> {{team1.id}} </option>
   
                 </select> 
               </td>
          
               <td>
 
-                  <select [(ngModel)]="partita.team.id">
+                  <select [(ngModel)]="partita.team2.id">
     
-                      <option [selected] = "team" *ngFor = "let team of teams"> {{team.id}} </option>
+                      <option [selected] = "team2" *ngFor = "let team2 of teams"> {{team2.id}} </option>
     
                   </select> 
                 </td>
