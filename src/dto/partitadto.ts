@@ -6,7 +6,7 @@ export class PartitaDTO {
  
     team1: TeamDTO;
 
-    team2: TeamDTO;
+    squadra: TeamDTO;
  
     date: string;
 

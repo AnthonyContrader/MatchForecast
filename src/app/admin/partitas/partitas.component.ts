@@ -13,13 +13,14 @@ export class PartitasComponent implements OnInit {
   partitas: PartitaDTO[];
   partitatoinsert: PartitaDTO = new PartitaDTO();
   teams: TeamDTO [];
-  teams2: TeamDTO [];
-  constructor(private service: PartitaService,private tService: TeamService) { }
+  squadras: TeamDTO [];
+  constructor(private service: PartitaService,private tService: TeamService,private t2Service: TeamService) { }
 
   ngOnInit() {
     this.getPartitas();
     this.getTeams();
-    this.getTeams2();
+    this.getSquadras();
+    
   }
 
   getPartitas() {
@@ -28,15 +29,20 @@ export class PartitasComponent implements OnInit {
 
   getTeams() {
     this.tService.getAll().subscribe(teams => this.teams = teams);
+    
   }
-  getTeams2() {
-    this.tService.getAll().subscribe(teams2 => this.teams2 = teams2);
+
+  getSquadras() {
+   
+    this.t2Service.getAll().subscribe(squadras => this.squadras = squadras);
   }
+  
   delete(partita: PartitaDTO) {
     this.service.delete(partita.id).subscribe(() => this.getPartitas());
   }
 
   update(partita: PartitaDTO) {
+    console.log(partita)
     this.service.update(partita).subscribe(() => this.getPartitas());
   }
 
