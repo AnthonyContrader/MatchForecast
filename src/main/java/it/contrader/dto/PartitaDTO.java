@@ -18,7 +18,7 @@ public class PartitaDTO {
 
 	private long id;
 	private Team team1;
-	private Team team2;
+	private Team squadra;
 	private String date;
 	private int win;
 	private int draw;

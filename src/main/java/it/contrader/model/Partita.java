@@ -34,7 +34,7 @@ public class Partita {
 	
 	@ManyToOne
 	@JoinColumn(name = "idTeam2", referencedColumnName = "id")
-	private Team team2;
+	private Team squadra;
 	
 	
 	@Column
