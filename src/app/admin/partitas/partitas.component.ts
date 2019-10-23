@@ -24,6 +24,7 @@ export class PartitasComponent implements OnInit {
   }
 
   getPartitas() {
+    
     this.service.getAll().subscribe(partitas => this.partitas = partitas);
   }
 
@@ -42,7 +43,7 @@ export class PartitasComponent implements OnInit {
   }
 
   update(partita: PartitaDTO) {
-    console.log(partita)
+    
     this.service.update(partita).subscribe(() => this.getPartitas());
   }
 
