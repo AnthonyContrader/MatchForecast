@@ -10,6 +10,10 @@ import { TeamDTO } from 'src/dto/teamdto';
 })
 export class PartitasComponent implements OnInit {
 
+ 
+
+  
+
   partitas: PartitaDTO[];
   partitatoinsert: PartitaDTO = new PartitaDTO();
   teams: TeamDTO [];
@@ -43,11 +47,27 @@ export class PartitasComponent implements OnInit {
   }
 
   update(partita: PartitaDTO) {
-    
+   
     this.service.update(partita).subscribe(() => this.getPartitas());
   }
 
   insert(partita: PartitaDTO) {
+    console.log(partita.team1.rating - partita.squadra.rating);
+    if ((partita.team1.rating - partita.squadra.rating) < 3){
+      partita.win = 30;
+      partita.draw = 60;
+      partita.lose = 20;
+
+    }else {
+
+
+      partita.win = 60;
+      partita.draw = 30;
+      partita.lose = 40;
+     
+
+    }
+
     this.service.insert(partita).subscribe(() => this.getPartitas());
   }
 

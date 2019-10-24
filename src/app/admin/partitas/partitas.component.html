@@ -25,7 +25,7 @@
             Lose
           </th>
           <th>
-            Edit
+         <!--   Edit -->
           </th>
           <th>
             Partita
@@ -44,16 +44,18 @@
                  </select>
                 </td>
                 <td>
-                    <input type="date" #date required name="date" placeholder="date" [(ngModel)]="partitatoinsert.date">
+                   
+
+                   <input type="date" #date required name="date" placeholder="date" [(ngModel)]="partitatoinsert.date">
                   </td>
                   <td>
-                      <input placeholder="win" [(ngModel)]="partitatoinsert.win">
+                     <!-- <input placeholder="win" [(ngModel)]="partitatoinsert.win">--> 
                     </td>
                     <td>
-                        <input placeholder="draw" [(ngModel)]="partitatoinsert.draw">
+                      <!--  <input placeholder="draw" [(ngModel)]="partitatoinsert.draw">--> 
                       </td>
                       <td>
-                          <input placeholder="lose" [(ngModel)]="partitatoinsert.lose">
+                        <!--  <input placeholder="lose" [(ngModel)]="partitatoinsert.lose">--> 
                         </td>
                         
           
@@ -84,19 +86,19 @@
                 </td>
          
           <td>
-            <input [(ngModel)]="partita.date">
+            <input [(ngModel)]="partita.date"> 
           </td>
           <td>
-            <input [(ngModel)]="partita.win">
+         <!--   <input [(ngModel)]="partita.win"> -->{{partita.win}}
           </td>
           <td>
-              <input [(ngModel)]="partita.draw">
+           <!--   <input [(ngModel)]="partita.draw"> -->{{partita.draw}}
             </td>
             <td>
-                <input [(ngModel)]="partita.lose">
+             <!--   <input [(ngModel)]="partita.lose"> -->{{partita.lose}}
               </td>
             <td>
-            <button (click)=update(partita)>Save</button>
+          <!--  <button (click)=update(partita)>Save</button> -->
           </td>
           <td>
             <button (click)="delete(partita)">Delete</button>
