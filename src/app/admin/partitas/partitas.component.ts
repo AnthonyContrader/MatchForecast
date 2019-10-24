@@ -52,19 +52,26 @@ export class PartitasComponent implements OnInit {
   }
 
   insert(partita: PartitaDTO) {
-    console.log(partita.team1.rating - partita.squadra.rating);
+    
     if ((partita.team1.rating - partita.squadra.rating) < 3){
       partita.win = 30;
       partita.draw = 60;
       partita.lose = 20;
 
-    }else {
+    }else if ((partita.team1.rating - partita.squadra.rating) < 6) {
 
 
       partita.win = 60;
       partita.draw = 30;
-      partita.lose = 40;
+      partita.lose = 20;
      
+
+    }else {
+
+      partita.win = 90;
+      partita.draw = 20;
+      partita.lose = 10;
+
 
     }
 
