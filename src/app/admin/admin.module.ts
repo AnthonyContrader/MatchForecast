@@ -8,6 +8,8 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import { TeamsComponent } from './teams/teams.component';
 import { PartitasComponent } from './partitas/partitas.component';
 import { HistoricalsComponent } from './historicals/historicals.component';
+import { SchedinaComponent } from './schedinas/schedinas.component';
+
 /**
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
  * l'admin. Questo modulo importa AdminRoutingModule.
@@ -18,7 +20,7 @@ import { HistoricalsComponent } from './historicals/historicals.component';
  */
 @NgModule({
   declarations: [AdminDashboardComponent, UsersComponent,
-    TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent],
+    TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinaComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

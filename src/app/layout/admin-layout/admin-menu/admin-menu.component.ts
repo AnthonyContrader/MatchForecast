@@ -12,6 +12,7 @@ export class AdminMenuComponent implements OnInit {
   isTeamCollapsed = false;
   isPartitaCollapsed = false;
   isHistoricalCollapsed = false;
+  isSchedinaCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
 
@@ -48,6 +49,12 @@ export class AdminMenuComponent implements OnInit {
     if (this.isHistoricalCollapsed === false) {
       this.isHistoricalCollapsed = true;
     } else { this.isHistoricalCollapsed = false; }
+  }
+
+  schedinascollapse() {
+    if (this.isSchedinaCollapsed === false) {
+      this.isSchedinaCollapsed = true;
+    } else { this.isSchedinaCollapsed = false; }
   }
   accountcollapse() {
     if (this.isAccountCollapsed === false) {

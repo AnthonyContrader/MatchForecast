@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            Partita
+          </th>
+          <th>
+            Quota 1
+          </th>
+          <th>
+            Quota X
+          </th>
+          <th>
+            Quota 2
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Schedina
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="Partita" [(ngModel)]="schedinatoinsert.Partita">
+          </td>
+          <td>
+            <input placeholder="Quota 1" [(ngModel)]="schedinatoinsert.Quota1">
+          </td>
+          <td>
+              <input placeholder="quota X" [(ngModel)]="schedinatoinsert.QuotaX">
+            </td>
+            <td>
+                <input placeholder="quota 2" [(ngModel)]="schedinatoinsert.Quota2">
+              </td>
+            <td>
+            <button (click)="insert(schedinatoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let schedina of schedinas">
+          <td>
+            <input [(ngModel)]="schedina.Partita">
+          </td>
+          <td>
+            <input [(ngModel)]="schedina.Quota1">
+          </td>
+            <td>
+                <input [(ngModel)]="schedina.QuotaX">
+              </td>
+              <td>
+                  <input [(ngModel)]="schedina.Quota2">
+                </td>
+            <td>
+            <button (click)=update(schedina)>Save</button>
+          </td>
+          <td>
+            <button (click)="delete(schedina)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>
