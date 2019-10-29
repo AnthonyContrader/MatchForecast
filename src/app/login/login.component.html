@@ -1,20 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <div class="container-fluid">
-  <div class="row">
+    
+      
     <div class="col-md-7">
-      <img src="../../assets/logo.svg" alt="logo">
+      <img src="../../assets/MatchForecastlogo-02.svg" alt="logo">
     </div>
+    
     <div class="col-md-5">
       <form #f="ngForm">
-        <p>Please insert username and password to Login or Sign Up</p>
+
         <div class="form-group">
-          <input class="form-control" type="text" id="user" name="username" placeholder="Username" ngModel>
+          <input class="form-control" type="text" id="form1" name="username" placeholder="Username" ngModel>
         </div>
         <div class="form-group">
-          <input class="form-control" type="password" id="pass" name="password" placeholder="Password" ngModel>
+          <input class="form-control" type="password" id="form2" name="password" placeholder="Password" ngModel>
         </div>
-        <button type="submit" (click)="login(f)">Login</button>
-        <button type="submit">Sign Up</button>
+        
+        <p>
+      
+        <div class="contenitore">
+
+        <div class="social">
+          <a class="fa fa-twitter" id="twitter" title="" target="_blank" href="#"></a>
+          <a class="fa fa-facebook" title="" target="_blank" href="#"></a>
+          <a class="fa fa-linkedin" title="" target="_blank" href="#"></a>
+          <a class="fa fa-instagram" title="" target="_blank" href="#"></a>
+        </div>
+        </div>  
+       
+        <div class="cerchio">
+           <div class="ddd">
+          <button type="submit" (click)="login(f)"  class="cerchio-control" id="logon">Login</button>
+          <button type="submit" id="button-reg">Register</button>
+        </div>          
+        </div>   
       </form>
     </div>
-  </div>
 </div>
