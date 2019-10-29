@@ -8,7 +8,9 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import { TeamsComponent } from './teams/teams.component';
 import { PartitasComponent } from './partitas/partitas.component';
 import { HistoricalsComponent } from './historicals/historicals.component';
-import { SchedinaComponent } from './schedinas/schedinas.component';
+
+import { InvestimentosComponent } from './investimentos/investimentos.component';
+import { SchedinasComponent } from './schedinas/schedinas.component';
 
 /**
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
@@ -20,7 +22,7 @@ import { SchedinaComponent } from './schedinas/schedinas.component';
  */
 @NgModule({
   declarations: [AdminDashboardComponent, UsersComponent,
-    TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinaComponent],
+    TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinasComponent, InvestimentosComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

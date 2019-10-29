@@ -50,16 +50,6 @@
                         </i> Manage Partitas </a>
                 </button>
             </div>
-            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#schedinas"
-                (click)="schedinascollapse()">
-                <i class="fas fa-schedinas" style="margin-right: 15px"></i>Schedinas
-            </button>
-            <div class="collapsebtn" id="schedinas" *ngIf="isSchedinaCollapsed">
-                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
-                    <a [routerLink]="['/admin-dashboard/schedinas']"> <i class="fas fa-edit" style="margin-right: 10px">
-                        </i> Manage Schedinas </a>
-                </button>
-            </div>
             <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#historicals"
                 (click)="historicalscollapse()">
                 <i class="fas fa-historicals" style="margin-right: 15px"></i>Historicals
@@ -70,6 +60,27 @@
                         </i> Manage Historicals </a>
                 </button>
             </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#schedinas"
+            (click)="schedinascollapse()">
+            <i class="fas fa-schedinas" style="margin-right: 15px"></i>Schedinas
+        </button>
+        <div class="collapsebtn" id="schedinas" *ngIf="isSchedinaCollapsed">
+            <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                <a [routerLink]="['/admin-dashboard/schedinas']"> <i class="fas fa-edit" style="margin-right: 10px">
+                    </i> Manage Schedinas </a>
+            </button>
+        </div>
+
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#investimentos"
+            (click)="investimentoscollapse()">
+            <i class="fas fa-investimentos" style="margin-right: 15px"></i>Investimentos
+        </button>
+        <div class="collapsebtn" id="investimentos" *ngIf="isInvestimentoCollapsed">
+            <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                <a [routerLink]="['/admin-dashboard/investimentos']"> <i class="fas fa-edit" style="margin-right: 10px">
+                    </i> Manage Investimentos </a>
+            </button>
+        </div>
             <button class="menubtn" (click)="logout()">
                 <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
             </button>

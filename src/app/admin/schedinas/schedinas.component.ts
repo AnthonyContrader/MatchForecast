@@ -7,7 +7,7 @@ import { SchedinaDTO } from 'src/dto/schedinadto';
   templateUrl: './schedinas.component.html',
   styleUrls: ['./schedinas.component.css']
 })
-export class SchedinaComponent implements OnInit {
+export class SchedinasComponent implements OnInit {
 
   schedinas: SchedinaDTO[];
   schedinatoinsert: SchedinaDTO =new  SchedinaDTO();

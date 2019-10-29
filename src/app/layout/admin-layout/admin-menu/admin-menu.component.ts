@@ -13,6 +13,7 @@ export class AdminMenuComponent implements OnInit {
   isPartitaCollapsed = false;
   isHistoricalCollapsed = false;
   isSchedinaCollapsed = false;
+  isInvestimentoCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
 
@@ -56,6 +57,13 @@ export class AdminMenuComponent implements OnInit {
       this.isSchedinaCollapsed = true;
     } else { this.isSchedinaCollapsed = false; }
   }
+
+  investimentoscollapse() {
+    if (this.isInvestimentoCollapsed === false) {
+      this.isInvestimentoCollapsed = true;
+    } else { this.isInvestimentoCollapsed = false; }
+  }
+
   accountcollapse() {
     if (this.isAccountCollapsed === false) {
       this.isAccountCollapsed = true;

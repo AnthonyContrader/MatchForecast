@@ -34,6 +34,7 @@ img{
     width:49.82%;
 	margin: auto;
 	border-top:-45px;
+	filter:drop-shadow(16px 16px 10px black);
 }
 
 input{
@@ -109,7 +110,7 @@ color: white;
 height: 180px;
 width: 180px;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+filter:drop-shadow(16px 16px 10px black);
 }
 
 #logon{
