@@ -28,7 +28,11 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
+<<<<<<< HEAD
               
+=======
+           
+>>>>>>> 1730d22da61312a25539c38145ef6baf80175893
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
               
             ],

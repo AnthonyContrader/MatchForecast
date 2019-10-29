@@ -35,12 +35,12 @@
          
             <td>
               <select [(ngModel)] = "partitatoinsert.team1">  
-                <option [(ngValue)] = "team1" *ngFor = "let team1 of teams"> {{team1.id}}</option>
+                <option [(ngValue)] = "team1" *ngFor = "let team1 of teams"> {{team1.nameTeam}}</option>
                  </select>
                </td>
              <td>
                <select [(ngModel)] = "partitatoinsert.squadra">  
-                <option [(ngValue)] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.id}}</option>
+                <option [(ngValue)] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.nameTeam}}</option>
                  </select>
                 </td>
                 <td>
@@ -69,18 +69,18 @@
         <tr *ngFor="let partita of partitas">
             <td>
 
-                <select [(ngModel)]="partita.team1.id">
+                <select [(ngModel)]="partita.team1.nameTeam">
   
-                    <option [selected] = "team1" *ngFor = "let team1 of teams"> {{team1.id}} </option>
+                    <option [selected] = "team1" *ngFor = "let team1 of teams"> {{team1.nameTeam}} </option>
   
                 </select> 
               </td>
          
               <td>
 
-                  <select [(ngModel)]="partita.squadra.id">
+                  <select [(ngModel)]="partita.squadra.nameTeam">
     
-                      <option [selected] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.id}} </option>
+                      <option [selected] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.nameTeam}} </option>
     
                   </select> 
                 </td>
