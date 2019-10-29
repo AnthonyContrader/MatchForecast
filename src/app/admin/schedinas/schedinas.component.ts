@@ -12,6 +12,7 @@ export class SchedinaComponent implements OnInit {
   schedinas: SchedinaDTO[];
   schedinatoinsert: SchedinaDTO =new  SchedinaDTO();
 
+  
   constructor(private service: SchedinaService) { }
 
   ngOnInit() {
