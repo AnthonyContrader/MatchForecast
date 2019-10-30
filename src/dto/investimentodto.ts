@@ -5,7 +5,7 @@ export class InvestimentoDTO {
  
  id: number;
 
- user: InvestimentoDTO;
+ user: UserDTO;
 
  schedina: SchedinaDTO;
 
@@ -13,6 +13,6 @@ export class InvestimentoDTO {
 
  durata: number;
 
- fRischio: number;
+ rischio: number;
 
 }

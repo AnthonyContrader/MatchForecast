@@ -55,7 +55,7 @@ export class InvestimentosComponent implements OnInit {
   }
 
   insert(investimento: InvestimentoDTO) {
-  
+  console.log(investimento);
     this.service.insert(investimento).subscribe(() => this.getInvestimentos());
   }
 

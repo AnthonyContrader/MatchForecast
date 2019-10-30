@@ -27,16 +27,18 @@
         </tr>
         <tr>
           <td>
-            <input placeholder="Partita" [(ngModel)]="schedinatoinsert.Partita">
+            <select [(ngModel)] = "schedinatoinsert.partita">  
+              <option [(ngValue)] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
+               </select>
+             </td>
+          <td>
+            <input placeholder="quota1" [(ngModel)]="schedinatoinsert.quota1">
           </td>
           <td>
-            <input placeholder="Quota 1" [(ngModel)]="schedinatoinsert.Quota1">
-          </td>
-          <td>
-              <input placeholder="quota X" [(ngModel)]="schedinatoinsert.QuotaX">
+              <input placeholder="quotaX" [(ngModel)]="schedinatoinsert.quotaX">
             </td>
             <td>
-                <input placeholder="quota 2" [(ngModel)]="schedinatoinsert.Quota2">
+                <input placeholder="quota2" [(ngModel)]="schedinatoinsert.quota2">
               </td>
             <td>
             <button (click)="insert(schedinatoinsert)">Insert</button>
@@ -47,16 +49,20 @@
         </tr>
         <tr *ngFor="let schedina of schedinas">
           <td>
-            <input [(ngModel)]="schedina.Partita">
+            <select [(ngModel)]="schedina.partita.id">
+  
+              <option [selected] = "partita" *ngFor = "let partita of partitas"> {{partita.id}} </option>
+
+          </select> 
           </td>
           <td>
-            <input [(ngModel)]="schedina.Quota1">
+            <input [(ngModel)]="schedina.quota1">
           </td>
             <td>
-                <input [(ngModel)]="schedina.QuotaX">
+                <input [(ngModel)]="schedina.quotaX">
               </td>
               <td>
-                  <input [(ngModel)]="schedina.Quota2">
+                  <input [(ngModel)]="schedina.quota2">
                 </td>
             <td>
             <button (click)=update(schedina)>Save</button>
