@@ -25,7 +25,7 @@ private long id;
 
 @ManyToOne
 @JoinColumn(name = "idUtente", referencedColumnName = "id")
-private Investimento user;
+private User user;
 
 @ManyToOne
 @JoinColumn(name = "idSchedina", referencedColumnName = "id")
@@ -34,7 +34,7 @@ private Schedina schedina;
 @Column
 private int budget;
 private int durata;
-private int fRischio;
+private int rischio;
 
 
 }

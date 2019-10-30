@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import it.contrader.model.Investimento;
 import it.contrader.model.Schedina;
 import it.contrader.model.Team;
+import it.contrader.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,11 +19,11 @@ import lombok.NoArgsConstructor;
 public class InvestimentoDTO {
 
 private long id;
-private Investimento user;
+private User user;
 private Schedina schedina;
 private int budget;
 private int durata;
-private int fRischio;
+private int rischio;
 
 
 }
