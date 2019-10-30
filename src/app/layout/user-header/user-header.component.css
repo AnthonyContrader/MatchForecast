@@ -1,0 +1,57 @@
+#header{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#334247+19,fbb03b+100 */
+background:white; /* Old browsers */
+
+}
+.searchContainer {
+    margin-top: 10px;
+    display: inline-block;
+    width:100%;
+    height: auto;
+    padding: auto;
+    margin-left:10px;
+    border: 0;
+    border-radius: 21px;
+    overflow: hidden;
+  background-color: white;
+  }
+  
+  
+  .searchIcon {
+    padding: 0.5rem;
+    z-index:2;
+    background-color: white;
+  }
+  
+  .searchBox {
+    border: 0;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 12px;
+  }
+  
+  .searchButton {
+      height: 70%;
+      margin-top:7px;
+    background: white;
+    border: 2px solid darkorange;
+    color: darkorange;
+    border-radius: 15px;
+  
+  }
+  
+  p{
+      font-size: 19px;
+      color: #fbb03b;
+      margin-left: 428px;
+      padding-left: 5px;
+      padding-top: 12px;
+      height: inherit;
+      width: 100%;
+      background-color:white !important;
+  }
+  
+  i:hover{
+    background-color: crimson;
+
+  }
