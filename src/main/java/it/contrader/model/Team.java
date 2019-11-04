@@ -2,6 +2,8 @@ package it.contrader.model;
 
 import javax.persistence.*;
 
+import com.mysql.jdbc.Blob;
+
 import it.contrader.model.Team;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,16 +26,17 @@ private int numPlayers;
 
 private int rating;
 
-private int homeWins;
+private int wins;
 
-private int transferWins;
 
-private int homeDefeats;
 
-private int transferDefeats;
+private int defeats;
 
-private int homeDraws;
 
-private int transferDraws;
+private int draws;
+
+private int totalgoal;
+
+//private Blob logo;
 
 }

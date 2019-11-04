@@ -2,6 +2,8 @@ package it.contrader.dto;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.mysql.jdbc.Blob;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,17 +23,18 @@ public class TeamDTO {
 
 	private int rating;
 
-	private int homeWins;
+	private int wins;
 
-	private int transferWins;
+	
 
-	private int homeDefeats;
+	private int defeats;
 
-	private int transferDefeats;
+	
+	private int draws;
+	
+	private int totalgol;
 
-	private int homeDraws;
-
-	private int transferDraws;
+	//private Blob logo;
 	
 
 }
