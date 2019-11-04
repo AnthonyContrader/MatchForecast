@@ -1,6 +1,127 @@
-<div class= "container">
-  <h1 style="text-align: center">Welcome {{user.username}}</h1>
-  <p>
-    
-  </p>
+<div id="container" class="row">
+  <div class="prima">
+    <div class="col-md-4 col-sm-6">
+        <table class="table">
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Win</th>
+        <th>Draw</th>
+        <th>Lose</th>
+          
+        
+
+
+        <tr *ngFor="let partita of partitas">
+          <td>
+            {{partita.team1.nameTeam}}
+          </td>
+
+          <td>
+            {{partita.squadra.nameTeam}}
+          </td>
+          <td>
+            <button id="button" (click)=insert(schedinas)>{{partita.win}}</button>
+          </td>
+
+          <td>
+              <button id="button" (click)=insert(schedinas)> {{partita.draw}}</button>
+          </td>
+          <td>
+              <button id="button" (click)=insert(schedinas)> {{partita.lose}}</button>
+          </td>
+
+
+
+        </tr>
+
+
+      </table>
+    </div>
+  </div>
+  <div class="seconda">
+    <div class="col-md-4 col-sm-6">
+      <table class="table">
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Win</th>
+        <th>Draw</th>
+        <th>Lose</th>
+        <tr *ngFor="let partita of partitas">
+          <td>
+            {{partita.team1.nameTeam}}
+          </td>
+
+          <td>
+            {{partita.squadra.nameTeam}}
+          </td>
+          <td> 
+              
+            <button id="button" (click)=insert(schedina)>  {{partita.win}} </button>
+            
+          </td>
+          
+          <td>
+            {{partita.draw}}
+          </td>
+          <td>
+            {{partita.lose}}
+          </td>
+
+
+
+        </tr>
+
+      </table>
+    </div>
+  </div>
+  <div class="terza">
+    <div class="col-md-4 col-sm-6">
+      <table>
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Win</th>
+        <th>Draw</th>
+        <th>Lose</th>
+        <tr *ngFor="let partita of partitas">
+          <td>
+            {{partita.team1.nameTeam}}
+          </td>
+
+          <td>
+            {{partita.squadra.nameTeam}}
+          </td>
+          <td>
+            <button id="button" (click)=insert(schedinas)>{{partita.win}}</button>
+          </td>
+
+          <td>
+            {{partita.draw}}
+          </td>
+          <td>
+            {{partita.lose}}
+          </td>
+
+
+
+        </tr>
+
+      </table>
+    </div>
+  </div>
+  <div class="schedina">
+
+    <div class="col-md-4 col-sm-6">
+      <table>
+          <tr *ngFor="let schedina of schedinas">
+        <td>{{schedina.id}} </td>
+          
+          
+          <td> {{schedina.id}} </td>
+          
+
+          </tr>
+      </table>
+    </div>
+
+  </div>
 </div>

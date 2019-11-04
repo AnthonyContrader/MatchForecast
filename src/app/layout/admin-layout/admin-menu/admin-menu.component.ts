@@ -16,7 +16,8 @@ export class AdminMenuComponent implements OnInit {
   isInvestimentoCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
-
+  isVistaCollapsed = false;
+  isImageCollapsed = false;
   constructor(private router: Router) {
   }
 
@@ -69,4 +70,16 @@ export class AdminMenuComponent implements OnInit {
       this.isAccountCollapsed = true;
     } else { this.isAccountCollapsed = false; }
   }
+  vistacollapse() {
+    if (this.isVistaCollapsed === false) {
+      this.isVistaCollapsed = true;
+    } else { this.isVistaCollapsed = false; }
+  }
+
+  imagecollapse() {
+    if (this.isImageCollapsed === false) {
+      this.isImageCollapsed = true;
+    } else { this.isImageCollapsed = false; }
+  }
+
 }

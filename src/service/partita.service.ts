@@ -23,5 +23,8 @@ export class PartitaService extends AbstractService<PartitaDTO>{
     super(http);
     this.type = 'partita';
   }
-
+  insert(PartitaDTO: PartitaDTO): Observable<PartitaDTO> {
+    return this.http.post<any>('http://localhost:8080/' + this.type + '/partitas', PartitaDTO)
+  }
+  
 }

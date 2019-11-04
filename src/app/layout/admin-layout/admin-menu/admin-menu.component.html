@@ -81,6 +81,26 @@
                     </i> Manage Investimentos </a>
             </button>
         </div>
+        <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#users"
+                (click)="vistacollapse()">
+                <i class="fas fa-vista" style="margin-right: 15px"></i>Vista User
+            </button>
+            <div class="collapsebtn" id="vista" *ngIf="isVistaCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/vista']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Users Vista </a>
+                </button>
+            </div>
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#image"
+            (click)="imagecollapse()">
+            <i class="fas fa-vista" style="margin-right: 15px"></i>Image
+        </button>
+        <div class="collapsebtn" id="image" *ngIf="isImageCollapsed">
+            <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                <a [routerLink]="['/admin-dashboard/image']"> <i class="fas fa-edit" style="margin-right: 10px">
+                    </i> Image upload </a>
+            </button>
+        </div>
             <button class="menubtn" (click)="logout()">
                 <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
             </button>

@@ -8,9 +8,13 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import { TeamsComponent } from './teams/teams.component';
 import { PartitasComponent } from './partitas/partitas.component';
 import { HistoricalsComponent } from './historicals/historicals.component';
-
 import { InvestimentosComponent } from './investimentos/investimentos.component';
 import { SchedinasComponent } from './schedinas/schedinas.component';
+import { VistaComponent } from './vista/vista.component';
+import { FormUploadComponent } from './upload/form-upload/form-upload.component';
+import { ListUploadComponent } from './upload/list-upload/list-upload.component';
+import { DetailsUploadComponent } from './upload/details-upload/details-upload.component';
+import { ImageComponent } from './image/image.component';
 
 /**
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
@@ -22,7 +26,7 @@ import { SchedinasComponent } from './schedinas/schedinas.component';
  */
 @NgModule({
   declarations: [AdminDashboardComponent, UsersComponent,
-    TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinasComponent, InvestimentosComponent],
+    TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinasComponent, InvestimentosComponent,VistaComponent, FormUploadComponent, ListUploadComponent, DetailsUploadComponent, ImageComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

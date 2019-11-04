@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container-fluid">
+    
+      
+    <div>
+      <img src="../../../assets/MatchForecast_logowhite-02 (1).svg" id="img"></div>
+      
+   
+    
+    
+
+       
+        
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">   
+      <div id="nav1">
+          <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              BUDGET
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="#">EUROPA</a>
+                              
+                            </div>
+                          </li>
+                          </ul></div>
+            </div>
+
+            <div id="nav2">
+                <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                          <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    DURATA
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                      <input type="date" #date required name="date" placeholder="date" [(ngModel)]="partitatoinsert.date">
+
+                                    
+                                  </div>
+                                </li>
+                                </ul></div>
+                  </div>
+                </nav> 
+      
+        <div class="cerchio">
+           <div class="ddd">
+          <button type="submit" (click)="login(f)"  class="cerchio-control" id="logon">Forecast</button>
+          
+        </div>          
+        </div>   
+      
+</div>

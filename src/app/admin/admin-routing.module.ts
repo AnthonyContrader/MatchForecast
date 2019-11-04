@@ -7,9 +7,10 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import { TeamsComponent } from './teams/teams.component';
 import { PartitasComponent } from './partitas/partitas.component';
 import { HistoricalsComponent } from './historicals/historicals.component';
-
 import { InvestimentosComponent } from './investimentos/investimentos.component';
 import { SchedinasComponent } from './schedinas/schedinas.component';
+import { VistaComponent } from './vista/vista.component';
+import { ImageComponent } from './image/image.component';
 
 
 /**
@@ -33,7 +34,11 @@ const routes: Routes = [
     { path: 'historicals', component: HistoricalsComponent},
     {path: 'schedinas', component: SchedinasComponent},
     {path: 'investimentos', component: InvestimentosComponent},
-    { path: 'work-in-progress', component: WorkInProgressComponent}
+    { path: 'work-in-progress', component: WorkInProgressComponent},
+    {path: 'vista', component: VistaComponent}, 
+    {path: 'image', component: ImageComponent}, 
+
+    
   ]}
 ];
 

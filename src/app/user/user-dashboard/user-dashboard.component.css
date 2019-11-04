@@ -1,7 +1,124 @@
-.container {
+#container {
 
     background-color: #D3D3D3;
 }
-p {
-    font-size: 16px;
+.prima {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 240px;
+    height: 300px;
+    border:2px solid gray;
+}
+table.th{
+    width: 50px;
+}
+.seconda {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 220px;
+    height: 300px;
+    border:2px solid gray;
+}
+.schedina {
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 180px;
+    height: 280px;
+    border:2px solid gray;
+}
+
+.terza {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 220px;
+    height: 300px;
+    border:2px solid gray;
+}
+
+.quarta {
+    margin-top: 8px;
+    margin-left: 40px;
+    width: 220px;
+    height: 240px;
+    border:2px solid gray;
+    background-color: white;
+}
+
+.quinta {
+    margin-top: 8px;
+    margin-left: 40px;
+    width: 220px;
+    height: 240px;
+    border:2px solid gray;
+}
+.sesta {
+    margin-top: 8px;
+    margin-left: 40px;
+    width: 220px;
+    height: 240px;
+    border:2px solid gray;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.containerTab {
+    padding: 20px;
+    color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+.slideL{
+    animation: slideL 3s forwards ease;
+}
+
+@keyframes slideL {
+  
+    100% {
+        
+        transform: translate(-10%, -50%);
+      }
+}
+.exactCenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    height: 700px;
+    width: 800px;
+  }
+  .clickertab{
+    display: block;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: 80px;
+    top: 110px;
+}
+#button{
+    border:none;
+    background-color: white;
+}
+td,th{
+    padding: 8px;
 }

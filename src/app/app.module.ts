@@ -8,10 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from './layout/layout.module';
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
-<<<<<<< HEAD
-
-=======
->>>>>>> 71e79dda1b5a81975251b85438f4d30827dd35b0
 
 /** 
  * Modulo principale dell'applicazione. Qui vengono importati i moduli secondari. L'UNICA component

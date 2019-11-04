@@ -1,8 +1,13 @@
 #header{
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#334247+19,fbb03b+100 */
-background:white; /* Old browsers */
+background:white; 
+height: 13vh;
 
 }
+#img{
+ 
+  margin-left:-5px;
+}
+
 .searchContainer {
     margin-top: 10px;
     display: inline-block;
@@ -55,3 +60,14 @@ background:white; /* Old browsers */
     background-color: crimson;
 
   }
+  .navbar{
+    font-family:CollegeSlabSC ;
+    font-size: 17px;
+    background-color: white;
+    
+  }
+  * {
+    font-family:CollegeSlabSC;
+   }
+   p{background-color: thistle;
+    }

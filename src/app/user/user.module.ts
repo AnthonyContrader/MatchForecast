@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserRoutingModule } from './user-routing.module';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UseraflogComponent } from './useraflog/useraflog.component';
 
 /*import { UsersComponent } from './users/users.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
@@ -18,7 +19,7 @@ import { HistoricalsComponent } from './historicals/historicals.component';*/
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [UserDashboardComponent, /*UsersComponent,
+  declarations: [UserDashboardComponent, UseraflogComponent, /*UsersComponent,
   TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent*/],
   imports: [
     CommonModule,

@@ -1,19 +1,72 @@
+<div class="row">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"> <img id="img" src="../../../assets/MatchForecastlogo-02.svg" alt="user-header"
+      style="width:150%; height: 150%;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          REGION
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">EUROPA</a>
 
-  
-    <div id="header" class="row no-gutters">
-        
-    <div class="col-md-4" style="text-align: center">
-        <img src="../../../assets/MatchForecastlogo-02.svg" alt="header" style="width:30%; height: 30%;">
-    </div>
-    <div class="col-md-1" style="text-align: center">
-    </div>
-    <div class="col-md-2" style="display: inline-block">
-  <a><i class="fas fa-futbol" style="font-size:25px; padding:12px"></i></a> 
-  <a><i class="fas fa-wallet" style="font-size:25px; padding:12px"></i></a> 
-  <a><i class="far fa-money-bill-alt" style="font-size:25px; padding:12px"></i></a> 
-    </div>
-    
-        <div class="col-md-2 " style=" display: inline-block">
-            <p><img src="../../../assets/man-1.svg" style="height:30px; margin:0.5%;"> {{user.username}} {{user.usertype}}</p>
-        
-    </div></div>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          NATION
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">ITALIA</a>
+
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          TORNEO
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">SERIE A</a>
+
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          SQUADRA
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="http://localhost:4200/admin-dashboard/teams" *ngFor="let team of teams">{{team.nameTeam}} </a>
+
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          PLAYER
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+</nav>
+</div>
