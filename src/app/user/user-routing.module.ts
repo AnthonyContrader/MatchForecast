@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserLayoutComponent } from '../layout/user-layout/user-layout.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UseraflogComponent } from './useraflog/useraflog.component';
+import { ClassificaComponent } from './classifica/classifica.component';
 /*import { UsersComponent } from './users/users.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
 import { TeamsComponent } from './teams/teams.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'useraflog', component:UseraflogComponent},
   { path: 'user-dashboard', component: UserLayoutComponent, children:[
     { path: '', component: UserDashboardComponent},
+  {path:'classifica',component:ClassificaComponent}
     
     /*{ path: 'users', component: UsersComponent},
     { path: 'teams', component: TeamsComponent},
