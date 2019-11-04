@@ -1,8 +1,9 @@
 package it.contrader.model;
 
 import javax.persistence.*;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +21,9 @@ public class Historical {
 	private long id;
 	
 	
-	@ManyToOne
+	
+	@ManyToOne (fetch=FetchType.EAGER)
+	@Cascade(CascadeType.SAVE_UPDATE)
 	@JoinColumn(name = "idPartita", referencedColumnName= "id")
 	private Partita partita;
 	

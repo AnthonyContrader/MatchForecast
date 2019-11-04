@@ -2,11 +2,15 @@ package it.contrader.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,11 +32,13 @@ public class Partita {
 	//private Long idcoin;
 	
 	//relazione Match - Team
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
+	@Cascade(CascadeType.SAVE_UPDATE)
 	@JoinColumn(name = "idTeam1", referencedColumnName = "id")
 	private Team team1;
 	
-	@ManyToOne
+	@ManyToOne (fetch=FetchType.EAGER)
+	@Cascade(CascadeType.SAVE_UPDATE)
 	@JoinColumn(name = "idTeam2", referencedColumnName = "id")
 	private Team squadra;
 	
