@@ -10,6 +10,7 @@ import { HistoricalsComponent } from '../admin/historicals/historicals.component
 import { PartitasComponent } from '../admin/partitas/partitas.component';
 import { TeamsComponent } from '../admin/teams/teams.component';
 import { SchedinasComponent } from '../admin/schedinas/schedinas.component';
+import { ClassificaComponent } from './classifica/classifica.component';
 
 /*
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
@@ -20,7 +21,7 @@ import { SchedinasComponent } from '../admin/schedinas/schedinas.component';
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [UserDashboardComponent, UseraflogComponent/*, UsersComponent,*
+  declarations: [UserDashboardComponent, UseraflogComponent,ClassificaComponent/*, UsersComponent,*
   TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinasComponent*/],
   imports: [
     CommonModule,
