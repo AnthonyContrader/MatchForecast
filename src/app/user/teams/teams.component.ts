@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TeamService } from 'src/service/team.service';
 import { TeamDTO } from 'src/dto/teamdto';
-
+import {TeamService} from 'src/service/team.service';
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',
@@ -9,7 +8,7 @@ import { TeamDTO } from 'src/dto/teamdto';
 })
 export class TeamsComponent implements OnInit {
 
-  teams: TeamDTO[];
+  team: TeamDTO[];
   teamtoinsert: TeamDTO = new TeamDTO();
 
   constructor(private service: TeamService) { }
@@ -19,7 +18,7 @@ export class TeamsComponent implements OnInit {
   }
 
   getTeams() {
-    this.service.getAll().subscribe(teams => this.teams = teams);
+    this.service.getAll().subscribe(teams => this.team = teams);
   }
 
   delete(team: TeamDTO) {

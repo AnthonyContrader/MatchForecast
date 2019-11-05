@@ -8,16 +8,12 @@ export class TeamDTO {
  
     rating: number;
 
-    homeWins: number;
+    wins: number;
 
-    trasferWins: number;
+    defeats: number;
 
-    homeDefeats: number;
+    draws: number;
 
-    transferDefeats: number;
-
-    homeDraws: number;
-
-    transferDraws: number
+    totalgoal: number;
  
  }
