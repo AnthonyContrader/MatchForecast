@@ -2,6 +2,8 @@
   <div class="prima">
     <div class="col-md-4 col-sm-6">
         <table class="table">
+         
+        <th>id</th> 
         <th>Team 1</th>
         <th>Team 2</th>
         <th>Win</th>
@@ -12,6 +14,10 @@
 
 
         <tr *ngFor="let partita of partitas">
+            <td>
+                
+                <button id="button" (click)=insert(partita)>{{partita.id}}</button>
+              </td>
           <td>
             {{partita.team1.nameTeam}}
           </td>
@@ -20,17 +26,14 @@
             {{partita.squadra.nameTeam}}
           </td>
           <td>
-            
-            
-            
-            <button id="button" (click)=insert(schedinas)>{{partita.win}}</button>
+            <button id="button" (click)=insert(partita)>{{partita.win}}</button>
           </td>
 
           <td>
-              <button id="button" (click)=insert(schedinas)> {{partita.draw}}</button>
+              <button id="button" (click)=insert(partita)> {{partita.draw}}</button>
           </td>
           <td>
-              <button id="button" (click)=insert(schedinas)> {{partita.lose}}</button>
+              <button id="button" (click)=insert(partita)> {{partita.lose}}</button>
           </td>
 
 
@@ -116,7 +119,7 @@
     <div class="col-md-4 col-sm-6">
       <table>
           <tr *ngFor="let schedina of schedinas">
-        <td>{{schedina.id}} </td>
+       
           
           
           <td> {{schedina.id}} </td>

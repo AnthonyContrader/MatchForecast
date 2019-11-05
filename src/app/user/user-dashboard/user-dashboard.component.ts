@@ -22,8 +22,9 @@ schedinas: SchedinaDTO[];
   team: TeamDTO;
   historical: HistoricalDTO;
   partita: PartitaDTO;
+  schedina: SchedinaDTO;
   partitas: PartitaDTO[];
-  
+  schedinatoinsert: SchedinaDTO = new SchedinaDTO();
   constructor(private service : PartitaService,private service2 :SchedinaService) { }
 
   ngOnInit() {
@@ -31,6 +32,7 @@ schedinas: SchedinaDTO[];
     this.team = JSON.parse(localStorage.getItem('currentTeam'));
     this.partita = JSON.parse(localStorage.getItem('currentPartita'));
     this.historical = JSON.parse(localStorage.getItem('currentHistorical'));
+    this.schedina = JSON.parse(localStorage.getItem('currentSchedina'));
     this.getPartitas();
     this.getSchedinas();
   }
@@ -42,6 +44,11 @@ schedinas: SchedinaDTO[];
     this.service2.getAll().subscribe(schedinas => this.schedinas = schedinas);
   }
   insert(schedina: SchedinaDTO) {
+   
+   // schedina.partita.id = this.schedina.partita.id;
+    schedina.quota1=16;
+    schedina.quotaX=22;
+    schedina.quota2=24;
     console.log(schedina);
           this.service2.insert(schedina).subscribe(()=> this.getSchedinas());
 }
