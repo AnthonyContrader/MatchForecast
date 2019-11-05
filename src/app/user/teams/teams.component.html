@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            nameTeam
+          </th>
+          <th>
+            numPlayers
+          </th>
+          <th>
+            rating
+          </th>
+          <th>
+            homeWins
+          </th>
+          <th>
+            transferWins
+          </th>
+          <th>
+            homeDefeats
+          </th>
+          <th>
+            transferDefeats
+          </th>
+          <th>
+            homeDraw
+          </th>
+          <th>
+            transferDraw
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Team
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="nameTeam" [(ngModel)]="teamtoinsert.nameTeam">
+          </td>
+          <td>
+            <input placeholder="numPlayers" [(ngModel)]="teamtoinsert.numPlayers">
+          </td>
+          <td>
+              <input placeholder="rating" [(ngModel)]="teamtoinsert.rating">
+            </td>
+            <td>
+                <input placeholder="homeWins" [(ngModel)]="teamtoinsert.homeWins">
+              </td>
+              <td>
+                  <input placeholder="transferWins" [(ngModel)]="teamtoinsert.transferWins">
+                </td>
+                <td>
+                    <input placeholder="homeDefeats" [(ngModel)]="teamtoinsert.homeDefeats">
+                  </td>
+                  <td>
+                      <input placeholder="transferDefeats" [(ngModel)]="teamtoinsert.transferDefeats">
+                    </td>
+                    <td>
+                        <input placeholder="homeDraws" [(ngModel)]="teamtoinsert.homeDraws">
+                      </td>
+                      <td>
+                          <input placeholder="transferDraws" [(ngModel)]="teamtoinsert.transferDraws">
+                        </td>
+          <td>
+            <button (click)="insert(teamtoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let team of teams">
+          <td>
+            <input [(ngModel)]="team.nameTeam">
+          </td>
+          <td>
+            <input [(ngModel)]="team.numPlayers">
+          </td>
+            <td>
+                <input [(ngModel)]="team.rating">
+              </td>
+              <td>
+                  <input [(ngModel)]="team.homeWins">
+                </td>
+                <td>
+                    <input [(ngModel)]="team.transferWins">
+                  </td>
+                  <td>
+                      <input [(ngModel)]="team.homeDefeats">
+                    </td>
+                    <td>
+                        <input [(ngModel)]="team.transferDefeats">
+                      </td>
+                      <td>
+                          <input [(ngModel)]="team.homeDraws">
+                        </td>
+                        <td>
+                            <input [(ngModel)]="team.transferDraws">
+                          </td>
+          <td>
+            <button (click)=update(team)>Save</button>
+          </td>
+          <td>
+            <button (click)="delete(team)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

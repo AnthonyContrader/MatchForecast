@@ -47,6 +47,8 @@ textarea:focus, input:focus {
 }
 
 input, select {
+
+    margin-left: 150px;
     color: white;
 }
 

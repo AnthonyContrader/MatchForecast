@@ -24,6 +24,7 @@ schedinas: SchedinaDTO[];
   partita: PartitaDTO;
   schedina: SchedinaDTO;
   partitas: PartitaDTO[];
+  partitatoinsert: PartitaDTO = new PartitaDTO();
   schedinatoinsert: SchedinaDTO = new SchedinaDTO();
   constructor(private service : PartitaService,private service2 :SchedinaService) { }
 
@@ -43,13 +44,26 @@ schedinas: SchedinaDTO[];
   getSchedinas(){
     this.service2.getAll().subscribe(schedinas => this.schedinas = schedinas);
   }
-  insert(schedina: SchedinaDTO) {
+  
+  in(partita: PartitaDTO) {
+
+   this.schedinatoinsert.partita = partita;
+     this.schedinatoinsert.quota1=16;
+    this.schedinatoinsert.quotaX=22;
+    this.schedinatoinsert.quota2=24;
+    console.log(this.schedinatoinsert);
+    this.service2.insert(this.schedinatoinsert).subscribe(()=> this.getSchedinas());
+
+
+  }
+
+  /*insert(schedina: SchedinaDTO) {
    
-   // schedina.partita.id = this.schedina.partita.id;
+     
     schedina.quota1=16;
     schedina.quotaX=22;
     schedina.quota2=24;
     console.log(schedina);
           this.service2.insert(schedina).subscribe(()=> this.getSchedinas());
-}
+}*/
 }

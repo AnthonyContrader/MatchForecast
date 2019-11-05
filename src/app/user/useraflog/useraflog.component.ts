@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { InvestimentoDTO } from 'src/dto/investimentodto';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-useraflog',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UseraflogComponent implements OnInit {
 
-  constructor() { }
+  investimento: InvestimentoDTO;
+  
+
+  constructor( private router: Router) { }
 
   ngOnInit() {
+  }
+
+
+  nv(f: NgForm) : void {
+
+    this.router.navigate(['/user-dashboard']);
+           
+
   }
 
 }

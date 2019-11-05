@@ -16,7 +16,7 @@
         <tr *ngFor="let partita of partitas">
             <td>
                 
-                <button id="button" (click)=insert(partita)>{{partita.id}}</button>
+                <button id="button" (click)="in(partita)">{{partita.id}}</button>
               </td>
           <td>
             {{partita.team1.nameTeam}}
@@ -26,14 +26,14 @@
             {{partita.squadra.nameTeam}}
           </td>
           <td>
-            <button id="button" (click)=insert(partita)>{{partita.win}}</button>
+            <button id="button" (click)=in(partita)>{{partita.win}}</button>
           </td>
 
           <td>
-              <button id="button" (click)=insert(partita)> {{partita.draw}}</button>
+              <button id="button" (click)=in(partita)> {{partita.draw}}</button>
           </td>
           <td>
-              <button id="button" (click)=insert(partita)> {{partita.lose}}</button>
+              <button id="button" (click)=in(partita)> {{partita.lose}}</button>
           </td>
 
 
@@ -44,76 +44,7 @@
       </table>
     </div>
   </div>
-  <div class="seconda">
-    <div class="col-md-4 col-sm-6">
-      <table class="table">
-        <th>Team 1</th>
-        <th>Team 2</th>
-        <th>Win</th>
-        <th>Draw</th>
-        <th>Lose</th>
-        <tr *ngFor="let partita of partitas">
-          <td>
-            {{partita.team1.nameTeam}}
-          </td>
-
-          <td>
-            {{partita.squadra.nameTeam}}
-          </td>
-          <td> 
-              
-            <button id="button" (click)=insert(schedina)>  {{partita.win}} </button>
-            
-          </td>
-          
-          <td>
-            {{partita.draw}}
-          </td>
-          <td>
-            {{partita.lose}}
-          </td>
-
-
-
-        </tr>
-
-      </table>
-    </div>
-  </div>
-  <div class="terza">
-    <div class="col-md-4 col-sm-6">
-      <table>
-        <th>Team 1</th>
-        <th>Team 2</th>
-        <th>Win</th>
-        <th>Draw</th>
-        <th>Lose</th>
-        <tr *ngFor="let partita of partitas">
-          <td>
-            {{partita.team1.nameTeam}}
-          </td>
-
-          <td>
-            {{partita.squadra.nameTeam}}
-          </td>
-          <td>
-            <button id="button" (click)=insert(schedinas)>{{partita.win}}</button>
-          </td>
-
-          <td>
-            {{partita.draw}}
-          </td>
-          <td>
-            {{partita.lose}}
-          </td>
-
-
-
-        </tr>
-
-      </table>
-    </div>
-  </div>
+  
   <div class="schedina">
 
     <div class="col-md-4 col-sm-6">
@@ -123,7 +54,9 @@
           
           
           <td> {{schedina.id}} </td>
-          
+          <td> {{schedina.partita.team1.nameTeam}} </td>
+          <td> {{schedina.partita.squadra.nameTeam}} </td>
+
 
           </tr>
       </table>

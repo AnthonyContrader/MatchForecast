@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            Team1
+          </th>
+          <th>
+            Team2
+          </th>
+          <th>
+            Date
+          </th>
+          <th>
+            Win
+          </th>
+          <th>
+            Draw
+          </th>
+          <th>
+            Lose
+          </th>
+          <th>
+         <!--   Edit -->
+          </th>
+          <th>
+            Partita
+          </th>
+        </tr>
+        <tr>
+         
+            <td>
+              <select [(ngModel)] = "partitatoinsert.team1">  
+                <option [(ngValue)] = "team1" *ngFor = "let team1 of teams"> {{team1.nameTeam}}</option>
+                 </select>
+               </td>
+             <td>
+               <select [(ngModel)] = "partitatoinsert.squadra">  
+                <option [(ngValue)] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.nameTeam}}</option>
+                 </select>
+                </td>
+                <td>
+                   
+
+                   <input type="date" #date required name="date" placeholder="date" [(ngModel)]="partitatoinsert.date">
+                  </td>
+                  <td>
+                     <!-- <input placeholder="win" [(ngModel)]="partitatoinsert.win">--> 
+                    </td>
+                    <td>
+                      <!--  <input placeholder="draw" [(ngModel)]="partitatoinsert.draw">--> 
+                      </td>
+                      <td>
+                        <!--  <input placeholder="lose" [(ngModel)]="partitatoinsert.lose">--> 
+                        </td>
+                        
+          
+          <td>
+            <button (click)="insert(partitatoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let partita of partitas">
+            <td>
+
+                <select [(ngModel)]="partita.team1.nameTeam">
+  
+                    <option [selected] = "team1" *ngFor = "let team1 of teams"> {{team1.nameTeam}} </option>
+  
+                </select> 
+              </td>
+         
+              <td>
+
+                  <select [(ngModel)]="partita.squadra.nameTeam">
+    
+                      <option [selected] = "squadra" *ngFor = "let squadra of squadras"> {{squadra.nameTeam}} </option>
+    
+                  </select> 
+                </td>
+         
+          <td>
+            <input [(ngModel)]="partita.date"> 
+          </td>
+          <td>
+         <!--   <input [(ngModel)]="partita.win"> -->{{partita.win}}
+          </td>
+          <td>
+           <!--   <input [(ngModel)]="partita.draw"> -->{{partita.draw}}
+            </td>
+            <td>
+             <!--   <input [(ngModel)]="partita.lose"> -->{{partita.lose}}
+              </td>
+            <td>
+          <!--  <button (click)=update(partita)>Save</button> -->
+          </td>
+          <td>
+            <button (click)="delete(partita)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { UserRoutingModule } from './user-routing.module';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UseraflogComponent } from './useraflog/useraflog.component';
+import { UsersComponent } from '../admin/users/users.component';
+import { WorkInProgressComponent } from '../admin/work-in-progress/work-in-progress.component';
+import { HistoricalsComponent } from '../admin/historicals/historicals.component';
+import { PartitasComponent } from '../admin/partitas/partitas.component';
+import { TeamsComponent } from '../admin/teams/teams.component';
+import { SchedinasComponent } from '../admin/schedinas/schedinas.component';
 
-/*import { UsersComponent } from './users/users.component';
-import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
-import { TeamsComponent } from './teams/teams.component';
-import { PartitasComponent } from './partitas/partitas.component';
-import { HistoricalsComponent } from './historicals/historicals.component';*/
-/**
+/*
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
  * l'admin. Questo modulo importa AdminRoutingModule.
  * 
@@ -19,8 +20,8 @@ import { HistoricalsComponent } from './historicals/historicals.component';*/
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [UserDashboardComponent, UseraflogComponent, /*UsersComponent,
-  TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent*/],
+  declarations: [UserDashboardComponent, UseraflogComponent/*, UsersComponent,*
+  TeamsComponent, PartitasComponent,HistoricalsComponent, WorkInProgressComponent, SchedinasComponent*/],
   imports: [
     CommonModule,
     UserRoutingModule,

@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserLayoutComponent } from '../layout/user-layout/user-layout.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UseraflogComponent } from './useraflog/useraflog.component';
-/*import { UsersComponent } from './users/users.component';
-import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
-import { TeamsComponent } from './teams/teams.component';
-import { PartitasComponent } from './partitas/partitas.component';
-import { HistoricalsComponent } from './historicals/historicals.component';*/
+import { UsersComponent } from '../admin/users/users.component';
+import { TeamsComponent } from '../admin/teams/teams.component';
+import { PartitasComponent } from '../admin/partitas/partitas.component';
+import { HistoricalsComponent } from '../admin/historicals/historicals.component';
+import { WorkInProgressComponent } from '../admin/work-in-progress/work-in-progress.component';
+import { SchedinasComponent } from '../admin/schedinas/schedinas.component';
+
 
 
 
@@ -27,12 +29,13 @@ const routes: Routes = [
   {path:'useraflog', component:UseraflogComponent},
   { path: 'user-dashboard', component: UserLayoutComponent, children:[
     { path: '', component: UserDashboardComponent},
-    
-    /*{ path: 'users', component: UsersComponent},
+   
+   // { path: 'users', component: UsersComponent},
     { path: 'teams', component: TeamsComponent},
     { path: 'partitas', component: PartitasComponent},
     { path: 'historicals', component: HistoricalsComponent},
-    { path: 'work-in-progress', component: WorkInProgressComponent}*/
+    { path: 'work-in-progress', component: WorkInProgressComponent},
+    { path: 'schedinas', component: SchedinasComponent}
   ]}
 ];
 
