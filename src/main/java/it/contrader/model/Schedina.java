@@ -1,6 +1,9 @@
 package it.contrader.model;
 import javax.persistence.*;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import it.contrader.model.Partita;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +20,8 @@ public class Schedina {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@ManyToOne
+	@ManyToOne (fetch=FetchType.EAGER)
+	@Cascade(CascadeType.SAVE_UPDATE)
 	@JoinColumn(name = "idPartita", referencedColumnName= "id")
 	private Partita partita;
 	
