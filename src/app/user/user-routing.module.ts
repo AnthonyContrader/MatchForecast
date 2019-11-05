@@ -9,6 +9,7 @@ import { PartitasComponent } from '../admin/partitas/partitas.component';
 import { HistoricalsComponent } from '../admin/historicals/historicals.component';
 import { WorkInProgressComponent } from '../admin/work-in-progress/work-in-progress.component';
 import { SchedinasComponent } from '../admin/schedinas/schedinas.component';
+import { ClassificaComponent } from './classifica/classifica.component';
 
 
 
@@ -29,7 +30,7 @@ const routes: Routes = [
   {path:'useraflog', component:UseraflogComponent},
   { path: 'user-dashboard', component: UserLayoutComponent, children:[
     { path: '', component: UserDashboardComponent},
-   
+    {path:'classifica', component:ClassificaComponent},
    // { path: 'users', component: UsersComponent},
     { path: 'teams', component: TeamsComponent},
     { path: 'partitas', component: PartitasComponent},
