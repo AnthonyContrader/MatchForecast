@@ -32,7 +32,7 @@ public class TeamDTO {
 	
 	private int draws;
 	
-	private int totalgol;
+	private int totalgoal;
 
 	//private Blob logo;
 	

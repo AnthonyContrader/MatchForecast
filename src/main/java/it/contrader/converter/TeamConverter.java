@@ -13,7 +13,7 @@ public class TeamConverter extends AbstractConverter<Team,TeamDTO> {
 	public Team toEntity(TeamDTO teamDTO) {
 		Team team = null;
 		if (teamDTO != null) {
-			team = new Team(teamDTO.getId(),teamDTO.getNameTeam(),teamDTO.getNumPlayers(),teamDTO.getRating(),teamDTO.getWins(),teamDTO.getDefeats(),teamDTO.getDraws(),teamDTO.getTotalgol()/*,teamDTO.getLogo()*/);			
+			team = new Team(teamDTO.getId(),teamDTO.getNameTeam(),teamDTO.getNumPlayers(),teamDTO.getRating(),teamDTO.getWins(),teamDTO.getDefeats(),teamDTO.getDraws(),teamDTO.getTotalgoal()/*,teamDTO.getLogo()*/);			
 		}
 		return team;
 	}
