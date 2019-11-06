@@ -9,9 +9,7 @@
           <th>
             Utentes
           </th>
-          <th>
-            Schedina
-          </th>
+         
           <th>
             Budget
           </th>
@@ -36,11 +34,7 @@
                 <option [(ngValue)] = "user" *ngFor = "let user of users"> {{user.id}}</option>
                  </select>
                </td>
-             <td>
-               <select [(ngModel)] = "investimentotoinsert.schedina">  
-                <option [(ngValue)] = "schedina" *ngFor = "let schedina of schedinas"> {{schedina.id}}</option>
-                 </select>
-                </td>
+             
                
                   <td>
                       <input placeholder="budget" [(ngModel)]="investimentotoinsert.budget">
@@ -70,14 +64,7 @@
                 </select> 
               </td>
          
-              <td>
-
-                  <select [(ngModel)]="investimento.schedina.id">
-    
-                      <option [selected] = "schedina" *ngFor = "let schedina of schedinas"> {{schedina.id}} </option>
-    
-                  </select> 
-                </td>
+              
          
           
                 <td>

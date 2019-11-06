@@ -3,7 +3,7 @@ import { InvestimentoService } from 'src/service/investimento.service';
 import { InvestimentoDTO } from 'src/dto/investimentodto';
 import {UserService} from 'src/service/user.service';
 import { UserDTO } from 'src/dto/userdto';
-import {SchedinaService} from 'src/service/schedina.service';
+
 import { SchedinaDTO } from 'src/dto/schedinadto';
 
 @Component({
@@ -20,13 +20,13 @@ export class InvestimentosComponent implements OnInit {
   investimentos: InvestimentoDTO[];
   investimentotoinsert: InvestimentoDTO = new InvestimentoDTO();
   users: UserDTO [];
-  schedinas: SchedinaDTO [];
-  constructor(private service: InvestimentoService,private tService: UserService,private t2Service: SchedinaService) { }
+  
+  constructor(private service: InvestimentoService,private tService: UserService) { }
 
   ngOnInit() {
     this.getInvestimentos();
     this.getUsers();
-    this.getSchedinas();
+    
     
   }
 
@@ -40,11 +40,7 @@ export class InvestimentosComponent implements OnInit {
     
   }
 
-  getSchedinas() {
-   
-    this.t2Service.getAll().subscribe(schedinas => this.schedinas = schedinas);
-  }
-  
+ 
   delete(investimento: InvestimentoDTO) {
     this.service.delete(investimento.id).subscribe(() => this.getInvestimentos());
   }
