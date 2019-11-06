@@ -1,68 +1,8 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="sidenav">
-            <button class="menubtn">
-                <a [routerLink]="['/user-dashboard']"> <i class="fas fa-home" style="margin-right: 10px"> </i>
-                    Dashboard </a>
-            </button>
-            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#account"
-                (click)="accountcollapse()">
-                <i class="fas fa-user" style="margin-right: 15px"></i> Account
-            </button>
-            <div class="collapsebtn" id="account" *ngIf="isAccountCollapsed">
-                <button class="menubtn" style="background-color: #334247; padding-left: 40px">
-                    <a [routerLink]="['/admin-dashboard/work-in-progress']"> <i class="fas fa-user-edit"
-                            style="margin-right: 15px"></i>
-                        Edit Profile</a>
-                </button>
-                <button class="menubtn" style="background-color: #334247; padding-left: 40px">
-                    <a [routerLink]="['/admin-dashboard/work-in-progress']"><i class="fas fa-file-alt"
-                            style="margin-right: 15px"></i>General Info</a>
-                </button>
-            </div>
-            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#users"
-                (click)="userscollapse()">
-                <i class="fas fa-users" style="margin-right: 15px"></i>Users
-            </button>
-            <div class="collapsebtn" id="users" *ngIf="isUserCollapsed">
-                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
-                    <a [routerLink]="['/admin-dashboard/users']"> <i class="fas fa-edit" style="margin-right: 10px">
-                        </i> Manage Users </a>
-                </button>
-            </div>
-            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#teams"
-                (click)="teamscollapse()">
-                <i class="fas fa-teams" style="margin-right: 15px"></i>Teams
-            </button>
-            <div class="collapsebtn" id="teams" *ngIf="isTeamCollapsed">
-                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
-                    <a [routerLink]="['/admin-dashboard/teams']"> <i class="fas fa-edit" style="margin-right: 10px">
-                        </i> Manage Teams </a>
-                </button>
-            </div>
-            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#partitas"
-                (click)="partitascollapse()">
-                <i class="fas fa-partitas" style="margin-right: 15px"></i>Partitas
-            </button>
-            <div class="collapsebtn" id="users" *ngIf="isPartitaCollapsed">
-                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
-                    <a [routerLink]="['/admin-dashboard/partitas']"> <i class="fas fa-edit" style="margin-right: 10px">
-                        </i> Manage Partitas </a>
-                </button>
-            </div>
-            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#historicals"
-                (click)="historicalscollapse()">
-                <i class="fas fa-historicals" style="margin-right: 15px"></i>Historicals
-            </button>
-            <div class="collapsebtn" id="historicals" *ngIf="isHistoricalCollapsed">
-                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
-                    <a [routerLink]="['/admin-dashboard/historicals']"> <i class="fas fa-edit" style="margin-right: 10px">
-                        </i> Manage Historicals </a>
-                </button>
-            </div>
-            <button class="menubtn" (click)="logout()">
-                <i class="fas fa-sign-out-alt" style="margin-right: 15px"></i>Logout
-            </button>
-        </div>
+<div class="bet"> 
+    <div class="col-sm-4">col-sm-4
+        <table>
+
+        </table>
+      </div>
     </div>
-</div>
+  

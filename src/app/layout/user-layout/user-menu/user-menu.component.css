@@ -1,165 +1,31 @@
-.sidenav {
-    height:92vh;
-    width: 100%;
-    top: 0;
-    left: -320;
-    background-color: #334247;
-   /* overflow-x: visible;*/
-   position: sticky;
-   transition: 0.5s;
-    padding-top: 0;
-    padding: 15px 20px;
-    
-    /* regoliamo la uscita del panello  */
-    
-    -webkit-transition: left 0.3s;
-    
-    -moz-transition: left 0.3s;
-    
-    transition: left 0.3s;
-    
-    /* indichiamo il colore dello sfondo del panello */
-    
-    
-    
-    /* indichiamo che sara sopra tutti gli altri elementi della pagina  */
-    
-    z-index: 2000;  
+.container-fluid{
+    background-color: #F8F8F8	;
 }
-.sidenav-toggle {
-    
-    /* posizionamento assoluto*/
-    
-    position: absolute;
-    
-    /* rispetto bordo sinistro del pannello  */
-    
-    left: 320px;
-    
-    /* rispetto bordo superiore  */
-    
-    top: 1em;
-    
-    /* spazzi interni  */
-    
-    padding: 0.5em;
-    
-    /* indichiamo il colore dello sfondo del interruttore
-    045.
-    * di solito corrisponde al colore del pannello
-    046.
-    */
-    
-    background: inherit;
-    
-    /* colore del testo */
-    
-    color: #dadada;
-    
-    /* tipo del cursore */
-    
-    cursor: pointer;
-    
-    /* altezza del font */
-    
-    font-size: 1.2em;
-    
-    line-height: 1;
-    
-    /* sempre in prima vista rispetto altri elementi della pagina  */
-    
-    z-index: 2001;
-    
-    /* animazione del colore del testo al hover */
-    
-    -webkit-transition: color .25s ease-in-out;
-    
-    -moz-transition: color .25s ease-in-out;
-    
-    transition: color .25s ease-in-out;
-    
-    }
-
-    .sidenav-toggle:after {
-    
-        content: '\2630';
-        
-        text-decoration: none;}
-
-        [id='sidenav-toggle'] {
-            
-            position: absolute;
-            
-            display: none;
-        }
-
-        [id='sidenav-toggle']:checked ~ .nav > .nav-toggle {
-            
-            left: auto;
-            
-            right: 2px;
-            
-            top: 1em;
-            
-            }
-
-
-            [id='sidenav-toggle']:checked ~ .nav {
-
-                left: 0;
-                
-                box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-                
-                -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-                
-                -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-                
-                overflow-y: auto;
-                
-                }
-
-                [id='sidenav-toggle']:checked ~ main > article {
-                    
-                    -webkit-transform: translateX(320px);
-                    
-                    -moz-transform: translateX(320px);
-                    
-                    transform: translateX(320px);
-                    
-                    }
-
-
-                    [id='sidenav-toggle']:checked ~ .nav > .nav-toggle:after {
-                        
-                        content: '\2715';
-                    }
-  .menubtn{
-      width: 100%;
-      text-align: left;
-      background-color: #334247;
-      color: #f1f1f1;
-      border: none;
-      padding-left: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  
-  
-  a{
-      text-decoration: none;
-      color: white;
-  }
-  
-  button:focus {
-      background-color: #334247;
-  }
-  
-  button:hover, a:hover {
-  background-color: #334247;
-  color: darkorange;
-  
+table.th{
+    width: 50px;
+}
+.classifica {
+    margin-top: 0x;
+    margin-left: 0px;
+    width: 919px;
+    height: 350px;
+    border:2px solid gray;
+border-radius: 2px;
+background-color: white;
 }
 
-  *{
-      font-size: 16px;
-  }
+.bet {
+    margin-top: -11px;
+    margin-left: 1px;
+    width: 149px;
+    height: 401px;
+    border:2px solid gray;
+    border-radius: 2px;
+    background-color: white;
+
+
+}
+table {border-collapse: separate; border-left-width: 0; border-spacing: 55px 5px;font-size: 18px;}
+
+*{font-family: CollegeSlabSC;
+font-size: 22;}
