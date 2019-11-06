@@ -27,9 +27,6 @@ private long id;
 @JoinColumn(name = "idUtente", referencedColumnName = "id")
 private User user;
 
-@ManyToOne
-@JoinColumn(name = "idSchedina", referencedColumnName = "id")
-private Schedina schedina;
 
 @Column
 private int budget;

@@ -20,7 +20,7 @@ public class InvestimentoDTO {
 
 private long id;
 private User user;
-private Schedina schedina;
+
 private int budget;
 private int durata;
 private int rischio;
