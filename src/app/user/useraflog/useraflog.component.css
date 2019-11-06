@@ -48,14 +48,14 @@ input{
 }
 
 textarea:focus, input:focus {
-    color: #ffffff;
+    color:black;
     border:none;
 }
 
 input, select {
 margin-top:83px;
     margin-left: 195px;
-    color: white;
+    color:black
 }
 
 .container-fluid{
