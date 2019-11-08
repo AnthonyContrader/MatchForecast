@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.matchforecast.contrader",
+      "nativeLanguage": "it"
+    },
+    "jhipsterVersion": "5.2.1",
+    "applicationType": "gateway",
+    "baseName": "gateway",
+    "packageName": "com.matchforecast.contrader",
+    "packageFolder": "com/matchforecast/contrader",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "a40087d1d3ec6a07d57ab18107868bfe1935e98b",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "it",
+    "languages": [
+      "it"
+    ]
+  }
+}
