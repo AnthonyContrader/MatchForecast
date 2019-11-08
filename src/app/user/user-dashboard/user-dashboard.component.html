@@ -1,0 +1,66 @@
+<div id="container-fluid" class="row">
+  <div class="prima">
+    <div class="col-md-4 col-sm-6">
+        <table class="table">
+         
+        <th>id</th> 
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Win</th>
+        <th>Draw</th>
+        <th>Lose</th>
+          
+        
+
+
+        <tr *ngFor="let partita of partitas">
+            <td>
+                
+                <button id="button" (click)="in(partita)">{{partita.id}}</button>
+              </td>
+          <td>
+            {{partita.team1.nameTeam}}
+          </td>
+
+          <td>
+            {{partita.squadra.nameTeam}}
+          </td>
+          <td>
+            <button id="button" (click)=in(partita)>{{partita.win}}</button>
+          </td>
+
+          <td>
+              <button id="button" (click)=in(partita)> {{partita.draw}}</button>
+          </td>
+          <td>
+              <button id="button" (click)=in(partita)> {{partita.lose}}</button>
+          </td>
+
+
+
+        </tr>
+
+
+      </table>
+    </div>
+  </div>
+  
+  <div class="schedina">
+
+    <div class="col-md-4 col-sm-6">
+      <table>
+          <tr *ngFor="let schedina of schedinas">
+       
+          
+          
+          <td> {{schedina.id}} </td>
+          <td> {{schedina.partita.team1.nameTeam}} </td>
+          <td> {{schedina.partita.squadra.nameTeam}} </td>
+
+
+          </tr>
+      </table>
+    </div>
+
+  </div>
+</div>

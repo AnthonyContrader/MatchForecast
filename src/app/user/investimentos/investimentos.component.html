@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            Utentes
+          </th>
+         
+          <th>
+            Budget
+          </th>
+          <th>
+            Duration
+          </th>
+          <th>
+            FRischio
+          </th>
+          
+          <th>
+          Edit 
+          </th>
+          <th>
+            Investimento
+          </th>
+        </tr>
+        <tr>
+         
+            <td>
+              <select [(ngModel)] = "investimentotoinsert.user">  
+                <option [(ngValue)] = "user" *ngFor = "let user of users"> {{user.id}}</option>
+                 </select>
+               </td>
+             
+               
+                  <td>
+                      <input placeholder="budget" [(ngModel)]="investimentotoinsert.budget">
+                    </td>
+                    <td>
+                       <input placeholder="durata" [(ngModel)]="investimentotoinsert.durata">
+                      </td>
+                      <td>
+                        <input placeholder="rischio" [(ngModel)]="investimentotoinsert.rischio">
+                        </td>
+                        
+          
+          <td>
+            <button (click)="insert(investimentotoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let investimento of investimentos">
+            <td>
+
+                <select [(ngModel)]="investimento.user.id">
+  
+                    <option [selected] = "user" *ngFor = "let user of users"> {{user.id}} </option>
+  
+                </select> 
+              </td>
+         
+              
+         
+          
+                <td>
+                  <input [(ngModel)]="investimento.budget">
+                </td>
+                <td>
+                   <input  [(ngModel)]="investimento.durata">
+                  </td>
+                  <td>
+                    <input [(ngModel)]="investimento.rischio">
+                    </td>
+                    <td>          
+           <button (click)=update(investimento)>Save</button> 
+          </td>
+          <td>
+            <button (click)="delete(investimento)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

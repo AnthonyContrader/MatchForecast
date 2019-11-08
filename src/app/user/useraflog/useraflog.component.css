@@ -1,0 +1,212 @@
+form{
+	margin-top:180px;
+	margin-left: 80px;
+    width: 50%;
+	border-radius:0;
+	border-color: crimson;
+	color: white;
+
+	
+}
+#form1{
+	margin-top:60px;
+	margin-left: 135px;
+    width: 80%;
+	font-size: 18px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: white;
+	
+	
+}
+#form2{
+	margin-top:40px;
+	margin-left: 20px;
+    width: 80%;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 18px;
+	color: white;
+	
+	
+}
+
+#img{
+    height: 20%;
+    width:12%;
+	margin-left: 561px;
+	border-top:90px;
+}
+
+input{
+    color:black;
+    border-bottom: white;
+    border-radius: 6px;
+    height: 26px;
+    width: 170px;
+    background-color:#F1F1F1;
+    outline: none;
+    
+}
+
+textarea:focus, input:focus {
+    color:black;
+    border:none;
+}
+
+input, select {
+margin-top:83px;
+    margin-left: 195px;
+    color:black
+}
+
+.container-fluid{
+	background: rgb(2,0,36);
+	background: linear-gradient(-360deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(251,176,59,1) 50%);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+  background-position: auto;
+  width: 106%;
+  margin-right: -50px;
+  margin-left: -50px;
+  margin-bottom: -50px;
+  overflow: hidden;
+
+  padding-top: 0px;
+  padding-left: 15px;
+  height: 520px;    
+}
+
+
+
+
+input::placeholder{
+	position: center;
+	font-family:CollegeSlabSC;
+    color: #fbb03b;
+    font-size: 17px;
+	
+}
+.form-control{
+border: #fbb03b ;
+background-color:#fbb03b ;
+color: #fbb03b ;
+border-bottom: 2px solid white;
+box-shadow: inset 0px 0px 0px 0px red;
+
+
+}
+
+.login{
+border: none;
+background-color: #fbb03b ;
+color: white;
+}
+/*padding-left: auto;*/
+.contenitore{
+	margin-top: 35px;
+	margin-left: -130px;
+	
+}
+.cerchio {
+	background:white;
+	background: white;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+  border: 1px solid white;
+  border-radius:500%;
+  border-color: #fbb03b;
+  margin-top: 70px;
+  margin-left:614px;
+height: 76px;
+width: 76px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	display: block;
+}
+
+#logon{
+font-size: 17px;
+margin-left:8px;
+margin-top: 5px;
+position: sticky;
+font-family: CollegeSlabSC;
+background-color: none;
+color:black;
+border: none;
+outline: none;
+text-decoration: none;
+background-color:white;
+
+}
+
+.ddd{
+	margin-top: 20px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#reg{
+	font-size: 20px;
+	color:black;
+margin-left: 92px;
+margin-top: 46px;
+position:fixed;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+border: none;
+text-decoration: none;
+
+}
+.social [class*="fa fa-"] {
+    background-color: white;
+    border-radius: 30px;
+    color:#fbb03b ;
+    height: 50px;
+    line-height: 48px;
+	margin-left: 35px;
+	width: 50px;
+	padding-right: 0px;
+    font-size: 38px;
+    text-align: center;
+}
+
+
+a {
+	outline: none;
+}
+
+#nav1{
+    margin-left: 356px;
+    font-size: 24px;
+}
+
+#nav2{
+    margin-left: 289px;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+
+.navbar{
+    font-family:CollegeSlabSC ;
+    font-size: 17px;
+    background-color: white;
+    
+  }
+  * {
+    font-family:CollegeSlabSC;
+    
+    font-size: 17px;
+
+   }
+   p{background-color: thistle;
+    }
+
+.label{
+    border-radius: 5px;
+}
+button, input, optgroup, select, textarea {
+   
+    text-align: center;
+    border: none;
+}

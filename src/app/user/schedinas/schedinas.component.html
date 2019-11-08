@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            Partita
+          </th>
+          <th>
+            Quota 1
+          </th>
+          <th>
+            Quota X
+          </th>
+          <th>
+            Quota 2
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Schedina
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <select [(ngModel)] = "schedinatoinsert.partita">  
+              <option [(ngValue)] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
+               </select>
+             </td>
+          <td>
+            <input placeholder="quota1" [(ngModel)]="schedinatoinsert.quota1">
+          </td>
+          <td>
+              <input placeholder="quotaX" [(ngModel)]="schedinatoinsert.quotaX">
+            </td>
+            <td>
+                <input placeholder="quota2" [(ngModel)]="schedinatoinsert.quota2">
+              </td>
+            <td>
+            <button (click)="insert(schedinatoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let schedina of schedinas">
+          <td>
+            <select [(ngModel)]="schedina.partita.id">
+  
+              <option [selected] = "partita" *ngFor = "let partita of partitas"> {{partita.id}} </option>
+
+          </select> 
+          </td>
+          <td>
+            <input [(ngModel)]="schedina.quota1">
+          </td>
+            <td>
+                <input [(ngModel)]="schedina.quotaX">
+              </td>
+              <td>
+                  <input [(ngModel)]="schedina.quota2">
+                </td>
+            <td>
+            <button (click)=update(schedina)>Save</button>
+          </td>
+          <td>
+            <button (click)="delete(schedina)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

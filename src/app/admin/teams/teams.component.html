@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            nameTeam
+          </th>
+          <th>
+            numPlayers
+          </th>
+          <th>
+            rating
+          </th>
+          <th>
+            Wins
+          </th>
+          <th>
+            Defeats
+          </th>
+          
+          <th>
+            Draw
+          </th>
+          <th>
+            totalgoal
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Team
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="nameTeam" [(ngModel)]="teamtoinsert.nameTeam">
+          </td>
+          <td>
+            <input placeholder="numPlayers" [(ngModel)]="teamtoinsert.numPlayers">
+          </td>
+          <td>
+              <input placeholder="rating" [(ngModel)]="teamtoinsert.rating">
+            </td>
+            <td>
+                <input placeholder="wins" [(ngModel)]="teamtoinsert.wins">
+              </td>
+                 <td>
+                    <input placeholder="defeats" [(ngModel)]="teamtoinsert.defeats">
+                  </td>
+                  <td>
+                        <input placeholder="draws" [(ngModel)]="teamtoinsert.draws">
+                      </td>
+                      <td>
+                          <input placeholder="totalgoal" [(ngModel)]="teamtoinsert.totalgoal">
+                        </td>
+          <td>
+            <button (click)="insert(teamtoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let team of teams">
+          <td>
+            <input [(ngModel)]="team.nameTeam">
+          </td>
+          <td>
+            <input [(ngModel)]="team.numPlayers">
+          </td>
+            <td>
+                <input [(ngModel)]="team.rating">
+              </td>
+              <td>
+                  <input [(ngModel)]="team.wins">
+                </td>
+                                <td>
+                      <input [(ngModel)]="team.defeats">
+                    </td>
+                    
+                      <td>
+                          <input [(ngModel)]="team.draws">
+                        </td>
+                        <td>
+                            <input [(ngModel)]="team.totalgoal">
+                          </td>
+          <td>
+            <button (click)=update(team)>Save</button>
+          </td>
+          <td>
+            <button (click)="delete(team)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

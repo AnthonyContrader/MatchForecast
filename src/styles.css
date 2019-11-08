@@ -1,0 +1,28 @@
+button{
+    background-color: darkorange;
+}
+
+#button-reg{
+background-color: white;
+font-size: 20px;
+	color:black;
+margin-left: 85px;
+margin-top: 46px;
+position:fixed;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+border: none;
+text-decoration: none;
+}
+
+/* You can add global styles to this file, and also import other style files */
+<!--@font-face {
+    font-family: CollegeSlabSC;
+    src: url(assets/CollegeSlabSC.otf) format("opentype");
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: CollegeSlabSC;
+  }
