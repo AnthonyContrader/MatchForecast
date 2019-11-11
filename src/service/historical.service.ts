@@ -14,5 +14,6 @@ export class HistoricalService extends AbstractService<HistoricalDTO>{
   constructor(http: HttpClient) {
     super(http);
     this.type = 'historical';
+    this.name = "micro2";
   }
 }

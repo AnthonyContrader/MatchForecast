@@ -16,14 +16,18 @@ export class InvestimentosComponent implements OnInit {
  
 
   
-
+  investimento: InvestimentoDTO;
   investimentos: InvestimentoDTO[];
   investimentotoinsert: InvestimentoDTO = new InvestimentoDTO();
   users: UserDTO [];
-  
+  user: UserDTO;
+
   constructor(private service: InvestimentoService,private tService: UserService) { }
 
   ngOnInit() {
+    this.user = JSON.parse(localStorage.getItem('AUTOKEN'));
+    console.log(this.user);
+    console.log(localStorage);
     this.getInvestimentos();
     this.getUsers();
     
@@ -31,11 +35,13 @@ export class InvestimentosComponent implements OnInit {
   }
 
   getInvestimentos() {
-    
+    if (this.user.id == this.investimento.iduser) {
     this.service.getAll().subscribe(investimentos => this.investimentos = investimentos);
+    }
   }
 
   getUsers() {
+    
     this.tService.getAll().subscribe(users => this.users = users);
     
   }
@@ -51,7 +57,9 @@ export class InvestimentosComponent implements OnInit {
   }
 
   insert(investimento: InvestimentoDTO) {
+    investimento.iduser = this.user.id;
   console.log(investimento);
+  console.log(this.user);
     this.service.insert(investimento).subscribe(() => this.getInvestimentos());
   }
 

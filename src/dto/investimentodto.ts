@@ -7,7 +7,7 @@ export class InvestimentoDTO {
 
  //user: UserDTO;
 
- 
+ iduser: number;
 
  budget: number;
 

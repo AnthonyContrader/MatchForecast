@@ -6,9 +6,9 @@
       <div class="col-md-10">
         <table>
           <tr>
-            <th>
+           <!-- <th>
               Partita
-            </th>
+            </th>-->
             <th>
               Result
             </th>
@@ -20,11 +20,11 @@
             </th>
           </tr>
           <tr>
-            <td>
+        <!--<td>
               <select [(ngModel)] = "historicaltoinsert.partita">  
                 <option [(ngValue)] = "partita" *ngFor = "let partita of partitas"> {{partita.id}}</option>
                  </select>
-               </td>
+               </td>-->
             <td>
               <input placeholder="result" [(ngModel)]="historicaltoinsert.result">
             </td>
@@ -37,7 +37,7 @@
             </td>
           </tr>
           <tr *ngFor="let historical of historicals">
-            <td>
+           <!--  <td>
 
               <select [(ngModel)]="historical.partita.id">
 
@@ -45,7 +45,7 @@
 
               </select>
                 
-          </td>
+          </td>-->
             <td>
               <input [(ngModel)]="historical.result">
             </td>
