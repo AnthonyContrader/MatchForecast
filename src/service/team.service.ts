@@ -20,7 +20,8 @@ export class TeamService extends AbstractService<TeamDTO>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.type = 'team';
+    this.type = 'squadras';
+    this.name = "micro2";
   }
 
   

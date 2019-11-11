@@ -11,7 +11,8 @@ export class SchedinaService extends AbstractService<SchedinaDTO>{
 
     constructor(http: HttpClient) {
         super(http);
-        this.type = 'schedina'
+        this.type = 'schedinas';
+        this.name = "micro2";
     }
 
 

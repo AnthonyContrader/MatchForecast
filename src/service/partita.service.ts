@@ -21,10 +21,11 @@ export class PartitaService extends AbstractService<PartitaDTO>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.type = 'partita';
+    this.type = 'partitas';
+    this.name = "micro2";
   }
-  insert(PartitaDTO: PartitaDTO): Observable<PartitaDTO> {
+  /*insert(PartitaDTO: PartitaDTO): Observable<PartitaDTO> {
     return this.http.post<any>('http://localhost:8080/' + this.type + '/partitas', PartitaDTO)
-  }
+}*/
   
 }

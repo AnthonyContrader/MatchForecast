@@ -74,7 +74,7 @@ export class PartitasComponent implements OnInit {
 
 
     }
-
+    console.log(partita);
     this.service.insert(partita).subscribe(() => this.getPartitas());
   }
 

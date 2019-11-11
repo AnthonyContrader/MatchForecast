@@ -4,7 +4,7 @@ export class HistoricalDTO {
 
     id: number;
  
-    partita: PartitaDTO;
+    //partita: PartitaDTO;
  
     result: string;
  
