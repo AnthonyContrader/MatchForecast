@@ -22,6 +22,7 @@ import { Observable } from 'rxjs';
     
     constructor(http: HttpClient) {
         super(http);
-        this.type = 'investimento';
+        this.name = "micro1";
+        this.type = 'investimentos';
     }
     }

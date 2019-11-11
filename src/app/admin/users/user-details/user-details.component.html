@@ -1,0 +1,51 @@
+<h3>
+  <!-- | uppercase è un pipe, trasforma la stringa mettendo tutte le lettere maiuscole-->
+  {{dto.username | uppercase }}'S DETAILS 
+</h3>
+<table>
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Username
+      </th>
+      <th>
+        Password
+      </th>
+      <th>
+        Usertype
+      </th>
+      <th>
+        Edit
+      </th>
+      <th>
+        User
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <span>
+          {{dto.id}}
+        </span>
+      </td>
+      <td>
+        <input [(ngModel)]="dto.username">
+      </td>
+      <td>
+        <input [(ngModel)]="dto.password">
+      </td>
+      <td>
+        <select [(ngModel)]="dto.usertype">
+          <option [selected]="dto.usertype===ADMIN" value="ADMIN">ADMIN</option>
+          <option [selected]="dto.usertype===USER" value="USER">USER</option>
+        </select>
+      </td>
+      <td>
+          <button (click)=update(dto)><i class="fas fa-edit"></i>Edit</button>
+        </td>
+        <td>
+          <button (click)="delete(dto.id)"><i class="fas fa-trash"></i>Delete</button>
+        </td>
+    </tr>
+  </table>

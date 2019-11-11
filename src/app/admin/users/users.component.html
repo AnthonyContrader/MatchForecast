@@ -10,10 +10,13 @@
             Username
           </th>
           <th>
-            Password
+            Email
           </th>
           <th>
             Usertype
+          </th>
+          <th>
+            Status
           </th>
           <th>
             Edit
@@ -24,15 +27,21 @@
         </tr>
         <tr>
           <td>
-            <input placeholder="username" [(ngModel)]="usertoinsert.username">
+            <input placeholder="login" [(ngModel)]="usertoinsert.login">
           </td>
           <td>
-            <input placeholder="password" [(ngModel)]="usertoinsert.password">
+            <input placeholder="email" [(ngModel)]="usertoinsert.email">
           </td>
           <td>
-            <select placeholder="usertype" [(ngModel)]="usertoinsert.usertype">
-              <option value="ADMIN">ADMIN</option>
-              <option value="USER">USER</option>
+            <select multiple = "multiple" placeholder="authorities" [(ngModel)]="usertoinsert.authorities">
+              <option value="ROLE_ADMIN">ADMIN</option>
+              <option value="ROLE_USER">USER</option>
+            </select>
+          </td>
+          <td>
+            <select  placeholder="activated" [(ngModel)]="usertoinsert.activated">
+              <option value="true">TRUE</option>
+              <option value="false">FALSE</option>
             </select>
           </td>
           <td>
@@ -44,19 +53,19 @@
         </tr>
         <tr *ngFor="let user of users">
           <td>
-            <input [(ngModel)]="user.username">
+            <input [(ngModel)]="user.login">
           </td>
           <td>
-            <input [(ngModel)]="user.password">
+            <input [(ngModel)]="user.email">
           </td>
           <td>
-            <select [(ngModel)]="user.usertype">
-              <option [selected]="user.usertype===ADMIN" value="ADMIN">ADMIN</option>
-              <option [selected]="user.usertype===USER" value="USER">USER</option>
-            </select>
+            <input [(ngModel)]="user.authorities">
           </td>
           <td>
-            <button (click)=update(user)>Save</button>
+            <input [(ngModel)]="user.activated">
+          </td>
+          <td>
+            <button (click)=update(user)>Update</button>
           </td>
           <td>
             <button (click)="delete(user)">Delete</button>

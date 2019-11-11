@@ -21,7 +21,7 @@ export class UserService extends AbstractService<UserDTO>{
 
   constructor(http: HttpClient) {
     super(http);
-    this.type = 'user';
+    this.type = 'users';
     this.port = '8080';
   }
 

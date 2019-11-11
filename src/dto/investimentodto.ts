@@ -5,7 +5,7 @@ export class InvestimentoDTO {
  
  id: number;
 
- user: UserDTO;
+ //user: UserDTO;
 
  
 

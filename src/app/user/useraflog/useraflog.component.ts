@@ -58,7 +58,7 @@ export class UseraflogComponent implements OnInit {
   nv(investimento: InvestimentoDTO) : void {
 
     this.router.navigate(['/user-dashboard']);
-    investimento.user = this.user;
+    //investimento.user = this.user;
     
     console.log(investimento);
     this.service.insert(investimento).subscribe(() => this.getInvestimentos());       
