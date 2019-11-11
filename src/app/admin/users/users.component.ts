@@ -32,6 +32,7 @@ export class UsersComponent implements OnInit {
   }
 
   insert(user: UserDTO) {
+    console.log(user);
     this.service.insert(user).subscribe(() => this.getUsers());
   }
 

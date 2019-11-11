@@ -40,7 +40,7 @@ export abstract class AbstractService<DTO> implements Service<DTO> {
         
         });
     } else{
-        return this.http.get<DTO[]>('http://localhost:' + this.port + '/' + '/api' + '/'+ this.type, {
+        return this.http.get<DTO[]>('http://localhost:' + this.port + '/' + this.name + '/api' + '/'+ this.type, {
 
             headers:{
                 Authorization: this.auth()
