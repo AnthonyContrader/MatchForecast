@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/admin-dashboard']);
           }
           if(user.authorities == "ROLE_USER") {
-            this.router.navigate(['/user-dashboard']);
+            this.router.navigate(['/useraflog']);
           }
         }else{
             alert("Wrong username or password");  

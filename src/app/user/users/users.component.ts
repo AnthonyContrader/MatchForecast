@@ -24,8 +24,14 @@ export class UsersComponent implements OnInit {
 
   delete(user: UserDTO) {
     this.service.delete(user.id).subscribe(() => this.getUsers());
+    console.log(user);
   }
-
+  
+  deleteUser(user: UserDTO) {
+    this.service.deleteUser(user.login).subscribe(() => this.getUsers());
+    console.log(user);
+  }
+  
   update(user: UserDTO) {
     this.service.update(user).subscribe(() => this.getUsers());
   }

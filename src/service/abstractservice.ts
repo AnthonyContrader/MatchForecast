@@ -69,7 +69,7 @@ export abstract class AbstractService<DTO> implements Service<DTO> {
         }
     }
 
-    delete(id: number): Observable<any> {
+    delete(id: number): Observable<DTO> {
       
         if(this.name == null){
             return this.http.delete<DTO>('http://localhost:' + this.port + '/' + 'api' + '/' + this.type + '/' + id, {
@@ -87,6 +87,23 @@ export abstract class AbstractService<DTO> implements Service<DTO> {
                 }
                   
                   });
+        }
+    }
+
+    deleteUser(login: string): Observable<DTO> {
+        if(this.name == null){
+          return this.http.delete<DTO>('http://localhost:' + this.port + '/' + 'api' + '/' + this.type + '/' + login , {
+            headers: {
+              Authorization : this.auth()
+            }
+          });
+        }else{
+          return this.http.delete<DTO>('http://localhost:' + this.port + '/' + this.name + '/api' + '/' + this.type + '/' + login , {
+            headers: {
+              Authorization : this.auth() 
+            }
+          });
+
         }
     }
 
