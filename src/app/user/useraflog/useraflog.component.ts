@@ -35,9 +35,10 @@ export class UseraflogComponent implements OnInit {
   }
 
   getInvestimentos() {
-    if (this.user.id == this.investimento.iduser) {
+     
+    
     this.service.getAll().subscribe(investimentos => this.investimentos = investimentos);
-    }
+    
   }
 
   getUsers() {
