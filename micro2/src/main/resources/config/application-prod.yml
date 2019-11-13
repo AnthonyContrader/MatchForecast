@@ -16,7 +16,7 @@
 logging:
     level:
         ROOT: INFO
-        com.project.contrader: INFO
+        com.matchforecast.contrader: INFO
         io.github.jhipster: INFO
 
 spring:
@@ -48,9 +48,13 @@ spring:
         show-sql: false
         properties:
             hibernate.id.new_generator_mappings: true
-            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_second_level_cache: true
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: false
+            hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+            hibernate.cache.hazelcast.instance_name: micro2
+            hibernate.cache.use_minimal_puts: true
+            hibernate.cache.hazelcast.use_lite_member: true
     liquibase:
         contexts: prod
     mail:
@@ -115,7 +119,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: bec5a9240728e7d523d53650564e9778975adf81
+                secret: 9ed1f180073d81e237c83dfff7c2745acf56651a
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
